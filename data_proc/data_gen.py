@@ -1,30 +1,27 @@
 import json
-import imp
 import networkx as nx
 
-sizes = [5, 8, 11]
+sizes = [12, 19, 28]
 #   a b c
 # a * * *
 # b * * *
 # c * * *
 
 probs = [
-    [0.15, 0.09, 0.02],
-    [0.09, 0.25, 0.07],
-    [0.02, 0.07, 0.10],
+    [0.55, 0.02, 0.01],
+    [0.02, 0.65, 0.02],
+    [0.01, 0.02, 0.45],
 ]
 
 g = nx.stochastic_block_model(sizes, probs, seed=0)
 
-print("len: {0}".format(len(g)))
+# H = nx.quotient_graph(g, g.graph["partition"], relabel=True)
 
-H = nx.quotient_graph(g, g.graph["partition"], relabel=True)
+# for v in H.nodes(data=True):
+#     print(round(v[1]["density"], 3))
 
-for v in H.nodes(data=True):
-    print(round(v[1]["density"], 3))
-
-for v in H.edges(data=True):
-    print(round(1.0 * v[2]["weight"] / (sizes[v[0]] * sizes[v[1]]), 3))
+# for v in H.edges(data=True):
+#     print(round(1.0 * v[2]["weight"] / (sizes[v[0]] * sizes[v[1]]), 3))
 
 
 g_json = {
@@ -41,3 +38,4 @@ for link in g.edges(data=True):
 
 with open("../data/dataset/synth/test.json",'w') as file:
     file.write( json.dumps(g_json) )
+    file.close()
