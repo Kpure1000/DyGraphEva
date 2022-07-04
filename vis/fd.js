@@ -1,44 +1,54 @@
 class force_directed {
-    constructor() {
-        this.nodes = loaded.data.nodes;
-        this.links = loaded.data.links;
+    constructor(svg_id) {
+        this.svg = d3.select('#' + svg_id)
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", [-width / 2, -height / 2, width, height])
 
-        this.simulation = d3.forceSimulation()
-            .force("link", d3.forceLink().id(d => d.id))
-            .force("charge", d3.forceManyBody())
+    }
+
+    vis(data) {
+        let nodes = data.nodes;
+        let links = data.links;
+
+        let simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(d => d.id).strength(0.1))
+            .force("charge", d3.forceManyBody().strength(-18))
             .force("x", d3.forceX())
             .force("y", d3.forceY())
 
-        this.simulation.nodes(this.nodes)
-            .on("tick", ticked)
+        let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
 
-        this.simulation.force("link").links(this.links)
-
-        let link = svg.append("g")
+        let link = this.svg.append("g")
             .attr("stroke", "#999")
-            .attr("stroke-opacity", 0.6)
+            .attr("stroke-opacity", 0.5)
+            .attr("stroke-width", 0.7)
             .selectAll("line")
 
-        let node = svg.append("g")
+        let node = this.svg.append("g")
             .attr("stroke", "#fff")
             .attr("stroke-width", 1.5)
             .selectAll("circle")
 
-        let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
-
         link = link
-            .data(this.links)
+            .data(links)
             .enter()
             .append("line")
 
         node = node
-            .data(this.nodes)
+            .data(nodes)
             .enter()
             .append("circle")
-            .attr("r", 5)
+            .attr("r", 4)
             .attr("fill", d => get_group_color(d.group))
-            .call(drag(this.simulation))
+            // .attr("fill", d => get_group_color(d.block))
+            .call(drag(simulation))
             .call(node => node.append("title").text(d => d.id))
+
+        simulation.nodes(nodes)
+            .on("tick", ticked)
+
+        simulation.force("link").links(links)
 
         function ticked() {
             link.attr("x1", d => d.source.x)
@@ -50,7 +60,6 @@ class force_directed {
                 .attr("cy", d => d.y);
 
         }
-
 
         function drag(simulation) {
             function dragstarted(event) {

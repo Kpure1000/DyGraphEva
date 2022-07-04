@@ -1,41 +1,63 @@
 import json
 import networkx as nx
 
-sizes = [12, 19, 28]
-#   a b c
-# a * * *
-# b * * *
-# c * * *
+count = 1
 
+def gen_graph(sizes, probs):
+    global count
+
+    g = nx.stochastic_block_model(sizes, probs, seed=0)
+
+    g_json = {
+        'nodes': [],
+        'links': [],
+    }
+
+    for node in g.nodes(data='block'):
+        g_json["nodes"].append({"id": node[0], "group": node[1]})
+
+    for link in g.edges(data=True):
+        g_json["links"].append({"source": link[0], "target": link[1]})
+
+    with open("../data/dataset/synth/test{0}.json".format(count),'w') as file:
+        file.write( json.dumps(g_json) )
+        file.close()
+
+    count += 1
+
+
+sizes = [12, 19, 18]
 probs = [
     [0.55, 0.02, 0.01],
     [0.02, 0.65, 0.02],
     [0.01, 0.02, 0.45],
 ]
+gen_graph(sizes, probs)
 
-g = nx.stochastic_block_model(sizes, probs, seed=0)
+probs = [
+    [0.65, 0.02, 0.01],
+    [0.02, 0.55, 0.02],
+    [0.01, 0.02, 0.35],
+]
+gen_graph(sizes, probs)
 
-# H = nx.quotient_graph(g, g.graph["partition"], relabel=True)
+probs = [
+    [0.55, 0.02, 0.01],
+    [0.02, 0.45, 0.02],
+    [0.01, 0.02, 0.25],
+]
+gen_graph(sizes, probs)
 
-# for v in H.nodes(data=True):
-#     print(round(v[1]["density"], 3))
+probs = [
+    [0.45, 0.02, 0.02],
+    [0.02, 0.35, 0.02],
+    [0.02, 0.02, 0.05],
+]
+gen_graph(sizes, probs)
 
-# for v in H.edges(data=True):
-#     print(round(1.0 * v[2]["weight"] / (sizes[v[0]] * sizes[v[1]]), 3))
-
-
-g_json = {
-    'nodes': [],
-    'links': [],
-}
-
-for node in g.nodes(data='block'):
-    g_json["nodes"].append({"id": node[0], "group": node[1]})
-
-for link in g.edges(data=True):
-    g_json["links"].append({"source": link[0], "target": link[1]})
-
-
-with open("../data/dataset/synth/test.json",'w') as file:
-    file.write( json.dumps(g_json) )
-    file.close()
+probs = [
+    [0.35, 0.02, 0.05],
+    [0.02, 0.35, 0.02],
+    [0.05, 0.02, 0.15],
+]
+gen_graph(sizes, probs)
