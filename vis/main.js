@@ -1,4 +1,4 @@
-let data_len = 5
+let data_len = 15
 
 let slices = document.getElementById("slices");
 
@@ -11,17 +11,17 @@ for (let i = 0; i < data_len - 1; i++) {
 let vis_methods=[]
 
 for (let i = 0; i < slice.length; i++) {
+    let data_name = "newcomb_" + (i + 1)
     const sl = slice[i];
     sl.getElementsByTagName("div")[1]
-        .innerText = i + 1;
+        .innerText = data_name;
     sl.getElementsByTagName("div")[0]
         .getElementsByTagName("svg")[0]
         .id = "viser" + i;
             
     new Promise((resolve) => {
-        let data_name = "test" + (i + 1)
         vis_methods.push(new force_directed("viser" + i))
-        d3.json("../data/dataset/synth/" + data_name + ".json", d => {
+        d3.json("../data/dataset/truth/newcomb/" + data_name + ".json", d => {
             resolve(d)
         })
     }).then(d => {
