@@ -22,20 +22,25 @@ class force_directed {
         let simulation = d3.forceSimulation()
             .force("link",
                 d3.forceLink()
-                    .distance(d => 10 * (maxweight + 5) - 10 * d.weight)
+                    .distance(d => 12 * (d.weight))
                     .id(d => d.id)
                     // .strength(0.1)
                 )
             .force("charge", d3.forceManyBody().strength(-18))
             .force("x", d3.forceX())
             .force("y", d3.forceY())
+    
+        simulation.nodes(nodes)
+            .on("tick", ticked)
+
+        simulation.force("link").links(links)
 
         let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
 
         let link = this.svg.append("g")
             .attr("stroke", "#999")
             .attr("stroke-opacity", 0.5)
-            .attr("stroke-width", 0.7)
+            .attr("stroke-width", 1.5)
             .selectAll("line")
 
         let node = this.svg.append("g")
@@ -47,6 +52,7 @@ class force_directed {
             .data(links)
             .enter()
             .append("line")
+            .call(link => link.append("title").text(d => d.source.id + " - " + d.target.id))
 
         node = node
             .data(nodes)
@@ -60,11 +66,6 @@ class force_directed {
             .on("click", function(d){
                 selected_node_id = d.id;
             })
-
-        simulation.nodes(nodes)
-            .on("tick", ticked)
-
-        simulation.force("link").links(links)
 
         function ticked() {
             link.attr("x1", d => d.source.x)
