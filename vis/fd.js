@@ -2,12 +2,12 @@
 let selected_node_id = -1
 
 class force_directed {
-    constructor(svg_id) {
+    constructor(svg_id, distance_scale) {
         this.svg = d3.select('#' + svg_id)
             .attr("width", width)
             .attr("height", height)
             .attr("viewBox", [-width / 2, -height / 2, width, height])
-
+        this.distance_scale = distance_scale;
     }
 
     vis(data) {
@@ -22,8 +22,10 @@ class force_directed {
         let simulation = d3.forceSimulation()
             .force("link",
                 d3.forceLink()
-                    .distance(d => 12 * (d.weight))
                     .id(d => d.id)
+                    .distance(d => {
+                        return d.weight == null ? 30 : this.distance_scale * (d.weight); // 30 is d3 default
+                    })
                     // .strength(0.1)
                 )
             .force("charge", d3.forceManyBody().strength(-18))
