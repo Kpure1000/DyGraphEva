@@ -10,6 +10,11 @@ class force_directed {
         this.distance_scale = distance_scale;
     }
 
+    clear()
+    {
+        this.svg.selectAll("*").remove()
+    }
+    
     vis(data) {
         let nodes = data.nodes;
         let links = data.links;
@@ -50,11 +55,25 @@ class force_directed {
             .attr("stroke-width", 1.5)
             .selectAll("circle")
 
+        let title = this.svg.append("g")
+            .attr("font-size",10)
+            .attr("fill", "#000000bb")
+            .attr("style", "user-select: none;")
+            .selectAll("text")
+        
+        title = title
+            .data(nodes)
+            .enter()
+            .append("text")
+            .attr("x",d=>d.x)
+            .attr("y",d=>d.y)
+            .text(d=>d.id)
+
         link = link
             .data(links)
             .enter()
             .append("line")
-            .call(link => link.append("title").text(d => d.source.id + " - " + d.target.id))
+            // .call(link => link.append("title").text(d => d.source.id + " - " + d.target.id))
 
         node = node
             .data(nodes)
@@ -62,14 +81,16 @@ class force_directed {
             .append("circle")
             .attr("r", 4)
             .attr("fill", d => get_group_color(d.group))
-            // .attr("fill", d => get_group_color(d.block))
             // .call(drag(simulation))
-            .call(node => node.append("title").text(d => d.id))
-            .on("click", function(d){
-                selected_node_id = d.id;
-            })
+            // .call(node => node.append("title").text(d => d.id))
+            // .on("click", function(d){
+            //     selected_node_id = d.id;
+            // })
 
         function ticked() {
+            title.attr("x",d=>d.x)
+                .attr("y",d=>d.y)
+    
             link.attr("x1", d => d.source.x)
                 .attr("y1", d => d.source.y)
                 .attr("x2", d => d.target.x)
@@ -85,6 +106,7 @@ class force_directed {
                     if (d.id == selected_node_id) return 4.75;
                     return 4;
                 })
+
         }
         simulation.alphaTarget(0.001)
         function drag(simulation) {

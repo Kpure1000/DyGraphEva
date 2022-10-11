@@ -41,7 +41,6 @@ probs = [
 ]
 gen_graph(sizes, probs)
 
-sizes = [5, 5, 7]
 probs = [
     [0.75, 0.11, 0.01],
     [0.11, 0.75, 0.01],
@@ -56,7 +55,6 @@ probs = [
 ]
 gen_graph(sizes, probs)
 
-sizes = [5, 4, 7]
 probs = [
     [0.75, 0.21, 0.01],
     [0.21, 0.75, 0.01],

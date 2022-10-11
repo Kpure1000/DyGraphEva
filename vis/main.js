@@ -1,14 +1,35 @@
+
+let vis_methods = []
+
+let slices = document.getElementById("slices");
+let slice = slices.getElementsByTagName("li");
+cloneNode = slice[0].cloneNode(true)
+
+let data_select = document.getElementById("data_select")
+
+let dataset_item = [
+    {
+        "name": "newcomb",
+        "path": "../data/dataset/truth/newcomb/",
+    },
+    {
+        "name": "test",
+        "path": "../data/dataset/synth/test0/",
+    },
+    {
+        "name": "node_eva",
+        "path": "../data/dataset/synth/node_eva/",
+    },
+]
+
+main(dataset_item[0].path, dataset_item[0].name);
+
 function main(path, filename) {
-    d3.json(path + filename + ".json", data_config=>{
-        let slices = document.getElementById("slices");
-
-        let slice = slices.getElementsByTagName("li");
-
-        for (let i = 0; i < data_config.days - 1; i++) {
-            slices.appendChild(slice[0].cloneNode(true));
+    vis_clear()
+    d3.json(path + filename + ".json", data_config => {
+        for (let i = 0; i < data_config.days; i++) {
+            slices.appendChild(cloneNode.cloneNode(true));
         }
-
-        let vis_methods = []
 
         for (let i = 0; i < slice.length; i++) {
             let data_name = data_config.prefix + (i + 1)
@@ -30,11 +51,26 @@ function main(path, filename) {
 
         }
     })
-    
+}
 
+function vis_clear() {
+    for (let index = 0; index < vis_methods.length; index++) {
+        const method = vis_methods[index];
+        method.clear()
+    }
+    vis_methods = []
+    slices.innerHTML = ""
 }
 
 
-// main("../data/dataset/truth/newcomb/", "newcomb");
-// main("../data/dataset/synth/", "test");
-main("../data/dataset/synth/node_eva/", "node_eva");
+for (let index = 0; index < dataset_item.length; index++) {
+    newOpt = document.createElement("option")
+    newOpt.text = dataset_item[index].name
+    newOpt.value = index
+    data_select.appendChild(newOpt)
+}
+
+function OnDatasetChanged() {
+    vis_clear()
+    main(dataset_item[data_select.value].path, dataset_item[data_select.value].name);
+}
