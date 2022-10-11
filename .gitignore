@@ -7,3 +7,6 @@
 [Oo]ut
 
 .vscode/
+
+/__pycache__/
+__pycache__/

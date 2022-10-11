@@ -13,7 +13,7 @@ def dict2graph(dict):
     return g
 
 
-def read_graph(filename):
+def read_SingleGraph(filename):
     with open(filename, 'r') as jsonIn:
         jsonStr = jsonIn.read()
         jsonIn.close()
@@ -22,32 +22,54 @@ def read_graph(filename):
     return g
 
 
-gs = []
+def closeness_centrality(gs):
+    ccs = []
 
-for i in range(1, 6):
-    # g = read_graph("../data/dataset/truth/newcomb/newcomb_{0}.json".format(i))
-    g = read_graph("../data/dataset/synth/test0/test{0}.json".format(i))
-    # g = read_graph("../data/dataset/synth/node_eva/node_eva_{0}.json".format(i))
-    gs.append(g)
+    for g in gs:
+        cc = nx.closeness_centrality(g, distance='weight')
+        ccs.append(cc)
 
-ccs = []
+    nodes_cc = []
 
-for g in gs:
-    cc = nx.closeness_centrality(g, distance='weight')
-    ccs.append(cc)
+    node_ids = gs[0].nodes()
 
-nodes_cc = []
+    for node_id in node_ids:
+        cc_delta = 0
+        for i in range(0, ccs.__len__() - 1):
+            if i + 1 != ccs.__len__():
+                cc_delta += abs(ccs[i + 1][node_id] - ccs[i][node_id])
+        nodes_cc.append({'id': node_id, 'cc': cc_delta})
 
-node_ids = gs[0].nodes()
+    nodes_cc.sort(key=lambda ele: ele['cc'], reverse=True)
 
-for node_id in node_ids:
-    cc_delta = 0
-    for i in range(0, ccs.__len__() - 1):
-        if i + 1 != ccs.__len__():
-            cc_delta += abs(ccs[i + 1][node_id] - ccs[i][node_id])
-    nodes_cc.append({'id': node_id, 'cc': cc_delta})
+    return nodes_cc
 
-nodes_cc.sort(key=lambda ele: ele['cc'], reverse=True)
 
+def mean_first_pass_time(gs):
+    nodes_mfpt=[]
+    return nodes_mfpt
+
+
+def read_Graphs(path, name):
+    gs = []
+    # read config
+    with open("{0}{1}.json".format(path, name)) as jsonIn:
+        config = json.loads(jsonIn.read())
+        jsonIn.close()
+
+    for i in range(1, config['days'] + 1):
+        g = read_SingleGraph("{0}{1}{2}.json".format(path, config['prefix'], i))
+        gs.append(g)
+
+    return gs
+
+
+gs = read_Graphs("../data/dataset/synth/test0/", "test")
+# gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
+# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
+
+
+nodes_cc = closeness_centrality(gs)
+print("Node Closeness Centrality (descend): ")
 for node_cc in nodes_cc:
-    print(node_cc)
+    print("Node '{0}':\t{1:.4f}".format(node_cc['id'],node_cc['cc']))
