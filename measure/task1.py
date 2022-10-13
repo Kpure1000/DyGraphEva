@@ -83,7 +83,7 @@ print("Node Closeness Centrality Variation (descend): ")
 for node_cc in nodes_cc:
     print("Node '{0}':\t{1:.4f}".format(node_cc['id'],node_cc['val']))
 
-nodes_mct = mean_commute_time(gs)
-print("Node Mean Commute Time Variation (descend): ")
-for node_mct in nodes_mct:
-    print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
+# nodes_mct = average_commute_time(gs)
+# print("Node Mean Commute Time Variation (descend): ")
+# for node_mct in nodes_mct:
+#     print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))

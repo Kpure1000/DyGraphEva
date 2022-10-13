@@ -83,9 +83,9 @@ class force_directed {
             .attr("fill", d => get_group_color(d.group))
             // .call(drag(simulation))
             // .call(node => node.append("title").text(d => d.id))
-            // .on("click", function(d){
-            //     selected_node_id = d.id;
-            // })
+            .on("click", function(d){
+                selected_node_id = d.id;
+            })
 
         function ticked() {
             title.attr("x",d=>d.x)
