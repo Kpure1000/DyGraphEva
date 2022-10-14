@@ -54,14 +54,14 @@ def average_commute_time(gs):
             g_mct[nodes[s]]=s_mct
         gs_mct.append(g_mct)
 
-    nodes_mct = delta_sum(gs[0].nodes(), gs_mct)
+    nodes_mct = delta_sum(gs_mct)
 
     nodes_mct.sort(key=lambda ele: ele['val'], reverse=True)
 
     return nodes_mct
 
-# gs = read_Graphs("../data/dataset/synth/test0/", "test")
-gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
+gs = read_Graphs("../data/dataset/synth/test0/", "test")
+# gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 # gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
 
 
@@ -70,7 +70,12 @@ print("Node [Closeness Centrality] Variation (descend): ")
 for node_cc in nodes_cc:
     print("Node '{0}':\t{1:.4f}".format(node_cc['id'],node_cc['val']))
 
-# nodes_mct = average_commute_time(gs)
-# print("Node Mean Commute Time Variation (descend): ")
-# for node_mct in nodes_mct:
-#     print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
+nodes_act = average_commute_time(gs)
+print("Node [Average Commute Time] Variation (descend): ")
+for node_act in nodes_act:
+    print("Node '{0}':\t{1:.4f}".format(node_act['id'],node_act['val']))
+
+nodes_mct = mean_commute_time(gs)
+print("Node [Mean Commute Time] Variation (descend): ")
+for node_mct in nodes_mct:
+    print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
