@@ -1,21 +1,8 @@
 import networkx as nx
 import numpy as np
 
-from read_graph import read_Graphs
+from task_total import read_Graphs, delta_sum
  
-# 计算节点在每两个时间片的指标差值并求和
-def delta_sum(node_indexs, gs_metrics):
-    nodes_metrics = []
-    for node_id in node_indexs:
-        cc_delta = 0
-        for i in range(0, gs_metrics.__len__() - 1):
-            if i + 1 != gs_metrics.__len__():
-                cc_delta += abs(gs_metrics[i + 1][node_id] - gs_metrics[i][node_id])
-        nodes_metrics.append({'id': node_id, 'val': cc_delta})
-    
-    return nodes_metrics
-
-
 def closeness_centrality(gs):
     ccs = []
 
@@ -23,7 +10,7 @@ def closeness_centrality(gs):
         cc = nx.closeness_centrality(g, distance='weight')
         ccs.append(cc)
 
-    nodes_cc = delta_sum(gs[0].nodes(), ccs)
+    nodes_cc = delta_sum(ccs)
 
     nodes_cc.sort(key=lambda ele: ele['val'], reverse=True)
 
@@ -45,7 +32,7 @@ def mean_commute_time(gs):
             g_mct[nodes[s]]=s_mct
         gs_mct.append(g_mct)
 
-    nodes_mct = delta_sum(gs[0].nodes(), gs_mct)
+    nodes_mct = delta_sum(gs_mct)
 
     nodes_mct.sort(key=lambda ele: ele['val'], reverse=True)
 
@@ -79,7 +66,7 @@ gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 
 
 nodes_cc = closeness_centrality(gs)
-print("Node Closeness Centrality Variation (descend): ")
+print("Node [Closeness Centrality] Variation (descend): ")
 for node_cc in nodes_cc:
     print("Node '{0}':\t{1:.4f}".format(node_cc['id'],node_cc['val']))
 
