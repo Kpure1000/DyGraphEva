@@ -35,8 +35,8 @@ function main(path, filename) {
             slices.appendChild(cloneNode.cloneNode(true));
         }
 
-        for (let i = 0; i < slice.length; i++) {
-            let data_name = data_config.prefix + (i + 1)
+        for (let i = 0, count = data_config.day_start; i < slice.length && count <= data_config.day_end; i++,count++) {
+            let data_name = data_config.prefix + count
             const sl = slice[i];
             sl.getElementsByTagName("div")[1]
                 .innerText = data_name;

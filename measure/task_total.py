@@ -34,14 +34,3 @@ def read_Graphs(path, name):
         gs.append(g)
 
     return gs
-
-# sum of value delta
-def delta_sum(gs_metrics):
-    keys_delta=[]
-    for key in gs_metrics[0]:
-        delta_val=0
-        for i in range(0, gs_metrics.__len__()-1):
-            if i+1!=gs_metrics.__len__():
-                delta_val += abs( gs_metrics[i+1][key] - gs_metrics[i][key] )
-        keys_delta.append({"id":key,"val":delta_val})
-    return keys_delta
