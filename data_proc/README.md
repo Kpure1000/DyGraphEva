@@ -55,11 +55,9 @@ Config file shoud be:
 
 ```javascript
 {
-    "days": 3,
+    "day_start": 1,
+    "day_end": 3,
     "prefix": "newcomb_",
-    "distance_scale": 12
+    "distance_scale": 12 // 
 }
 ```
-
-***PAY ATTENTION: days should start from 1***
-

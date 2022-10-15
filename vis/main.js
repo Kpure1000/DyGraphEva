@@ -31,7 +31,7 @@ main(dataset_item[0].path, dataset_item[0].name);
 function main(path, filename) {
     vis_clear()
     d3.json(path + filename + ".json", data_config => {
-        for (let i = 0; i < data_config.days; i++) {
+        for (let i = data_config.day_start; i < data_config.day_end + 1; i++) {
             slices.appendChild(cloneNode.cloneNode(true));
         }
 

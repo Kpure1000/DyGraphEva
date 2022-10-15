@@ -1,4 +1,5 @@
 {
-    "days": 5,
+    "day_start": 1,
+    "day_end": 5,
     "prefix": "test"
 }

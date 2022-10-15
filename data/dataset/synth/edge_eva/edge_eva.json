@@ -1,5 +1,6 @@
 {
-    "days": 5,
+    "day_start": 1,
+    "day_end": 5,
     "prefix": "edge_eva_",
     "distance_scale": 19
 }

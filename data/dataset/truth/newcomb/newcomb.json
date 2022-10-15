@@ -1,5 +1,6 @@
 {
-    "days": 15,
+    "day_start": 1,
+    "day_end": 15,
     "prefix": "newcomb_",
     "distance_scale": 12
 }

@@ -29,7 +29,7 @@ def read_Graphs(path, name):
         config = json.loads(jsonIn.read())
         jsonIn.close()
 
-    for i in range(1, config['days'] + 1):
+    for i in range(config['day_start'], config['day_end'] + 1):
         g = read_SingleGraph("{0}{1}{2}.json".format(path, config['prefix'], i))
         gs.append(g)
 
