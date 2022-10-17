@@ -33,7 +33,11 @@ class force_directed {
                     })
                     // .strength(0.1)
                 )
-            .force("charge", d3.forceManyBody().strength(-18))
+            .force("charge", 
+                d3.forceManyBody()
+                    .strength(-78)
+                    .distanceMin(1)
+                    .distanceMax(199))
             .force("x", d3.forceX())
             .force("y", d3.forceY())
     
@@ -46,19 +50,21 @@ class force_directed {
 
         let link = this.svg.append("g")
             .attr("stroke", "#999")
-            .attr("stroke-opacity", 0.5)
-            .attr("stroke-width", 1.5)
+            .attr("stroke-opacity", 0.4)
+            .attr("stroke-width", 1.9)
             .selectAll("line")
 
         let node = this.svg.append("g")
             .attr("stroke", "#fff")
-            .attr("stroke-width", 1.5)
+            .attr("stroke-width", 1.8)
             .selectAll("circle")
 
         let title = this.svg.append("g")
-            .attr("font-size",10)
-            .attr("fill", "#000000bb")
+            .attr("font-size","5pt")
+            .attr("fill", "#fff")
             .attr("style", "user-select: none;")
+            .style("font-weight", "bold")
+            .style("text-anchor", "middle")
             .selectAll("text")
         
         title = title
@@ -67,25 +73,28 @@ class force_directed {
             .append("text")
             .attr("x",d=>d.x)
             .attr("y",d=>d.y)
+            .attr("dy", 3)
             .text(d=>d.id)
+            .on("click", function(d){
+                selected_node_id = d.id;
+            })
+            // .call(drag(simulation))
 
         link = link
             .data(links)
             .enter()
             .append("line")
-            // .call(link => link.append("title").text(d => d.source.id + " - " + d.target.id))
+            .call(link => link.append("title").text(d => d.source.id + "-" + d.target.id))
 
         node = node
             .data(nodes)
             .enter()
             .append("circle")
-            .attr("r", 4)
             .attr("fill", d => get_group_color(d.group))
-            // .call(drag(simulation))
-            // .call(node => node.append("title").text(d => d.id))
             .on("click", function(d){
                 selected_node_id = d.id;
             })
+            // .call(drag(simulation))
 
         function ticked() {
             title.attr("x",d=>d.x)
@@ -103,8 +112,8 @@ class force_directed {
                     return get_group_color(d.group);
                 })
                 .attr("r", (d)=>{
-                    if (d.id == selected_node_id) return 4.75;
-                    return 4;
+                    if (d.id == selected_node_id) return 7.7;
+                    return 6.5;
                 })
 
         }

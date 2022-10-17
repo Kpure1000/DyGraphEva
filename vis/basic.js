@@ -1,4 +1,4 @@
-var width = 250, height = 250
+var width = 400, height = 400
 
 // var svg = d3.select("#viser")
 //     .attr("width", width)
