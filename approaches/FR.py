@@ -99,5 +99,5 @@ anim = ani.FuncAnimation(fig=fig,
                          frames=gout,
                          interval=33,
                          repeat=True,)
-anim.save("save.gif")
+
 plt.show()
