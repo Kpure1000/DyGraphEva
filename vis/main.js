@@ -24,6 +24,10 @@ let dataset_item = [
         "name": "edge_eva",
         "path": "../data/dataset/synth/edge_eva/",
     },
+    {
+        "name": "cube",
+        "path": "../data/dataset/synth/cube/",
+    },
 ]
 
 main(dataset_item[0].path, dataset_item[0].name);

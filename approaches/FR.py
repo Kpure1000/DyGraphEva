@@ -6,9 +6,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as ani
 
-gs = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
-# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
+# gs, distance_scale = read_Graphs("../data/dataset/synth/test0/", "test")
+# gs, distance_scale = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
+# gs, distance_scale = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
+gs, distance_scale = read_Graphs("../data/dataset/synth/cube/", "cube")
 g = gs[0]
 
 nodes = list(g.nodes)
@@ -25,7 +26,7 @@ for i in range(0, nodelen):
 
 area = 100
 k = np.sqrt(area/nodelen)
-drag_index = 0.15
+drag_index = 0.55
 lambda_ = 0.9
 temperature = k * np.sqrt(nodelen)
 iterator_count=120
@@ -56,7 +57,7 @@ def iterate():
                 x_n = np.array(node_pos[nei_s[n]])
                 x_sn = x_n - x_s
                 weight = g.get_edge_data(nodes[s], nei_s[n])['weight']
-                F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k / (1 + weight * 12)
+                F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k / (weight * distance_scale)
             F_repl = np.array([0.0,0.0])
             for n in range(0, nodelen):
                 if n != s:

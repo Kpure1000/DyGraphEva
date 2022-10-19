@@ -32,5 +32,7 @@ def read_Graphs(path, name):
     for i in range(config['day_start'], config['day_end'] + 1):
         g = read_SingleGraph("{0}{1}{2}.json".format(path, config['prefix'], i))
         gs.append(g)
-
-    return gs
+        distance_scale=1
+        if 'distance_scale' in config:
+            distance_scale =  config['distance_scale']
+    return gs, distance_scale
