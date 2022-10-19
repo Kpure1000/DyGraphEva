@@ -10,11 +10,15 @@ def save_graph(g, days):
         'links': [],
     }
 
-    for node in g.nodes(data='block'):
+    for node in g.nodes(data='group'):
         g_json["nodes"].append({"id": node[0], "group": node[1]})
 
     for link in g.edges(data=True):
-        g_json["links"].append({"source": link[0], "target": link[1]})
+        g_json["links"].append({
+            "source": link[0],
+            "target": link[1],
+            "weight": link[2]["weight"]
+        })
 
     with open("../data/dataset/synth/node_eva/node_eva_{0}.json".format(days),'w') as file:
         file.write( json.dumps(g_json) )
@@ -85,4 +89,3 @@ G.add_nodes_from([1, 2, 3, 4, 5, 6, 7, 8], group=0)
 G.add_edges_from([(1, 4), (2, 4), (3, 4), (4, 5), (5, 6), (5, 7), (5, 8)], weight=1)
 
 save_graph(G, 8)
-
