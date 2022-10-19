@@ -29,7 +29,8 @@ class force_directed {
                 d3.forceLink()
                     .id(d => d.id)
                     .distance(d => {
-                        return d.weight == null ? 30 : this.distance_scale * (d.weight); // 30 is d3 default
+                        return d.weight == null ? 30 : // 30 is d3 default
+                            (this.distance_scale ? this.distance_scale * (d.weight) : d.weight); 
                     })
                     // .strength(0.1)
                 )
@@ -84,7 +85,7 @@ class force_directed {
             .data(links)
             .enter()
             .append("line")
-            .call(link => link.append("title").text(d => d.source.id + "-" + d.target.id))
+            .call(link => link.append("title").text(d => d.weight))
 
         node = node
             .data(nodes)
