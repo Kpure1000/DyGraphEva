@@ -1,5 +1,6 @@
 {
     "day_start": 1,
     "day_end": 5,
-    "prefix": "test"
+    "prefix": "test",
+    "distance_scale": 20
 }
