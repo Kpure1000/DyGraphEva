@@ -21,6 +21,10 @@ let dataset_item = [
         "path": "../data/dataset/synth/node_eva/",
     },
     {
+        "name": "node_add",
+        "path": "../data/dataset/synth/node_add/",
+    },
+    {
         "name": "edge_eva",
         "path": "../data/dataset/synth/edge_eva/",
     },
