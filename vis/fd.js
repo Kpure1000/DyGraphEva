@@ -1,6 +1,4 @@
 
-let selected_node_id = -1
-
 class force_directed {
     constructor(svg_id, distance_scale) {
         this.svg = d3.select('#' + svg_id)

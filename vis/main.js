@@ -9,12 +9,12 @@ let data_select = document.getElementById("data_select")
 
 let dataset_item = [
     {
-        "name": "newcomb",
-        "path": "../data/dataset/truth/newcomb/",
-    },
-    {
         "name": "test",
         "path": "../data/dataset/synth/test0/",
+    },
+    {
+        "name": "newcomb",
+        "path": "../data/dataset/truth/newcomb/",
     },
     {
         "name": "node_eva",
@@ -34,9 +34,22 @@ let dataset_item = [
     },
 ]
 
-main(dataset_item[0].path, dataset_item[0].name);
+let result_item = [
+    {
+        "name": "node_add",
+        "path": "../data/result/synth/node_add/",
+    },
+    {
+        "name": "test",
+        "path": "../data/result/synth/test/",
+    },
+    {
+        "name": "newcomb",
+        "path": "../data/result/synth/newcomb/",
+    },
+]
 
-function main(path, filename) {
+function fd_main(path, filename) {
     vis_clear()
     d3.json(path + filename + ".json", data_config => {
         for (let i = data_config.day_start; i < data_config.day_end + 1; i++) {
@@ -65,6 +78,35 @@ function main(path, filename) {
     })
 }
 
+function fix_main(path, filename) {
+    vis_clear()
+    d3.json(path + filename + ".json", data_config => {
+        for (let i = data_config.day_start; i < data_config.day_end + 1; i++) {
+            slices.appendChild(cloneNode.cloneNode(true));
+        }
+
+        for (let i = 0, count = data_config.day_start; i < slice.length && count <= data_config.day_end; i++,count++) {
+            let data_name = data_config.prefix + count
+            const sl = slice[i];
+            sl.getElementsByTagName("div")[1]
+                .innerText = data_name;
+            sl.getElementsByTagName("div")[0]
+                .getElementsByTagName("svg")[0]
+                .id = "viser" + i;
+
+            new Promise((resolve) => {
+                vis_methods.push(new fix_layout("viser" + i, data_config.distance_scale))
+                d3.json(path + data_name + ".json", d => {
+                    resolve(d)
+                })
+            }).then(d => {
+                vis_methods[i].vis(d)
+            })
+
+        }
+    })
+}
+
 function vis_clear() {
     for (let index = 0; index < vis_methods.length; index++) {
         const method = vis_methods[index];
@@ -74,15 +116,29 @@ function vis_clear() {
     slices.innerHTML = ""
 }
 
+let seleter_item
+let func_main
 
-for (let index = 0; index < dataset_item.length; index++) {
-    newOpt = document.createElement("option")
-    newOpt.text = dataset_item[index].name
-    newOpt.value = index
-    data_select.appendChild(newOpt)
+function main() {
+    // seleter_item = dataset_item
+    seleter_item = result_item
+
+    // func_main = fd_main
+    func_main = fix_main
+    
+    for (let index = 0; index < seleter_item.length; index++) {
+        newOpt = document.createElement("option")
+        newOpt.text = seleter_item[index].name
+        newOpt.value = index
+        data_select.appendChild(newOpt)
+    }
+
+    func_main(seleter_item[0].path, seleter_item[0].name);
 }
 
-function OnDatasetChanged() {
+function OnSelecterChanged() {
     vis_clear()
-    main(dataset_item[data_select.value].path, dataset_item[data_select.value].name);
+    func_main(seleter_item[data_select.value].path, seleter_item[data_select.value].name);
 }
+
+main()
