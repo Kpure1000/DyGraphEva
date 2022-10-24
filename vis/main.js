@@ -13,10 +13,6 @@ let dataset_item = [
         "path": "../data/dataset/synth/test0/",
     },
     {
-        "name": "newcomb",
-        "path": "../data/dataset/truth/newcomb/",
-    },
-    {
         "name": "node_eva",
         "path": "../data/dataset/synth/node_eva/",
     },
@@ -32,20 +28,56 @@ let dataset_item = [
         "name": "cube",
         "path": "../data/dataset/synth/cube/",
     },
+    {
+        "name": "newcomb",
+        "path": "../data/dataset/truth/newcomb/",
+    },
+    {
+        "name": "FR",
+        "path": "../data/dataset/truth/vdBunt_data/",
+    },
 ]
 
 let result_item = [
     {
-        "name": "node_add",
+        "name": "node_add_Frishman",
         "path": "../data/result/synth/node_add/",
     },
     {
-        "name": "test",
+        "name": "test_Frishman",
         "path": "../data/result/synth/test/",
     },
     {
-        "name": "newcomb",
-        "path": "../data/result/synth/newcomb/",
+        "name": "newcomb_Frishman",
+        "path": "../data/result/truth/newcomb/",
+    },
+    {
+        "name": "FR_Frishman",
+        "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "VRND32T_Frishman",
+        "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "node_add_Aging",
+        "path": "../data/result/synth/node_add/",
+    },
+    {
+        "name": "test_Aging",
+        "path": "../data/result/synth/test/",
+    },
+    {
+        "name": "newcomb_Aging",
+        "path": "../data/result/truth/newcomb/",
+    },
+    {
+        "name": "FR_Aging",
+        "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "VRND32T_Aging",
+        "path": "../data/result/truth/vdBunt_data/",
     },
 ]
 
