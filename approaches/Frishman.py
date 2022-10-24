@@ -7,19 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as ani
 
-gs, distance_scale = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/node_add/", "node_add")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/cube/", "cube")
-
-# with open('node_add','wb') as f:
-#     f.write(pickle.dumps(gs))
-#     f.flush()
-#     f.close()
-# with open('node_add','rb') as f:
-#     gs = pickle.loads(f.read())
-#     f.close()
-
 def Merging(Gi, Gi_1, Li_1):
     # merging params
     circle_scale = 0.1
@@ -158,7 +145,7 @@ def Pinning(Gi, Gi_1, score, neibs):
                 Wpin_global[node] = Wpin_init
             elif i > int(dcutoff):
                 Wpin_global[node] = 1.0
-            else:    
+            else:
                 Wpin_global[node] = np.power(Wpin_init, 1 - i / dcutoff)
 
     # print("Wpin_global: {0}".format(Wpin_global))
@@ -166,7 +153,7 @@ def Pinning(Gi, Gi_1, score, neibs):
     return Wpin_global
 
 
-def FrLayout(Gi, Li, neibs, wpin_glob=None):
+def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0):
     nodes=list(Gi.nodes)
     nodelen=len(nodes)
     # FrLayout params
@@ -210,71 +197,40 @@ def FrLayout(Gi, Li, neibs, wpin_glob=None):
     return node_pos
 
 
-def InitLayout(G0):
+def InitLayout(G0, distance_scale):
     # 1) TODO: coarsening
     # 2) perform kk layout
     L0 = nx.kamada_kawai_layout(G=G0)
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = FrLayout(G0, L0, neibs)
+    L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale)
     return L0
 
 
-def OnlineLayout(Gi, Gi_1, Li_1):
+def OnlineLayout(Gi, Gi_1, Li_1, distance_scale):
     # 1) Merging: Merge layout Li-1 and graph Gi to produce an initial layout.
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
     Wpin_glob = Pinning(Gi, Gi_1, score, neibs)
 
-    Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob)
+    Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale)
 
     return Li
 
 
-def OnlineDraw(ax, Gi, Gi_1=None, Li_1=None):
+def Frishman(gs, distance_scale):
+    np.random.seed(1)
 
-    if Gi_1!=None and Li_1!=None:
-        Li = OnlineLayout(Gi, Gi_1, Li_1)
-    else:
-        Li = InitLayout(G0=Gi)
+    Li_1 = None
+    posOut=[]
+    for i in range(0, len(gs)):
+        if i == 0:
+            Li_1 = InitLayout(G0=gs[i], distance_scale=distance_scale)
+        else:
+            Li_1 = OnlineLayout(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, distance_scale=distance_scale)
+        posOut.append(deepcopy(Li_1))
 
-    nx.draw_networkx(
-        G=Gi,
-        pos=Li,
-        node_size=80,
-        node_shape="o",
-        edge_color="#aaa",
-        width=1.5,
-        font_size=6,
-        font_color="#fff",
-        ax=ax
-    )
+    for i in range(0, len(posOut)):
+        nx.set_node_attributes(G=gs[i], values=posOut[i], name='pos')
 
-    return Li
-
-
-np.random.seed(1)
-
-glen = len(gs)
-fig, ax = plt.subplots(nrows=1, ncols=glen)
-# fig = plt.figure()
-# plt.xlim(-2., 2.)
-# plt.ylim(-2., 2.)
-# fig.set_size_inches(5, 5)
-# plt.get_current_fig_manager().set_window_title("FR force-directed test")
-fig.suptitle("`Online Dynamic Graph Drawing`, Frishman. 2008.")
-
-
-Li_1=None
-axr=list(ax)
-axc=list(axr)
-for i in range(0, glen):
-    # axc[i].set_xlim(-2.0,2.0)
-    # axc[i].set_ylim(-2.0,2.0)
-    if i==0:
-        Li_1 = OnlineDraw(Gi=gs[i], ax=axc[i])
-    else:
-        Li_1 = OnlineDraw(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, ax=axc[i])
-
-
-plt.show()
+    return gs

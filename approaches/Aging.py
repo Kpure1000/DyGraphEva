@@ -10,14 +10,8 @@ import matplotlib.animation as ani
 from app_total import save_Graphs
 
 
-# gs, distance_scale = read_Graphs("../data/dataset/synth/test0/", "test")
-gs, distance_scale = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/node_add/", "node_add")
-# gs, distance_scale = read_Graphs("../data/dataset/synth/cube/", "cube")
 
-
-def Aging(Gi, Gi_1=None, Ai_1=None):
+def Aging_g(Gi, Gi_1=None, Ai_1=None):
     Ai = {}
     if Ai_1 != None and Gi_1 != None:
         for node in Gi:
@@ -54,9 +48,9 @@ def Aging(Gi, Gi_1=None, Ai_1=None):
     return Ai
 
 
-def Age_drag_index(Ages_G):
+def Age_drag_index(Ages_G, beta):
     #param
-    beta = 0.5
+    # beta = 2.5
 
     drag_index_G={}
     for G in Ages_G:
@@ -65,17 +59,18 @@ def Age_drag_index(Ages_G):
         for node in Age:
             drag_node[node] = np.power( np.e , - beta * Age[node])
         drag_index_G[G] = drag_node
-    
+
     return drag_index_G
+
 
 def Aging_Gs(Gs):
     Ages={}
-    for i in range(0, len(gs)):
+    for i in range(0, len(Gs)):
         if i == 0:
-            Ai = Aging(Gi=gs[i])
+            Ai = Aging_g(Gi=Gs[i])
         else:
-            Ai = Aging(Gi=gs[i], Gi_1=gs[i-1], Ai_1=Ai)
-        Ages[gs[i]] = deepcopy(Ai)
+            Ai = Aging_g(Gi=Gs[i], Gi_1=Gs[i-1], Ai_1=Ai)
+        Ages[Gs[i]] = deepcopy(Ai)
     return Ages
 
 
@@ -151,48 +146,23 @@ def OnlineDraw(ax, Gi,drag_index, Li_1=None):
         # Li = nx.fruchterman_reingold_layout(Gi)
         Li = fd_iterator(G=Gi,drag_index=drag_index)
 
-    nx.draw_networkx(
-        G=Gi,
-        pos=Li,
-        node_size=35,
-        node_shape="o",
-        edge_color="#aaa",
-        width=1.5,
-        font_size=4,
-        font_color="#fff",
-        ax=ax
-    )
-
     return Li
 
+def Aging(gs, distance_scale, beta=1):
+    np.random.seed(1)
+    Ages_G = Aging_Gs(Gs=gs)
+    drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
 
-np.random.seed(1)
-
-Ages_G = Aging_Gs(Gs=gs)
-
-drag_index_G = Age_drag_index(Ages_G=Ages_G)
-
-glen = len(gs)
-fig, ax = plt.subplots(nrows=1, ncols=glen)
-Li_1=None
-axr=list(ax)
-axc=list(axr)
-posOut=[]
-for i in range(0, glen):
-    axc[i].set_xlim(-2.0,2.0)
-    axc[i].set_ylim(-2.0,2.0)
-    if i==0:
-        Li_1 = OnlineDraw(ax=axc[i],drag_index=drag_index_G[gs[i]], Gi=gs[i])
-        posOut.append(deepcopy(Li_1))
-    else:
-        Li_1 = OnlineDraw(ax=axc[i],drag_index=drag_index_G[gs[i]], Gi=gs[i], Li_1=Li_1)
+    posOut=[]
+    Li_1=None
+    for i in range(0, len(gs)):
+        if i==0:
+            Li_1 = fd_iterator(G=gs[i], drag_index=drag_index_G[gs[i]], distance_scale=distance_scale)
+        else:
+            Li_1 = fd_iterator(G=gs[i], drag_index=drag_index_G[gs[i]], init_pos=Li_1, distance_scale=distance_scale)
         posOut.append(deepcopy(Li_1))
 
-plt.show()
+    for i in range(0, len(posOut)):
+        nx.set_node_attributes(G=gs[i], values=posOut[i], name='pos')
 
-for i in range(0, len(posOut)):
-    nx.set_node_attributes(G=gs[i], values=posOut[i], name='pos')
-
-# save_Graphs("../data/result/synth/node_add/", "node_add", gs, distance_scale)
-save_Graphs("../data/result/synth/newcomb/", "newcomb", gs, distance_scale)
-# save_Graphs("../data/result/synth/test/", "test", gs, distance_scale)
+    return gs
