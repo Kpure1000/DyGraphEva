@@ -14,37 +14,20 @@ def delta_sum(gs_metrics):
     return keys_delta
 
 
-def closeness_centrality(gs):
-    ccs = []
-
-    for g in gs:
-        cc = nx.closeness_centrality(g, distance='weight')
-        ccs.append(cc)
-
-    nodes_cc_dict = delta_sum(ccs)
-
-    nodes_cc=[]
-    for node_cc in nodes_cc_dict:
-        nodes_cc.append({"id": node_cc, "val": nodes_cc_dict[node_cc]})
-
-    nodes_cc.sort(key=lambda ele: ele['val'], reverse=True)
-
-    return nodes_cc
-
-
 def shortest_paths(gs):
     gs_sp=[]
     for g in gs:
         g_sp={}
         nodes = list(g.nodes)
-        for s in range(0,len(g)):
-            for t in range(0, s): # 去重
+        for s in range(0,len(nodes)):
+            for t in range(0,len(nodes)): # with repeat
                 if(s != t):
                     try:
                         p_sp = 1/nx.shortest_path_length(G=g,source=nodes[s],target=nodes[t],weight="weight")
                     except: # networkx.exception.NetworkXNoPath 
                         p_sp=0
                     pair = (nodes[s],nodes[t])
+                    # if pair == (1,8): print(pair)
                     g_sp[pair]=p_sp
         gs_sp.append(g_sp)
  
@@ -54,14 +37,13 @@ def shortest_paths(gs):
     nodes=list(gs[0].nodes)
     for s in range(0,len(nodes)):
         nodes_sp_dict[nodes[s]]=0
-        for t in range(0,s):
+        for t in range(0,len(nodes)): # with repeat
             if(s != t):
                 nodes_sp_dict[nodes[s]] += pairs_sp[(nodes[s], nodes[t])]
-                nodes_sp_dict[nodes[t]] += pairs_sp[(nodes[s], nodes[t])]
-
+    
     nodes_sp=[]
     for node_sp in nodes_sp_dict:
-        nodes_sp.append({"id": node_sp, "val": nodes_sp_dict[node_sp]})
+        nodes_sp.append({"id": node_sp, "val": nodes_sp_dict[node_sp]}) # * 0.5 to wipe repeat
 
     nodes_sp.sort(key=lambda ele: ele['val'], reverse=True)
 
@@ -75,8 +57,8 @@ def mean_commute_time(gs):
         CTK = np.linalg.pinv(L)
         g_mct={}
         nodes = list(g.nodes)
-        for s in range(0,len(g)):
-            for t in range(0,s):
+        for s in range(0,len(nodes)):
+            for t in range(0,len(nodes)):
                 if(s != t):
                     s_mct = (CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
                     g_mct[(nodes[s],nodes[t])]=s_mct
@@ -88,10 +70,9 @@ def mean_commute_time(gs):
     nodes=list(gs[0].nodes)
     for s in range(0,len(nodes)):
         nodes_mct_dict[nodes[s]]=0
-        for t in range(0,s):
+        for t in range(0,len(nodes)):
             if(s != t):
                 nodes_mct_dict[nodes[s]] += pairs_mct[(nodes[s], nodes[t])]
-                nodes_mct_dict[nodes[t]] += pairs_mct[(nodes[s], nodes[t])]
 
     nodes_mct=[]
     for node_mct in nodes_mct_dict:
@@ -109,10 +90,14 @@ def average_commute_time(gs):
         CTK = np.linalg.pinv(L)
         g_mct={}
         nodes = list(g.nodes)
-        for s in range(0,len(g)):
-            for t in range(0,s):
+        for s in range(0,len(nodes)):
+            for t in range(0,len(nodes)):
                 if(s != t):
-                    s_mct = 1/(CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
+                    val = (CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
+                    if val != 0:
+                        s_mct = 1/(CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
+                    else:
+                        s_mct = 0
                     g_mct[(nodes[s],nodes[t])]=s_mct
         gs_mct.append(g_mct)
 
@@ -122,10 +107,9 @@ def average_commute_time(gs):
     nodes=list(gs[0].nodes)
     for s in range(0,len(nodes)):
         nodes_mct_dict[nodes[s]]=0
-        for t in range(0,s):
+        for t in range(0,len(nodes)):
             if(s != t):
                 nodes_mct_dict[nodes[s]] += pairs_mct[(nodes[s], nodes[t])]
-                nodes_mct_dict[nodes[t]] += pairs_mct[(nodes[s], nodes[t])]
 
     nodes_mct=[]
     for node_mct in nodes_mct_dict:
@@ -147,12 +131,11 @@ def katz_index(gs):
 
         nodes = list(g.nodes)
         g_ki={}
-        for s in range(0,len(g)):
-            for t in range(0, s): # 去重
+        for s in range(0,len(nodes)):
+            for t in range(0, len(nodes)): # 去重
                 if(s != t):
                     p_ki = S[s][t]
                     g_ki[(nodes[s], nodes[t])] = p_ki
-
         gs_ki.append(g_ki)
 
     pairs_ki = delta_sum(gs_ki)
@@ -161,10 +144,9 @@ def katz_index(gs):
     nodes=list(gs[0].nodes)
     for s in range(0,len(nodes)):
         nodes_ki_dict[nodes[s]]=0
-        for t in range(0,s):
+        for t in range(0,len(nodes)):
             if(s != t):
                 nodes_ki_dict[nodes[s]] += pairs_ki[(nodes[s], nodes[t])]
-                nodes_ki_dict[nodes[t]] += pairs_ki[(nodes[s], nodes[t])]
 
     nodes_ki=[]
     for node_ki in nodes_ki_dict:
@@ -176,9 +158,10 @@ def katz_index(gs):
 
 
 # gs = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
-gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
+# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
 
+# gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
+gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
 
 # nodes_cc = closeness_centrality(gs)
 # print("[Closeness Centrality] Variation (descend): ")
