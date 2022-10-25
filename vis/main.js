@@ -36,6 +36,10 @@ let dataset_item = [
         "name": "FR",
         "path": "../data/dataset/truth/vdBunt_data/",
     },
+    {
+        "name": "mammalia-pa",
+        "path": "../data/dataset/truth/mammalia-pa/",
+    },
 ]
 
 let result_item = [
@@ -60,6 +64,10 @@ let result_item = [
         "path": "../data/result/truth/vdBunt_data/",
     },
     {
+        "name": "mammalia-pa_Frishman",
+        "path": "../data/result/truth/mammalia-pa/",
+    },
+    {
         "name": "node_add_Aging",
         "path": "../data/result/synth/node_add/",
     },
@@ -78,6 +86,10 @@ let result_item = [
     {
         "name": "VRND32T_Aging",
         "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "mammalia-pa_Aging",
+        "path": "../data/result/truth/mammalia-pa/",
     },
 ]
 

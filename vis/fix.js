@@ -58,30 +58,30 @@ class fix_layout {
 
         let node = this.svg.append("g")
             .attr("stroke", "#fff")
-            .attr("stroke-width", 1.8)
+            .attr("stroke-width", 1.5)
             .selectAll("circle")
 
-        let title = this.svg.append("g")
-            .attr("font-size","5pt")
-            .attr("fill", "#fff")
-            .attr("style", "user-select: none;")
-            .style("font-weight", "bold")
-            .style("text-anchor", "middle")
-            .selectAll("text")
+        // let title = this.svg.append("g")
+        //     .attr("font-size","3pt")
+        //     .attr("fill", "#fff")
+        //     .attr("style", "user-select: none;")
+        //     .style("font-weight", "bold")
+        //     .style("text-anchor", "middle")
+        //     .selectAll("text")
         
-        title = title
-            .data(nodes)
-            .enter()
-            .append("text")
-            .attr("x",d=>d.x * this.distance_scale)
-            .attr("y",d=>d.y * this.distance_scale)
-            .attr("dy", 3)
-            .text(d=>d.id)
-            .on("click", function(d){
-                selected_node_id = d.id;
-            })
-            .attr("x",d=>d.x * this.distance_scale)
-            .attr("y",d=>d.y * this.distance_scale)
+        // title = title
+        //     .data(nodes)
+        //     .enter()
+        //     .append("text")
+        //     .attr("x",d=>d.x * this.distance_scale)
+        //     .attr("y",d=>d.y * this.distance_scale)
+        //     .attr("dy", 2)
+        //     .text(d=>d.id)
+        //     .on("click", function(d){
+        //         selected_node_id = d.id;
+        //     })
+        //     .attr("x",d=>d.x * this.distance_scale)
+        //     .attr("y",d=>d.y * this.distance_scale)
 
         link = link
             .data(links)
@@ -97,6 +97,7 @@ class fix_layout {
             .data(nodes)
             .enter()
             .append("circle")
+            .call(node => node.append("title").text(d => d.id))
             .attr("fill", d => get_group_color(d.group))
             .on("click", function(d){
                 selected_node_id = d.id;
@@ -108,8 +109,8 @@ class fix_layout {
                 return get_group_color(d.group);
             })
             .attr("r", (d)=>{
-                if (d.id == selected_node_id) return 7.7;
-                return 6.5;
+                if (d.id == selected_node_id) return 4.75;
+                return 4;
             })
 
             setInterval(()=>{
@@ -117,8 +118,8 @@ class fix_layout {
                     if (d.id == selected_node_id) return "#f00";
                     return get_group_color(d.group);
                 }).attr("r", (d) => {
-                    if (d.id == selected_node_id) return 7.7;
-                    return 6.5;
+                    if (d.id == selected_node_id) return 4.75;
+                    return 4;
                 })
             }, 16)
 
