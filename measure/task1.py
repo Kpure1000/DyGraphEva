@@ -7,11 +7,23 @@ def delta_sum(gs_metrics):
     keys_delta={}
     for key in gs_metrics[0]:
         delta_val=0
-        for i in range(0, gs_metrics.__len__()-1):
-            if i+1!=gs_metrics.__len__():
+        for i in range(0, len(gs_metrics)-1):
+            if i+1!=len(gs_metrics):
                 delta_val += abs( gs_metrics[i+1][key] - gs_metrics[i][key] )
-        keys_delta[key]=delta_val
+        keys_delta[key] = delta_val
     return keys_delta
+
+
+def pairs2nodes(all_nodes, all_pairs):
+    nodes_dict = {}
+    for s in range(0, len(all_nodes)):
+        nodes_dict[all_nodes[s]] = 0
+        for t in range(0, len(all_nodes)):  # with repeat
+            if(s != t):
+                nodes_dict[all_nodes[s]] += all_pairs[(all_nodes[s], all_nodes[t])]
+
+    return [{"id": node, "val": nodes_dict[node]} for node in nodes_dict]
+
 
 
 def shortest_paths(gs):
@@ -27,24 +39,11 @@ def shortest_paths(gs):
                     except: # networkx.exception.NetworkXNoPath 
                         p_sp=0
                     pair = (nodes[s],nodes[t])
-                    # if pair == (1,8): print(pair)
                     g_sp[pair]=p_sp
         gs_sp.append(g_sp)
  
     pairs_sp = delta_sum(gs_sp)
-
-    nodes_sp_dict={}
-    nodes=list(gs[0].nodes)
-    for s in range(0,len(nodes)):
-        nodes_sp_dict[nodes[s]]=0
-        for t in range(0,len(nodes)): # with repeat
-            if(s != t):
-                nodes_sp_dict[nodes[s]] += pairs_sp[(nodes[s], nodes[t])]
-    
-    nodes_sp=[]
-    for node_sp in nodes_sp_dict:
-        nodes_sp.append({"id": node_sp, "val": nodes_sp_dict[node_sp]}) # * 0.5 to wipe repeat
-
+    nodes_sp = pairs2nodes(all_nodes=list(gs[0].nodes), all_pairs=pairs_sp)
     nodes_sp.sort(key=lambda ele: ele['val'], reverse=True)
 
     return nodes_sp
@@ -53,7 +52,7 @@ def shortest_paths(gs):
 def mean_commute_time(gs):
     gs_mct=[]
     for g in gs:
-        L = nx.laplacian_matrix(g, nodelist=sorted(g.nodes)).toarray()
+        L = nx.laplacian_matrix(g).toarray()
         CTK = np.linalg.pinv(L)
         g_mct={}
         nodes = list(g.nodes)
@@ -65,19 +64,7 @@ def mean_commute_time(gs):
         gs_mct.append(g_mct)
 
     pairs_mct = delta_sum(gs_mct)
-
-    nodes_mct_dict={}
-    nodes=list(gs[0].nodes)
-    for s in range(0,len(nodes)):
-        nodes_mct_dict[nodes[s]]=0
-        for t in range(0,len(nodes)):
-            if(s != t):
-                nodes_mct_dict[nodes[s]] += pairs_mct[(nodes[s], nodes[t])]
-
-    nodes_mct=[]
-    for node_mct in nodes_mct_dict:
-        nodes_mct.append({"id": node_mct, "val": nodes_mct_dict[node_mct]})
-
+    nodes_mct = pairs2nodes(all_nodes=list(gs[0].nodes), all_pairs=pairs_mct)
     nodes_mct.sort(key=lambda ele: ele['val'], reverse=True)
 
     return nodes_mct
@@ -86,7 +73,7 @@ def mean_commute_time(gs):
 def average_commute_time(gs):
     gs_mct=[]
     for g in gs:
-        L = nx.laplacian_matrix(g, nodelist=sorted(g.nodes)).toarray()
+        L = nx.laplacian_matrix(g).toarray()
         CTK = np.linalg.pinv(L)
         g_mct={}
         nodes = list(g.nodes)
@@ -102,19 +89,7 @@ def average_commute_time(gs):
         gs_mct.append(g_mct)
 
     pairs_mct = delta_sum(gs_mct)
-
-    nodes_mct_dict={}
-    nodes=list(gs[0].nodes)
-    for s in range(0,len(nodes)):
-        nodes_mct_dict[nodes[s]]=0
-        for t in range(0,len(nodes)):
-            if(s != t):
-                nodes_mct_dict[nodes[s]] += pairs_mct[(nodes[s], nodes[t])]
-
-    nodes_mct=[]
-    for node_mct in nodes_mct_dict:
-        nodes_mct.append({"id": node_mct, "val": nodes_mct_dict[node_mct]})
-
+    nodes_mct = pairs2nodes(all_nodes=list(gs[0].nodes), all_pairs=pairs_mct)
     nodes_mct.sort(key=lambda ele: ele['val'], reverse=True)
 
     return nodes_mct
@@ -139,51 +114,39 @@ def katz_index(gs):
         gs_ki.append(g_ki)
 
     pairs_ki = delta_sum(gs_ki)
-
-    nodes_ki_dict={}
-    nodes=list(gs[0].nodes)
-    for s in range(0,len(nodes)):
-        nodes_ki_dict[nodes[s]]=0
-        for t in range(0,len(nodes)):
-            if(s != t):
-                nodes_ki_dict[nodes[s]] += pairs_ki[(nodes[s], nodes[t])]
-
-    nodes_ki=[]
-    for node_ki in nodes_ki_dict:
-        nodes_ki.append({"id": node_ki, "val": nodes_ki_dict[node_ki]})
-
+    nodes_ki = pairs2nodes(all_nodes=list(gs[0].nodes), all_pairs=pairs_ki)
     nodes_ki.sort(key=lambda ele: ele['val'], reverse=True)
 
     return nodes_ki
 
 
 # gs = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
+gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
 
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
-gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
+# gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
 
 # nodes_cc = closeness_centrality(gs)
 # print("[Closeness Centrality] Variation (descend): ")
 # for node_cc in nodes_cc:
 #     print("Node '{0}':\t{1:.4f}".format(node_cc['id'],node_cc['val']))
 
-nodes_sp = shortest_paths(gs)
-print("[Short Paths] Variation (descend): ")
-for node_act in nodes_sp:
-    print("Node '{0}':\t{1:.4f}".format(node_act['id'],node_act['val']))
+# nodes_sp = shortest_paths(gs)
+# print("[Short Paths] Variation (descend): ")
+# for node_act in nodes_sp:
+#     print("Node '{0}':\t{1:.4f}".format(node_act['id'],node_act['val']))
 
 nodes_act = average_commute_time(gs)
 print("[Average Commute Time] Variation (descend): ")
 for node_act in nodes_act:
     print("Node '{0}':\t{1:.4f}".format(node_act['id'],node_act['val']))
 
-nodes_mct = mean_commute_time(gs)
-print("[Mean Commute Time] Variation (descend): ")
-for node_mct in nodes_mct:
-    print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
+# nodes_mct = mean_commute_time(gs)
+# print("[Mean Commute Time] Variation (descend): ")
+# for node_mct in nodes_mct:
+#     print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
 
-nodes_kz = katz_index(gs)
-print("[Katz Index Time] Variation (descend): ")
-for node_mct in nodes_kz:
-    print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
+# nodes_kz = katz_index(gs)
+# print("[Katz Index Time] Variation (descend): ")
+# for node_mct in nodes_kz:
+#     print("Node '{0}':\t{1:.4f}".format(node_mct['id'],node_mct['val']))
