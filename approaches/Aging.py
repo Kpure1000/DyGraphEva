@@ -74,7 +74,7 @@ def Aging_Gs(Gs):
     return Ages
 
 
-def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterator_count=50, pos_rec=None):
+def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterator_count=50, pos_rec=None, weight='weight'):
 
     nodes = list(G.nodes)
 
@@ -116,8 +116,9 @@ def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterat
                 x_s = np.array(node_pos[nodes[s]])
                 x_n = np.array(node_pos[nei_s[n]])
                 x_sn = x_n - x_s
-                weight = G.get_edge_data(nodes[s], nei_s[n])['weight']
-                F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k / (1 + weight * distance_scale)
+                w = G.get_edge_data(nodes[s], nei_s[n])[weight]
+                F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k  / (1 + w * distance_scale)
+                # F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k  * weight * distance_scale
             F_repl = np.array([0.0,0.0])
             for n in range(0, nodelen):
                 if n != s:
@@ -136,19 +137,7 @@ def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterat
 
     return node_pos
 
-
-def OnlineDraw(ax, Gi,drag_index, Li_1=None):
-    if Li_1!=None:
-        # Li = nx.fruchterman_reingold_layout(G=Gi, pos=Li_1)
-        Li = fd_iterator(G=Gi,drag_index=drag_index, init_pos=Li_1)
-        # Li = fd_iterator(G=Gi,drag_index=drag_index)
-    else:
-        # Li = nx.fruchterman_reingold_layout(Gi)
-        Li = fd_iterator(G=Gi,drag_index=drag_index)
-
-    return Li
-
-def Aging(gs, distance_scale, beta=1):
+def Aging(gs, distance_scale, beta=1, weight='weight'):
     np.random.seed(1)
     Ages_G = Aging_Gs(Gs=gs)
     drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
@@ -157,9 +146,20 @@ def Aging(gs, distance_scale, beta=1):
     Li_1=None
     for i in range(0, len(gs)):
         if i==0:
-            Li_1 = fd_iterator(G=gs[i], drag_index=drag_index_G[gs[i]], distance_scale=distance_scale)
+            Li_1 = fd_iterator(G=gs[i],
+                               drag_index=drag_index_G[gs[i]],
+                               distance_scale=distance_scale,
+                               weight=weight,
+                               k=0.1)
+            # Li_1 = nx.fruchterman_reingold_layout(G=gs[i],weight='capacity')
         else:
-            Li_1 = fd_iterator(G=gs[i], drag_index=drag_index_G[gs[i]], init_pos=Li_1, distance_scale=distance_scale)
+            Li_1 = fd_iterator(G=gs[i],
+                               drag_index=drag_index_G[gs[i]],
+                               init_pos=Li_1,
+                               distance_scale=distance_scale,
+                               weight=weight,
+                               k=0.1)
+            # Li_1 = nx.fruchterman_reingold_layout(G=gs[i], pos=Li_1,k=0.4,weight='capacity')
         posOut.append(deepcopy(Li_1))
 
     for i in range(0, len(posOut)):

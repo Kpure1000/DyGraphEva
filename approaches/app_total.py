@@ -6,10 +6,15 @@ def dict2graph(dictIn):
     for node in dictIn['nodes']:
         g.add_node(node['id'], group=node['group'])
     for edge in dictIn['links']:
+        g.add_edge(edge['source'], edge['target'])
         if 'weight' in edge:
-            g.add_edge(edge['source'], edge['target'], weight=edge['weight'])
+            nx.set_edge_attributes(g,{(edge['source'], edge['target']):{'weight':edge['weight']}})
         else:
-            g.add_edge(edge['source'], edge['target'], weight=1.0)
+            nx.set_edge_attributes(g,{(edge['source'], edge['target']):{'weight':1.0}})
+        if 'capacity' in edge:
+            nx.set_edge_attributes(g,{(edge['source'], edge['target']):{'capacity':edge['capacity']}})
+        else:
+            nx.set_edge_attributes(g,{(edge['source'], edge['target']):{'capacity':1.0}})
     return g
 
 

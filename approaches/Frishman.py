@@ -153,7 +153,7 @@ def Pinning(Gi, Gi_1, score, neibs):
     return Wpin_global
 
 
-def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0):
+def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0, weight='weight'):
     nodes=list(Gi.nodes)
     nodelen=len(nodes)
     # FrLayout params
@@ -177,8 +177,8 @@ def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0):
                     x_s = np.array(node_pos[nodes[s]])
                     x_n = np.array(node_pos[nei_s[n]])
                     x_sn = x_n - x_s
-                    weight = Gi.get_edge_data(nodes[s], nei_s[n])['weight']
-                    F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / Fr_k / (1 + weight * distance_scale)
+                    w = Gi.get_edge_data(nodes[s], nei_s[n])[weight]
+                    F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / Fr_k / (1 + w * distance_scale)
                 F_repl = np.array([0.0,0.0])
                 for n in range(0, nodelen):
                     if n != s:
@@ -192,42 +192,42 @@ def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0):
                 node_pos[nodes[s]] += F_tot / (F_tot_mag) * min(temperature, F_tot_mag)
 
         temperature *= lambda_
-        frac_done += 1 / it
+        frac_done += 1.0 / np.double(it)
 
     return node_pos
 
 
-def InitLayout(G0, distance_scale):
+def InitLayout(G0, distance_scale, weight):
     # 1) TODO: coarsening
     # 2) perform kk layout
     L0 = nx.kamada_kawai_layout(G=G0)
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale)
+    L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale, weight=weight)
     return L0
 
 
-def OnlineLayout(Gi, Gi_1, Li_1, distance_scale):
+def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight):
     # 1) Merging: Merge layout Li-1 and graph Gi to produce an initial layout.
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
     Wpin_glob = Pinning(Gi, Gi_1, score, neibs)
 
-    Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale)
+    Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale, weight=weight)
 
     return Li
 
 
-def Frishman(gs, distance_scale):
+def Frishman(gs, distance_scale, weight='weight'):
     np.random.seed(1)
 
     Li_1 = None
     posOut=[]
     for i in range(0, len(gs)):
         if i == 0:
-            Li_1 = InitLayout(G0=gs[i], distance_scale=distance_scale)
+            Li_1 = InitLayout(G0=gs[i], distance_scale=distance_scale, weight=weight)
         else:
-            Li_1 = OnlineLayout(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, distance_scale=distance_scale)
+            Li_1 = OnlineLayout(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, distance_scale=distance_scale, weight=weight)
         posOut.append(deepcopy(Li_1))
 
     for i in range(0, len(posOut)):
