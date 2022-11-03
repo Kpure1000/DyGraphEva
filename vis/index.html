@@ -22,8 +22,13 @@
 
 <body>
     <div style="margin: 0 0 10px 20px;">
-        <p style="display: inline-block;margin-right: 10px;">select dataset</p>
-        <select name="data_selecter" id="data_select" onchange="OnSelecterChanged()"></select>
+        <p style="display: inline-block;margin-right: 10px;">Visualization method</p>
+        <select style="margin-right: 30pt;" name="vis_selecter" id="vis_select" onchange="OnVisMethodChanged()"></select>
+        <p style="display: inline-block;margin-right: 10px;">Select dataset</p>
+        <select style="margin-right: 30pt;" name="data_selecter" id="data_select" onchange="OnSelecterChanged()"></select>
+        <p style="display: inline-block;margin-right: 10px;">Enable Zoom</p>
+        <input  style="margin-right: 30pt;" type="checkbox" name="rescale" id="can_rescale", onchange="OnRecaleChanged()">
+        <!-- <input type="button" value="Reset Zoom" id="reset_bt"> -->
     </div>
     <ul id="slices">
         <li style="float: left;">

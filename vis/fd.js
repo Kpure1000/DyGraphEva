@@ -83,7 +83,7 @@ class force_directed {
             .data(links)
             .enter()
             .append("line")
-            .call(link => link.append("title").text(d => d.weight))
+            .call(link => link.append("title").text(d => "(" + d.source.id + ", " + d.target.id + "), w: " + d.weight))
 
         node = node
             .data(nodes)
@@ -95,17 +95,32 @@ class force_directed {
             })
             // .call(drag(simulation))
 
-        function ticked() {
-            title.attr("x",d=>d.x)
-                .attr("y",d=>d.y)
-    
-            link.attr("x1", d => d.source.x)
-                .attr("y1", d => d.source.y)
-                .attr("x2", d => d.target.x)
-                .attr("y2", d => d.target.y);
+        let scale = 1.0
+        let translate = { 'x': 0.0, 'y': 0.0 }
 
-            node.attr("cx", d => d.x)
-                .attr("cy", d => d.y)
+        this.svg.call(d3.zoom()
+            .extent([[0, 0], [width, height]])
+            .scaleExtent([0.5, 6])
+            .on('zoom', () => {
+                if (is_rescale == true) {
+                    scale = d3.event.transform.k
+                    translate.x = d3.event.transform.x
+                    translate.y = d3.event.transform.y
+                }
+            })
+        )
+
+        function ticked() {
+            title.attr("x",d=>d.x * scale + translate.x)
+                .attr("y",d=>d.y * scale + translate.y)
+    
+            link.attr("x1", d => d.source.x * scale + translate.x)
+                .attr("y1", d => d.source.y * scale + translate.y)
+                .attr("x2", d => d.target.x * scale + translate.x)
+                .attr("y2", d => d.target.y * scale + translate.y);
+
+            node.attr("cx", d => d.x * scale + translate.x)
+                .attr("cy", d => d.y * scale + translate.y)
                 .attr("fill", (d)=>{
                     if (d.id == selected_node_id) return "#f00";
                     return get_group_color(d.group);
