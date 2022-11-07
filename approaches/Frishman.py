@@ -1,11 +1,7 @@
 from copy import deepcopy
-from json import dumps
-import pickle
-from app_total import read_Graphs
 import networkx as nx
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as ani
+from FR import fr_layout
 
 def Merging(Gi, Gi_1, Li_1):
     # merging params
@@ -72,7 +68,7 @@ def Merging(Gi, Gi_1, Li_1):
     return deepcopy(Li), score, neibs
 
 
-def Pinning(Gi, Gi_1, score, neibs):
+def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
     # Pining params
     alpha=0.6
     Wpin_init = 0.35
@@ -85,7 +81,7 @@ def Pinning(Gi, Gi_1, score, neibs):
             scoreNeib=0
             for neib in neibs[node]:
                 scoreNeib += score[neib]
-            degree = nx.degree(G=Gi, nbunch=node, weight='weight')
+            degree = nx.degree(G=Gi, nbunch=node, weight=weight)
             Wpin_local[node] = alpha * score[node] + (1 - alpha) * scoreNeib / degree
         else:
             Wpin_local[node] = alpha * score[node]
@@ -200,25 +196,27 @@ def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0, weight='weight')
 def InitLayout(G0, distance_scale, weight):
     # 1) TODO: coarsening
     # 2) perform kk layout
-    L0 = nx.kamada_kawai_layout(G=G0)
+    L0 = nx.kamada_kawai_layout(G=G0,weight=weight)
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale, weight=weight)
+    # L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale, weight=weight)
+    L0 = fr_layout(G=G0, k=0.1, pos=L0, weight=weight)
     return L0
 
 
-def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight):
+def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight='weight'):
     # 1) Merging: Merge layout Li-1 and graph Gi to produce an initial layout.
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
-    Wpin_glob = Pinning(Gi, Gi_1, score, neibs)
+    Wpin_glob = Pinning(Gi, Gi_1, score, neibs, weight)
 
-    Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale, weight=weight)
+    # Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale, weight=weight)
+    Li = fr_layout(G=Gi, k=0.1, pos=Li_init, weight=weight, pinning=Wpin_glob)
 
     return Li
 
 
-def Frishman(gs, distance_scale, weight='weight'):
+def Frishman(gs, distance_scale=1.0, weight='weight'):
     np.random.seed(1)
 
     Li_1 = None

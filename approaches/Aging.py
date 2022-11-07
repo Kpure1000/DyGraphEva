@@ -1,15 +1,7 @@
 from copy import deepcopy
-from json import dumps
-import pickle
-from app_total import read_Graphs
 import networkx as nx
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as ani
-
-from app_total import save_Graphs
-
-
+from FR import fr_layout
 
 def Aging_g(Gi, Gi_1=None, Ai_1=None):
     Ai = {}
@@ -137,7 +129,7 @@ def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterat
 
     return node_pos
 
-def Aging(gs, distance_scale, beta=1, weight='weight'):
+def Aging(gs, beta=1, weight='weight'):
     np.random.seed(1)
     Ages_G = Aging_Gs(Gs=gs)
     drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
@@ -146,20 +138,20 @@ def Aging(gs, distance_scale, beta=1, weight='weight'):
     Li_1=None
     for i in range(0, len(gs)):
         if i==0:
-            Li_1 = fd_iterator(G=gs[i],
-                               drag_index=drag_index_G[gs[i]],
-                               distance_scale=distance_scale,
-                               weight=weight,
-                               k=0.1)
-            # Li_1 = nx.fruchterman_reingold_layout(G=gs[i],weight='capacity')
+            # Li_1 = nx.kamada_kawai_layout(G=gs[i], weight=weight)
+            Li_1 = fr_layout(G=gs[i],
+                             pos=Li_1,
+                             weight=weight,
+                             k=0.1,
+                             drag_index=drag_index_G[gs[i]]
+                             )
         else:
-            Li_1 = fd_iterator(G=gs[i],
-                               drag_index=drag_index_G[gs[i]],
-                               init_pos=Li_1,
-                               distance_scale=distance_scale,
-                               weight=weight,
-                               k=0.1)
-            # Li_1 = nx.fruchterman_reingold_layout(G=gs[i], pos=Li_1,k=0.4,weight='capacity')
+            Li_1 = fr_layout(G=gs[i],
+                             pos=Li_1,
+                             weight=weight,
+                             k=0.1,
+                             drag_index=drag_index_G[gs[i]]
+                             )
         posOut.append(deepcopy(Li_1))
 
     for i in range(0, len(posOut)):
