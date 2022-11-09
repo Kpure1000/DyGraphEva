@@ -1,20 +1,14 @@
+import sys
 import networkx as nx
 import numpy as np
 
 from task_total import read_Graphs
+from task_total import print_l
 
-def delta_sum(gs_metrics):
-    keys_delta={}
-    for key in gs_metrics[0]:
-        delta_val=0
-        for i in range(0, len(gs_metrics)-1):
-            if i+1!=len(gs_metrics):
-                delta_val += abs( gs_metrics[i+1][key] - gs_metrics[i][key] )
-        keys_delta[key] = delta_val
-    return keys_delta
+import measurements as ms
 
 
-def wipe_repeat(nodes, all_paris):
+def wipe_repeated_pair_list(nodes, all_paris):
     paris_sp_s=set()
     paris_sp_l=[]
     for s in range(0,len(nodes)):
@@ -26,128 +20,57 @@ def wipe_repeat(nodes, all_paris):
     return paris_sp_l
 
 
-def paired_shortest_paths(gs):
-    gs_sp=[]
-    for g in gs:
-        g_sp={}
-        nodes = list(g.nodes)
-        for s in range(0,len(nodes)):
-            for t in range(0, len(nodes)):
-                if s != t:
-                    try:
-                        p_sp = 1/nx.shortest_path_length(G=g,source=nodes[s],target=nodes[t],weight="weight")
-                    except: # networkx.exception.NetworkXNoPath
-                        p_sp=0
-                    pair = (nodes[s],nodes[t])
-                    g_sp[pair]=p_sp
-        gs_sp.append(g_sp)
+def all_pairs_delta(nodes, gs_metrics):
+    all_paris_delta = ms.delta_sum(gs_metrics)
 
-    all_paris_sp = delta_sum(gs_sp)
-    paris_sp_l = wipe_repeat(nodes=nodes, all_paris=all_paris_sp)
-    paris_sp_l.sort(key=lambda ele: ele['val'], reverse=True)
+    paris_l = wipe_repeated_pair_list(nodes=nodes, all_paris=all_paris_delta)
 
-    return paris_sp_l, gs_sp
+    paris_l.sort(key=lambda ele: ele['val'], reverse=True)
+
+    return paris_l
 
 
+def t2_ShortestPath(Gs, print_lim=sys.maxsize):
+    nodes = list(Gs[0].nodes)
+    gs_measure = ms.all_pairs_measure([ms.ShortestPath(g) for g in Gs])
+    pairs_delta_list = all_pairs_delta(nodes, gs_measure)
 
-def paired_katz_index(gs):
-    gs_ki=[]
-    for g in gs:
-        A = nx.adjacency_matrix(g).toarray()
-        I = np.identity(len(g))
-        eigen_max = np.amax(np.double(nx.adjacency_spectrum(g)))
-        Beta = 0.099999 * (1 / eigen_max) # Beta is a free parameter
-        S = np.linalg.inv(I - Beta * A) - I
-
-        nodes = list(g.nodes)
-        g_ki={}
-        for s in range(0,len(nodes)):
-            for t in range(0, len(nodes)): # 去重
-                if s != t:
-                    p_ki = S[s][t]
-                    g_ki[(nodes[s], nodes[t])] = p_ki
-
-        gs_ki.append(g_ki)
-
-    all_pairs_ki = delta_sum(gs_ki)
-    paris_ki_l = wipe_repeat(nodes=nodes, all_paris=all_pairs_ki)
-    paris_ki_l.sort(key=lambda ele: ele['val'], reverse=True)
-
-    return paris_ki_l, gs_ki
+    print_l(pairs_delta_list, "Shortest Path", print_lim)
 
 
-
-def paired_average_commute_time(gs):
-    gs_mct=[]
-    for g in gs:
-        L = nx.laplacian_matrix(g).toarray()
-        CTK = np.linalg.pinv(L)
-        nodes = list(g.nodes)
-        g_mct={}
-        for s in range(0,len(nodes)):
-            for t in range(0, len(nodes)): # 去重
-                if s != t:
-                    val = (CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
-                    if val != 0:
-                        p_mct = 1/(CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
-                    else:
-                        p_mct = 0
-                    g_mct[(nodes[s],nodes[t])]=p_mct
-
-        gs_mct.append(g_mct)
-
-    all_paris_mct = delta_sum(gs_mct)
-    paris_mct_l = wipe_repeat(nodes=nodes, all_paris=all_paris_mct)
-    paris_mct_l.sort(key=lambda ele: ele['val'], reverse=True)
-
-    return paris_mct_l, gs_mct
+def t2_ACT(Gs, print_lim=sys.maxsize):
+    nodes = list(Gs[0].nodes)
+    gs_measure = ms.all_pairs_measure([ms.ACT(g) for g in Gs])
+    pairs_delta_list = all_pairs_delta(nodes, gs_measure)
+    print_l(pairs_delta_list, "ACT", print_lim)
 
 
-def paired_mean_commute_time(gs):
-    gs_mct=[]
-    for g in gs:
-        L = nx.laplacian_matrix(g).toarray()
-        CTK = np.linalg.pinv(L)
-        nodes = list(g.nodes)
-        g_mct={}
-        for s in range(0,len(nodes)):
-            for t in range(0, len(nodes)): # 去重
-                if s != t:
-                    p_mct = (CTK[s][s] + CTK[t][t] - 2 * CTK[s][t])
-                    g_mct[(nodes[s],nodes[t])]=p_mct
+def t2_MCT(Gs, print_lim=sys.maxsize):
+    nodes = list(Gs[0].nodes)
+    gs_measure = ms.all_pairs_measure([ms.MCT(g) for g in Gs])
+    pairs_delta_list = all_pairs_delta(nodes, gs_measure)
 
-        gs_mct.append(g_mct)
+    print_l(pairs_delta_list, "MCT", print_lim)
 
-    all_paris_mct = delta_sum(gs_mct)
-    paris_mct_l = wipe_repeat(nodes=nodes, all_paris=all_paris_mct)
-    paris_mct_l.sort(key=lambda ele: ele['val'], reverse=True)
 
-    return paris_mct_l, gs_mct
+def t2_Katz(Gs, print_lim=sys.maxsize):
+    nodes = list(Gs[0].nodes)
+    gs_measure = ms.all_pairs_measure([ms.KatzIndex(g) for g in Gs])
+    pairs_delta_list = all_pairs_delta(nodes, gs_measure)
 
-# gs = read_Graphs("../data/dataset/synth/test0/", "test")
+    print_l(pairs_delta_list, "Katz", print_lim)
+
+
+gs = read_Graphs("../data/dataset/synth/test0/", "test")
 # gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
-gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
+# gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
+# gs = read_Graphs("../data/dataset/synth/cluster/", "cluster")
 
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 # gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
 
 
-# nodes_mct, gs_mct = paired_shortest_paths(gs)
-# print("[Shortest Paths] Variation (descend): ")
-# for node_mct in nodes_mct:
-#     print("Pair '{0}':\t{1:.7f}".format(node_mct['id'],node_mct['val']))
-
-nodes_mct, gs_mct = paired_average_commute_time(gs)
-print("[Average Commute Time] Variation (descend): ")
-for node_mct in nodes_mct:
-    print("Pair '{0}':\t{1:.7f}".format(node_mct['id'],node_mct['val']))
-
-# nodes_mct, gs_mct = paired_mean_commute_time(gs)
-# print("[Mean Commute Time] Variation (descend): ")
-# for node_mct in nodes_mct:
-#     print("Pair '{0}':\t{1:.7f}".format(node_mct['id'],node_mct['val']))
-
-# nodes_ki, gs_ki = paired_katz_index(gs)
-# print("[Katz Index] Variation (descend): ")
-# for node_mct in nodes_ki:
-#     print("Pair '{0}':\t{1:.7f}".format(node_mct['id'],node_mct['val']))
+# t2_ShortestPath(gs, 10)
+# t2_Katz(gs, 10)
+# t2_MCT(gs, 10)
+# t2_ACT(gs, 10)
