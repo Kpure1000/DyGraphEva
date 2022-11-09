@@ -81,12 +81,14 @@ def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
             scoreNeib=0
             for neib in neibs[node]:
                 scoreNeib += score[neib]
-            degree = nx.degree(G=Gi, nbunch=node, weight=weight)
+            # degree = nx.degree(G=Gi, nbunch=node, weight=weight)
+            degree = len(neibs[node])
             Wpin_local[node] = alpha * score[node] + (1 - alpha) * scoreNeib / degree
+            # TODO: 这个degree会受到本身权重设置的影响
         else:
             Wpin_local[node] = alpha * score[node]
 
-    # print("Wpin_local: {0}".format(Wpin_local))
+    print("Wpin_local: {0}".format(Wpin_local))
 
     D0=set()
     edge_rm = set(Gi_1.edges) - set(Gi.edges)
