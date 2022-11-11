@@ -81,14 +81,12 @@ def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
             scoreNeib=0
             for neib in neibs[node]:
                 scoreNeib += score[neib]
-            # degree = nx.degree(G=Gi, nbunch=node, weight=weight)
             degree = len(neibs[node])
             Wpin_local[node] = alpha * score[node] + (1 - alpha) * scoreNeib / degree
-            # TODO: 这个degree会受到本身权重设置的影响
         else:
             Wpin_local[node] = alpha * score[node]
 
-    print("Wpin_local: {0}".format(Wpin_local))
+    # print("Wpin_local: {0}".format(Wpin_local))
 
     D0=set()
     edge_rm = set(Gi_1.edges) - set(Gi.edges)
@@ -151,68 +149,19 @@ def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
     return Wpin_global
 
 
-def FrLayout(Gi, Li, neibs, wpin_glob=None, distance_scale=1.0, weight='weight'):
-    nodes=list(Gi.nodes)
-    nodelen=len(nodes)
-    # FrLayout params
-    drag_index = 0.55
-    area = 0.2
-    Fr_k = 0.1 #np.sqrt(area/nodelen)
-    lambda_ = 0.9
-    temperature = Fr_k * np.sqrt(nodelen)
-    iterator_times=50
-
-    frac_done=0
-    node_pos=Li
-    for it in range(1, iterator_times + 1):
-        # each node
-        for s in range(0, nodelen):
-            # if wpin_glob != None: print("node[{0}]: frac_done={1}, wpin={2}".format(nodes[s], frac_done, wpin_glob[nodes[s]]))
-            if (wpin_glob != None and frac_done > wpin_glob[nodes[s]]) or (wpin_glob == None):
-                nei_s = neibs[nodes[s]]
-                F_attr = np.array([0.0,0.0])
-                for n in range(0, len(nei_s)):
-                    x_s = np.array(node_pos[nodes[s]])
-                    x_n = np.array(node_pos[nei_s[n]])
-                    x_sn = x_n - x_s
-                    w = Gi.get_edge_data(nodes[s], nei_s[n])[weight]
-                    F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / Fr_k / (1 + w * distance_scale)
-                F_repl = np.array([0.0,0.0])
-                for n in range(0, nodelen):
-                    if n != s:
-                        x_s = np.array(node_pos[nodes[s]])
-                        x_n = np.array(node_pos[nodes[n]])
-                        x_ns = x_s - x_n
-                        F_repl += Fr_k * Fr_k * x_ns / x_ns.dot(x_ns)
-                F_tot = F_attr + F_repl
-                F_tot_mag = np.sqrt(F_tot.dot(F_tot))
-                # node_pos[nodes[s]] += drag_index * F_tot / (F_tot_mag) * min(temperature, F_tot_mag)
-                node_pos[nodes[s]] += F_tot / (F_tot_mag) * min(temperature, F_tot_mag)
-
-        temperature *= lambda_
-        frac_done += 1.0 / np.double(it)
-
-    return node_pos
-
-
 def InitLayout(G0, distance_scale, weight):
-    # 1) TODO: coarsening
-    # 2) perform kk layout
     L0 = nx.kamada_kawai_layout(G=G0,weight=weight)
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    # L0 = FrLayout(Gi=G0, Li=L0, neibs=neibs, distance_scale=distance_scale, weight=weight)
     L0 = fr_layout(G=G0, k=0.1, pos=L0, weight=weight)
+
     return L0
 
 
 def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight='weight'):
-    # 1) Merging: Merge layout Li-1 and graph Gi to produce an initial layout.
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
     Wpin_glob = Pinning(Gi, Gi_1, score, neibs, weight)
-
-    # Li = FrLayout(Gi, Li_init, neibs, wpin_glob=Wpin_glob, distance_scale=distance_scale, weight=weight)
     Li = fr_layout(G=Gi, k=0.1, pos=Li_init, weight=weight, pinning=Wpin_glob)
 
     return Li
