@@ -129,8 +129,8 @@ def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterat
 
     return node_pos
 
-def Aging(gs, beta=1, weight='weight'):
-    np.random.seed(1)
+def Aging(gs, beta=1, weight='weight', seed=1):
+    np.random.seed(seed)
     Ages_G = Aging_Gs(Gs=gs)
     drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
 
@@ -138,7 +138,7 @@ def Aging(gs, beta=1, weight='weight'):
     Li_1=None
     for i in range(0, len(gs)):
         if i==0:
-            # Li_1 = nx.kamada_kawai_layout(G=gs[i], weight=weight)
+            Li_1 = nx.kamada_kawai_layout(G=gs[i], weight=weight)
             Li_1 = fr_layout(G=gs[i],
                              pos=Li_1,
                              weight=weight,

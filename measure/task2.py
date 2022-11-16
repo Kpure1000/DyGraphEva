@@ -61,16 +61,12 @@ def t2_Katz(Gs, print_lim=sys.maxsize):
     print_l(pairs_delta_list, "Katz", print_lim)
 
 
-gs = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
-# gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
-# gs = read_Graphs("../data/dataset/synth/cluster/", "cluster")
-
+gs = read_Graphs("../data/dataset/synth/cluster/", "cluster")
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 # gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
 
 
-# t2_ShortestPath(gs, 10)
+t2_ShortestPath(gs)
 # t2_Katz(gs, 10)
 # t2_MCT(gs, 10)
 # t2_ACT(gs, 10)

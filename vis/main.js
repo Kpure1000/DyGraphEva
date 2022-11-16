@@ -11,26 +11,6 @@ let rescale_check = document.getElementById("can_rescale")
 
 let dataset_item = [
     {
-        "name": "test",
-        "path": "../data/dataset/synth/test0/",
-    },
-    {
-        "name": "node_eva",
-        "path": "../data/dataset/synth/node_eva/",
-    },
-    {
-        "name": "node_add",
-        "path": "../data/dataset/synth/node_add/",
-    },
-    {
-        "name": "edge_eva",
-        "path": "../data/dataset/synth/edge_eva/",
-    },
-    {
-        "name": "cube",
-        "path": "../data/dataset/synth/cube/",
-    },
-    {
         "name": "cluster",
         "path": "../data/dataset/synth/cluster/",
     },
@@ -54,14 +34,6 @@ let dataset_item = [
 
 let result_item = [
     {
-        "name": "node_add_Frishman",
-        "path": "../data/result/synth/node_add/",
-    },
-    {
-        "name": "test_Frishman",
-        "path": "../data/result/synth/test/",
-    },
-    {
         "name": "cluster_Frishman",
         "path": "../data/result/synth/cluster/",
     },
@@ -80,14 +52,6 @@ let result_item = [
     {
         "name": "mammalia-pa_Frishman",
         "path": "../data/result/truth/mammalia-pa/",
-    },
-    {
-        "name": "node_add_Aging",
-        "path": "../data/result/synth/node_add/",
-    },
-    {
-        "name": "test_Aging",
-        "path": "../data/result/synth/test/",
     },
     {
         "name": "cluster_Aging",

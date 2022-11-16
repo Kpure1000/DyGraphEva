@@ -19,22 +19,16 @@ def Get_Result_Aging(pathIn, nameIn, pathOut, nameOut):
     save_Graphs(pathOut, nameOut, gs_out, 100.0)
     print("Aging {0} save suc".format(nameIn))
 
-# 
-# Get_Result_Frishman("../data/dataset/synth/test0/", "test", "../data/result/synth/test/", "test_Frishman")
-# Get_Result_Frishman("../data/dataset/synth/node_eva/", "node_eva", "../data/result/synth/node_eva/", "node_eva_Frishman")
-# Get_Result_Frishman("../data/dataset/synth/node_add/", "node_add", "../data/result/synth/node_add/", "node_add_Frishman")
+
 # Get_Result_Frishman("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Frishman")
 # Get_Result_Frishman("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Frishman")
-# Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Frishman")
+Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Frishman")
 # Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Frishman")
 # Get_Result_Frishman("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Frishman")
 
 
-# Get_Result_Aging("../data/dataset/synth/test0/", "test", "../data/result/synth/test/", "test_Aging")
-# Get_Result_Aging("../data/dataset/synth/node_eva/", "node_eva", "../data/result/synth/node_eva/", "node_eva_Aging")
-# Get_Result_Aging("../data/dataset/synth/node_add/", "node_add", "../data/result/synth/node_add/", "node_add_Aging")
 # Get_Result_Aging("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Aging")
-Get_Result_Aging("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Aging")
-# Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Aging")
+# Get_Result_Aging("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Aging")
+Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Aging")
 # Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Aging")
 # Get_Result_Aging("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Aging")

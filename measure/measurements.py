@@ -1,6 +1,9 @@
 import networkx as nx
 import numpy as np
 
+from warnings import simplefilter
+simplefilter(action='ignore', category=FutureWarning)
+
 
 class IMeasure:
 
@@ -21,7 +24,11 @@ class ShortestPath(IMeasure):
 
     def get(self, s, t):
         try:
-            return 1.0 / nx.shortest_path_length(G=self.G,
+            # return 1.0 / nx.shortest_path_length(G=self.G,
+            #                                    source=self.nodes[s],
+            #                                    target=self.nodes[t],
+            #                                    weight=self.weight)
+            return nx.shortest_path_length(G=self.G,
                                                source=self.nodes[s],
                                                target=self.nodes[t],
                                                weight=self.weight)
@@ -39,7 +46,8 @@ class KatzIndex(IMeasure):
         super().__init__(G)
         A = nx.adjacency_matrix(G=G,weight=weight).toarray()
         I = np.identity(len(G))
-        eigen_max = np.amax(np.double(nx.adjacency_spectrum(G)))
+        # eigen_max = np.amax(np.double(nx.adjacency_spectrum(G))) # ! nx spectrum is comlex number !
+        eigen_max = np.amax(np.linalg.eigvals(A))
         Beta = b * (1.0 / eigen_max)  # Beta is a free parameter
         self.S = np.linalg.inv(I - Beta * A) - I
 
@@ -74,6 +82,31 @@ class ACT(IMeasure):
             return 1/(self.CTK[s][s] + self.CTK[t][t] - 2 * self.CTK[s][t])
         else:
             return 0
+
+
+class RWR(IMeasure):
+
+    def __init__(self, G, weight='weight', alpha=0.6) -> None:
+        super().__init__(G)
+
+        import scipy as sp
+
+        # A = nx.to_scipy_sparse_array(G, weight=weight, format="csr")
+        A = nx.adjacency_matrix(G, weight=weight, dtype=float).toarray()
+        # TODO: rm csr_array wrapper when spdiags can produce arrays
+        Dvec = np.sum(A, axis=0,)
+        Drec=[]
+        for d in Dvec:
+            if d == 0.0: Drec.append(0.0)
+            else: Drec.append(1.0 / d)
+        P = np.multiply(np.array(Drec), A)
+        Pt = np.transpose(P)
+        I = np.identity(len(G))
+        self.q = alpha * np.linalg.inv(I - (1 - alpha) * Pt)
+
+
+    def get(self, s, t):
+        return self.q[s][t] + self.q[t][s]
 
 
 def all_pairs_measure(measure_list):

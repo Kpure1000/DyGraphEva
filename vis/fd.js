@@ -28,7 +28,7 @@ class force_directed {
                     .id(d => d.id)
                     .distance(d => {
                         return d.weight == null ? 30 : // 30 is d3 default
-                            (this.distance_scale ? this.distance_scale * (d.weight) : d.weight); 
+                            (this.distance_scale ? this.distance_scale / (d.weight) : 1.0 / d.weight); 
                     })
                     // .strength(0.1)
                 )

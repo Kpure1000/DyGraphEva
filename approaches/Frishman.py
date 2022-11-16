@@ -167,8 +167,8 @@ def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight='weight'):
     return Li
 
 
-def Frishman(gs, distance_scale=1.0, weight='weight'):
-    np.random.seed(1)
+def Frishman(gs, distance_scale=1.0, weight='weight', seed=1):
+    np.random.seed(seed)
 
     Li_1 = None
     posOut=[]

@@ -57,9 +57,6 @@ def t1_Katz(Gs, print_lim=sys.maxsize):
     print_l(nodes_delta_l, "Katz", print_lim)
 
 
-# gs = read_Graphs("../data/dataset/synth/test0/", "test")
-# gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
-# gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
 # gs = read_Graphs("../data/dataset/synth/cluster/", "cluster")
 
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")

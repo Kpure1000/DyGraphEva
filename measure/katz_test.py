@@ -5,6 +5,16 @@ import measurements as ms
 import matplotlib.pyplot as plt
 
 
+def wipe_repeated_pair_dict(nodes, all_paris):
+    paris_d={}
+    for s in range(0,len(nodes)):
+        for t in range(0, len(nodes)):
+            pair_st = (nodes[s],nodes[t])
+            if (s != t) and ( pair_st not in paris_d and (nodes[t],nodes[s]) not in paris_d ):
+                paris_d[pair_st]=all_paris[pair_st]
+    return paris_d
+
+
 # gs = read_Graphs("../data/dataset/synth/test0/", "test")
 # gs = read_Graphs("../data/dataset/synth/node_eva/", "node_eva")
 gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
@@ -12,16 +22,6 @@ gs = read_Graphs("../data/dataset/synth/edge_eva/", "edge_eva")
 
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 # gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
-
-
-def wipe_repeated_pair_dict(nodes, all_paris):
-    paris_sp_d={}
-    for s in range(0,len(nodes)):
-        for t in range(0, len(nodes)):
-            pair_st = (nodes[s],nodes[t])
-            if (s != t) and ( pair_st not in paris_sp_d and (nodes[t],nodes[s]) not in paris_sp_d ):
-                paris_sp_d[pair_st]=all_paris[pair_st]
-    return paris_sp_d
 
 
 pl=[]
