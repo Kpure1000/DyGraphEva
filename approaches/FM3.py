@@ -309,8 +309,8 @@ def _FM3(
         pos += delta_pos * drag_arr * pinning
         # cool temperature
         t -= dt
-        if (np.linalg.norm(delta_pos) / nnodes) < threshold:
-            break
+        # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
+        #     break
         frac_done += 1.0 / float(iteration + 1)
 
     return pos
@@ -388,6 +388,6 @@ def _sparse_FM3(
         pos += delta_pos * drag_arr
         # cool temperature
         t -= dt
-        if (np.linalg.norm(delta_pos) / nnodes) < threshold:
-            break
+        # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
+        #     break
     return pos
