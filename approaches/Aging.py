@@ -75,14 +75,16 @@ def Aging(gs, beta=1, weight='weight', seed=1):
     Li_1=None
     # for i in range(0, len(gs)):
     for i, G in enumerate(gs):
-        if i==0:
-            Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
-
+        # if i==0:
+            # Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
+        from FM3 import fm3_layout
         Li_1 = fr_layout(G=G,
                          pos=Li_1,
                          weight=weight,
                          k=0.1,
-                         drag_index=drag_index_G[G]
+                         iterations = 100,
+                         drag_index=drag_index_G[G],
+                         scale=None
                          )
 
         posOut.append(deepcopy(Li_1))

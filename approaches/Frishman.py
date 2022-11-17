@@ -154,7 +154,7 @@ def InitLayout(G0, distance_scale, weight):
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = fr_layout(G=G0, k=0.1, pos=L0, weight=weight)
+    L0 = fr_layout(G=G0, k=0.1, pos=L0, weight=weight, scale=None)
 
     return L0
 
@@ -162,7 +162,7 @@ def InitLayout(G0, distance_scale, weight):
 def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight='weight'):
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
     Wpin_glob = Pinning(Gi, Gi_1, score, neibs, weight)
-    Li = fr_layout(G=Gi, k=0.1, pos=Li_init, weight=weight, pinning=Wpin_glob)
+    Li = fr_layout(G=Gi, k=0.1, pos=Li_init, iterations = 100, weight=weight, pinning=Wpin_glob, scale=None)
 
     return Li
 
