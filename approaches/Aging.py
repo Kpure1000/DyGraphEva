@@ -66,69 +66,6 @@ def Aging_Gs(Gs):
     return Ages
 
 
-def fd_iterator(G, drag_index, k=None, init_pos=None, distance_scale=1.0, iterator_count=50, pos_rec=None, weight='weight'):
-
-    nodes = list(G.nodes)
-
-    # param
-    nodelen = len(nodes)
-    if k == None: k = np.sqrt(1 / nodelen)
-    lambda_ = 0.9
-    temperature = k * np.sqrt(nodelen)
-
-    # pre-compute neighbors
-    neighbors={}
-    for node in nodes:
-        neighbor = nx.neighbors(G, node)
-        neighbors[node]=list(neighbor)
-
-    # initial position
-    node_pos={}
-    for i in range(0, nodelen):
-        node_pos[nodes[i]] = (
-            (np.random.rand() - 0.5) * 0.1,
-            (np.random.rand() - 0.5) * 0.1
-        )
-    if init_pos != None:
-        for node in init_pos:
-            node_pos[node] = init_pos[node]
-
-    # iterate
-    for it in range(0, iterator_count):
-        # barycentric
-        barycentric = 0
-        for i in nodes:
-            barycentric += np.array(node_pos[i])
-        barycentric /= nodelen
-        # each node
-        for s in range(0, nodelen):
-            nei_s = neighbors[nodes[s]]
-            F_attr = np.array([0.0,0.0])
-            for n in range(0, len(nei_s)):
-                x_s = np.array(node_pos[nodes[s]])
-                x_n = np.array(node_pos[nei_s[n]])
-                x_sn = x_n - x_s
-                w = G.get_edge_data(nodes[s], nei_s[n])[weight]
-                F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k  / (1 + w * distance_scale)
-                # F_attr += x_sn * np.sqrt(x_sn.dot(x_sn)) / k  * weight * distance_scale
-            F_repl = np.array([0.0,0.0])
-            for n in range(0, nodelen):
-                if n != s:
-                    x_s = np.array(node_pos[nodes[s]])
-                    x_n = np.array(node_pos[nodes[n]])
-                    x_ns = x_s - x_n
-                    F_repl += k * k * x_ns / x_ns.dot(x_ns)
-            F_tot = F_attr + F_repl
-            F_tot_mag = np.sqrt(F_tot.dot(F_tot))
-            v_s = F_tot / (F_tot_mag)
-            node_pos[nodes[s]] += drag_index[node] * v_s * min(temperature, F_tot_mag)
-            # node_pos[nodes[s]] += v_s * min(temperature, F_tot_mag)
-        temperature *= lambda_
-        if pos_rec!=None:
-            pos_rec.append(deepcopy(node_pos))
-
-    return node_pos
-
 def Aging(gs, beta=1, weight='weight', seed=1):
     np.random.seed(seed)
     Ages_G = Aging_Gs(Gs=gs)
@@ -136,25 +73,21 @@ def Aging(gs, beta=1, weight='weight', seed=1):
 
     posOut=[]
     Li_1=None
-    for i in range(0, len(gs)):
+    # for i in range(0, len(gs)):
+    for i, G in enumerate(gs):
         if i==0:
-            Li_1 = nx.kamada_kawai_layout(G=gs[i], weight=weight)
-            Li_1 = fr_layout(G=gs[i],
-                             pos=Li_1,
-                             weight=weight,
-                             k=0.1,
-                             drag_index=drag_index_G[gs[i]]
-                             )
-        else:
-            Li_1 = fr_layout(G=gs[i],
-                             pos=Li_1,
-                             weight=weight,
-                             k=0.1,
-                             drag_index=drag_index_G[gs[i]]
-                             )
+            Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
+
+        Li_1 = fr_layout(G=G,
+                         pos=Li_1,
+                         weight=weight,
+                         k=0.1,
+                         drag_index=drag_index_G[G]
+                         )
+
         posOut.append(deepcopy(Li_1))
 
-    for i in range(0, len(posOut)):
-        nx.set_node_attributes(G=gs[i], values=posOut[i], name='pos')
+    for i, pos in enumerate(posOut):
+        nx.set_node_attributes(G=gs[i], values=pos, name='pos')
 
     return gs

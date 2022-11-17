@@ -14,7 +14,7 @@ def Get_Result_Frishman(pathIn, nameIn, pathOut, nameOut):
 def Get_Result_Aging(pathIn, nameIn, pathOut, nameOut):
     gs, distance_scale = read_Graphs(pathIn, nameIn)
 
-    gs_out = Aging(gs=gs, beta=0.6, weight='weight')
+    gs_out = Aging(gs=gs, beta=0.1, weight='weight')
 
     save_Graphs(pathOut, nameOut, gs_out, 100.0)
     print("Aging {0} save suc".format(nameIn))
