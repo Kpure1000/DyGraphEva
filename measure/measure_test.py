@@ -5,45 +5,48 @@ import networkx as nx
 
 def pair_nodes():
 
-    #        C1  C2  C3
-    sizes = [10, 10, 10]
+    
+    G0 = nx.Graph()
 
-    p = [
-        [0.6, 0.0, 0.0],
-        [0.0, 0.6, 0.0],
-        [0.0, 0.0, 0.6],
-    ]
+    for i in range(1, 5):
+        G0.add_edge(0, i, weight=1.0)
+        G0.add_edge(5, i + 5, weight=1.0)
+    
+    G0.add_node(10)
+    G0.add_node(11)
+    G0.add_node(12)
+    nx.set_node_attributes(G=G0, values=0, name='block')
 
-    G0 = nx.stochastic_block_model(sizes, p, seed=0)
-
-    nx.set_edge_attributes(G0, 1, 'weight')
-
-    # nx.draw_networkx(G=G0)
-
-    # plt.show()
-
+    G0.add_edge(0,5,weight=1.4)
+    
     gs=[]
 
-    G0.add_edge(0, 20, weight=1.0)
     gs.append(G0)
 
     G1 = G0.copy()
-    G1.add_edge(3, 13, weight=1)
-    G1.add_edge(13, 23, weight=1)
-    G1.add_edge(4, 14, weight=1)
-    G1.add_edge(14, 24, weight=1)
+    # G1.add_edge(0, 10, weight=1)
+    # G1.add_edge(10, 5, weight=1)
+    G1[0][5]['weight']=1.35
+    nx.set_node_attributes(G=G1, values=0, name='block')
     gs.append(G1)
 
+    # nx.draw_networkx(G=G1)
+    # import matplotlib.pyplot as plt
+    # plt.show()
+
     G2 = G1.copy()
-    G2.add_edge(5, 15, weight=1)
-    G2.add_edge(16, 26, weight=1)
-    G2.add_edge(7, 17, weight=1)
-    G2.add_edge(18, 28, weight=1)
+    # G2.add_edge(0, 11, weight=1)
+    # G2.add_edge(11, 5, weight=1)
+    G2[0][5]['weight']=1.45
+    nx.set_node_attributes(G=G2, values=0, name='block')
     gs.append(G2)
     
 
     G3 = G2.copy()
-    G3[0][20]['weight']=8.0
+    # G3.add_edge(0, 12, weight=1)
+    # G3.add_edge(12, 5, weight=1)
+    G3[0][5]['weight']=1.4
+    nx.set_node_attributes(G=G3, values=0, name='block')
     gs.append(G3)
 
     return gs
@@ -66,7 +69,7 @@ def act_get(Gs, s, t):
 
 def kz_get(Gs, s, t):
     print("kz:")
-    ml = [ms.KatzIndex(G, b=0.099).get(s, t) for G in Gs]
+    ml = [ms.KatzIndex(G, b=0.849).get(s, t) for G in Gs]
     print(ml)
 
 
@@ -76,7 +79,7 @@ def rwr_get(Gs, s, t):
     print(ml)
 
 
-sp_get(gs, 9, 29)
-act_get(gs, 9, 29)
-kz_get(gs, 9, 29)
-rwr_get(gs, 9, 29)
+sp_get(gs, 3, 8)
+act_get(gs, 3, 8)
+kz_get(gs, 3, 8)
+rwr_get(gs, 3, 8)
