@@ -363,6 +363,7 @@ def _sparse_fruchterman_reingold(
     dt = t / (iterations + 1)
 
     displacement = np.zeros((dim, nnodes))
+    frac_done = 0.0
     for iteration in range(iterations):
         displacement *= 0
         # loop over rows
@@ -385,9 +386,16 @@ def _sparse_fruchterman_reingold(
         length = np.sqrt((displacement**2).sum(axis=0))
         length = np.where(length < 0.01, 0.1, length)
         delta_pos = (displacement * t / length).T
-        pos += delta_pos * drag_arr
+        pinning=[]
+        for pin in pin_arr:
+            if frac_done > pin:
+                pinning.append([1.0,1.0])
+            else:
+                pinning.append([0.0,0.0])
+        pos += delta_pos * drag_arr * pinning
         # cool temperature
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
         #     break
+        frac_done += 1.0 / float(iteration + 1)
     return pos

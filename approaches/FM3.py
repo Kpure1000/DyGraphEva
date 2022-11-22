@@ -77,7 +77,9 @@ def fm3_layout(
     dim=2,
     seed=None,
     drag_index=None,
-    pinning=None
+    pinning=None,
+    C=0.4,
+    dl=0.055
 ):
     """Position nodes using FM3 force-directed algorithm.
 
@@ -221,7 +223,7 @@ def fm3_layout(
             nnodes, _ = A.shape
             k = dom_size / np.sqrt(nnodes)
         pos = _sparse_FM3(
-            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr
+            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl
         )
     except ValueError:
         A = nx.to_numpy_array(G, weight=weight)
@@ -230,7 +232,7 @@ def fm3_layout(
             nnodes, _ = A.shape
             k = dom_size / np.sqrt(nnodes)
         pos = _FM3(
-            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr
+            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl
         )
     if fixed is None and scale is not None:
         pos = _rescale_layout(pos, scale=scale) + center
@@ -240,8 +242,7 @@ def fm3_layout(
 
 @nxu.np_random_state(7)
 def _FM3(
-    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None,
-    C=0.04, dl=0.055
+    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055
 ):
     # Position nodes in adjacency matrix A using Fruchterman-Reingold
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
@@ -318,7 +319,7 @@ def _FM3(
 
 @nxu.np_random_state(7)
 def _sparse_FM3(
-    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None
+    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055
 ):
     # Position nodes in adjacency matrix A using Fruchterman-Reingold
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
@@ -351,6 +352,8 @@ def _sparse_FM3(
 
     if drag_arr is None:
         drag_arr = [[float(1.0),float(1.0)] for i in range(nnodes)]
+    if pin_arr is None:
+            pin_arr = [float('-inf') for i in range(nnodes)]
 
     # optimal distance between nodes
     if k is None:
@@ -363,6 +366,7 @@ def _sparse_FM3(
     dt = t / (iterations + 1)
 
     displacement = np.zeros((dim, nnodes))
+    frac_done = 0.0
     for iteration in range(iterations):
         displacement *= 0
         # loop over rows
@@ -379,15 +383,22 @@ def _sparse_FM3(
             Ai = A.getrowview(i).toarray()  # TODO: revisit w/ sparse 1D container
             # displacement "force"
             displacement[:, i] += (
-                delta * (k * k / distance**2 - Ai * distance / k)
+                delta * (C / np.power(distance, 3) - Ai * distance * np.log(distance / dl))
             ).sum(axis=1)
         # update positions
         length = np.sqrt((displacement**2).sum(axis=0))
         length = np.where(length < 0.01, 0.1, length)
         delta_pos = (displacement * t / length).T
-        pos += delta_pos * drag_arr
+        pinning=[]
+        for pin in pin_arr:
+            if frac_done > pin:
+                pinning.append([1.0,1.0])
+            else:
+                pinning.append([0.0,0.0])
+        pos += delta_pos * drag_arr * pinning
         # cool temperature
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
         #     break
+        frac_done += 1.0 / float(iteration + 1)
     return pos
