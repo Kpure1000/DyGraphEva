@@ -47,7 +47,7 @@ class KatzIndex(IMeasure):
         A = nx.adjacency_matrix(G=G,weight=weight).toarray()
         I = np.identity(len(G))
         # eigen_max = np.amax(np.double(nx.adjacency_spectrum(G))) # ! nx spectrum is comlex number !
-        eigen_max = np.amax(np.linalg.eigvals(A))
+        eigen_max = np.amax(np.double(np.linalg.eigvals(A)))
         Beta = b * (1.0 / eigen_max)  # Beta is a free parameter
         self.S = np.linalg.inv(I - Beta * A) - I
 
