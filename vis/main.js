@@ -11,10 +11,6 @@ let rescale_check = document.getElementById("can_rescale")
 
 let dataset_item = [
     {
-        "name": "cluster",
-        "path": "../data/dataset/synth/cluster/",
-    },
-    {
         "name": "newcomb",
         "path": "../data/dataset/truth/newcomb/",
     },
@@ -29,6 +25,10 @@ let dataset_item = [
     {
         "name": "mammalia-pa",
         "path": "../data/dataset/truth/mammalia-pa/",
+    },
+    {
+        "name": "cluster",
+        "path": "../data/dataset/synth/cluster/",
     },
 ]
 
@@ -144,14 +144,14 @@ function vis_clear() {
 
 let vismethod_item = [
     {
-        "name": "force_directed",
-        "func": fd_main,
-        "data": dataset_item,
-    },
-    {
         "name": "positioned",
         "func": fix_main,
         "data": result_item,
+    },
+    {
+        "name": "force_directed",
+        "func": fd_main,
+        "data": dataset_item,
     },
 ]
 

@@ -66,6 +66,6 @@ gs = read_Graphs("../data/dataset/truth/mammalia-pa/", "mammalia-pa")
 
 
 t1_ShortestPath(gs,10)
-t1_ACT(gs,10)
-t1_MCT(gs,10)
-t1_Katz(gs,10)
+# t1_ACT(gs,10)
+# t1_MCT(gs,10)
+# t1_Katz(gs,10)
