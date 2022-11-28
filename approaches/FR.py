@@ -194,7 +194,7 @@ def fr_layout(
         dom_size = 1
 
     drag_arr = None
-    print(drag_index)
+    # print(drag_index)
     if drag_index is not None:
         drag_arr=[]
         if isinstance(drag_index, dict):
