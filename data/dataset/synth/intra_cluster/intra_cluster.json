@@ -1,0 +1,6 @@
+{
+    "day_start": 1,
+    "day_end": 5,
+    "prefix": "intra_cluster_",
+    "distance_scale": 10.0
+}
