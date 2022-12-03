@@ -20,15 +20,17 @@ def Get_Result_Aging(pathIn, nameIn, pathOut, nameOut):
     print("Aging {0} save suc".format(nameIn))
 
 
-Get_Result_Frishman("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Frishman")
-Get_Result_Frishman("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Frishman")
-Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Frishman")
-Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Frishman")
-Get_Result_Frishman("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Frishman")
+# Get_Result_Frishman("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Frishman")
+Get_Result_Frishman("../data/dataset/synth/intra_cluster/", "intra_cluster", "../data/result/synth/intra_cluster/", "intra_cluster_Frishman")
+# Get_Result_Frishman("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Frishman")
+# Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Frishman")
+# Get_Result_Frishman("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Frishman")
+# Get_Result_Frishman("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Frishman")
 
 
-Get_Result_Aging("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Aging")
-Get_Result_Aging("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Aging")
-Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Aging")
-Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Aging")
-Get_Result_Aging("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Aging")
+# Get_Result_Aging("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Aging")
+Get_Result_Aging("../data/dataset/synth/intra_cluster/", "intra_cluster", "../data/result/synth/intra_cluster/", "intra_cluster_Aging")
+# Get_Result_Aging("../data/dataset/truth/newcomb/", "newcomb", "../data/result/truth/newcomb/", "newcomb_Aging")
+# Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Aging")
+# Get_Result_Aging("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Aging")
+# Get_Result_Aging("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Aging")

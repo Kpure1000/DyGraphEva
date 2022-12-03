@@ -30,12 +30,20 @@ let dataset_item = [
         "name": "cluster",
         "path": "../data/dataset/synth/cluster/",
     },
+    {
+        "name": "intra_cluster",
+        "path": "../data/dataset/synth/intra_cluster/",
+    },
 ]
 
 let result_item = [
     {
         "name": "cluster_Frishman",
         "path": "../data/result/synth/cluster/",
+    },
+    {
+        "name": "intra_cluster_Frishman",
+        "path": "../data/result/synth/intra_cluster/",
     },
     {
         "name": "newcomb_Frishman",
@@ -56,6 +64,10 @@ let result_item = [
     {
         "name": "cluster_Aging",
         "path": "../data/result/synth/cluster/",
+    },
+    {
+        "name": "intra_cluster_Aging",
+        "path": "../data/result/synth/intra_cluster/",
     },
     {
         "name": "newcomb_Aging",
