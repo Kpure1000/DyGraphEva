@@ -20,20 +20,29 @@ class ShortestPath(IMeasure):
         super().__init__(G)
         self.weight = weight
         self.nodes = list(G.nodes)
+        self.G = G
+        self.ps = nx.shortest_path(G=G, weight=weight, method='bellman-ford')
 
 
     def get(self, s, t):
-        try:
-            # return 1.0 / nx.shortest_path_length(G=self.G,
-            #                                    source=self.nodes[s],
-            #                                    target=self.nodes[t],
-            #                                    weight=self.weight)
-            return nx.shortest_path_length(G=self.G,
-                                               source=self.nodes[s],
-                                               target=self.nodes[t],
-                                               weight=self.weight)
-        except: # networkx.exception.NetworkXNoPath
-            return 0.0
+        sp = 0
+        nodes = self.ps[self.nodes[s]][self.nodes[t]]
+        for i, n in enumerate(nodes):
+            if i < len(nodes) - 1:
+                sp += self.G[nodes[i]][nodes[i + 1]][self.weight]
+
+        return sp
+        # try:
+        #     # return 1.0 / nx.shortest_path_length(G=self.G,
+        #     #                                    source=self.nodes[s],
+        #     #                                    target=self.nodes[t],
+        #     #                                    weight=self.weight)
+        #     # return nx.shortest_path_length(G=self.G,
+        #     #                                    source=self.nodes[s],
+        #     #                                    target=self.nodes[t],
+        #     #                                    weight=self.weight)
+        # except: # networkx.exception.NetworkXNoPath
+        #     return 0.0
 
 
 class KatzIndex(IMeasure):
