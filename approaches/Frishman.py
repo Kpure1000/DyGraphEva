@@ -54,9 +54,10 @@ def Merging(Gi, Gi_1, Li_1):
             Li[node] = line_ratio * Li_1[list(neib_set)[0]] + ( 1 - line_ratio ) * center_bx
             score[node]= score_level[3]
         else:
+            angle = np.pi * np.random.uniform(0.0, 2.0)
             Li[node] = center_bx  + [
-                radius * np.cos(2 * np.pi * np.random.random()),
-                radius * np.sin(2 * np.pi * np.random.random()),
+                radius * np.cos(angle),
+                radius * np.sin(angle),
             ]
             score[node]= score_level[4]
 
