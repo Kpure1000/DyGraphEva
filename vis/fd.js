@@ -60,7 +60,7 @@ class force_directed {
 
         let title = this.svg.append("g")
             .attr("font-size","5pt")
-            .attr("fill", "#fff")
+            .attr("fill", "#ccc")
             .attr("style", "user-select: none;")
             .style("font-weight", "bold")
             .style("text-anchor", "middle")

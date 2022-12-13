@@ -65,7 +65,7 @@ class fix_layout {
 
         let title = this.svg.append("g")
             .attr("font-size","3pt")
-            .attr("fill", "#fff")
+            .attr("fill", "#ccc")
             .attr("style", "user-select: none;")
             .style("font-weight", "bold")
             .style("text-anchor", "middle")

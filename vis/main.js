@@ -27,6 +27,10 @@ let dataset_item = [
         "path": "../data/dataset/truth/mammalia-pa/",
     },
     {
+        "name": "dblp",
+        "path": "../data/dataset/truth/dblp/",
+    },
+    {
         "name": "cluster",
         "path": "../data/dataset/synth/cluster/",
     },
@@ -84,6 +88,38 @@ let result_item = [
     {
         "name": "mammalia-pa_Aging",
         "path": "../data/result/truth/mammalia-pa/",
+    },
+    {
+        "name": "dblp_Aging",
+        "path": "../data/result/truth/dblp/",
+    },
+    {
+        "name": "cluster_Incremental",
+        "path": "../data/result/synth/cluster/",
+    },
+    {
+        "name": "intra_cluster_Incremental",
+        "path": "../data/result/synth/intra_cluster/",
+    },
+    {
+        "name": "newcomb_Incremental",
+        "path": "../data/result/truth/newcomb/",
+    },
+    {
+        "name": "FR_Incremental",
+        "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "VRND32T_Incremental",
+        "path": "../data/result/truth/vdBunt_data/",
+    },
+    {
+        "name": "mammalia-pa_Incremental",
+        "path": "../data/result/truth/mammalia-pa/",
+    },
+    {
+        "name": "dblp_Incremental",
+        "path": "../data/result/truth/dblp/",
     },
 ]
 
