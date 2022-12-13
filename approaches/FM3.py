@@ -78,8 +78,9 @@ def fm3_layout(
     seed=None,
     drag_index=None,
     pinning=None,
-    C=0.4,
-    dl=0.055
+    C=4.0,
+    dl=0.055,
+    nodes_ite=None
 ):
     """Position nodes using FM3 force-directed algorithm.
 
@@ -208,6 +209,10 @@ def fm3_layout(
     if pinning is not None:
         pin_arr = [pinning[pin] for pin in pinning]
 
+    nodes_ite_arr=None
+    if nodes_ite is not None:
+        nodes_ite_arr = [nodes_ite[n] for n in nodes_ite]
+
     if len(G) == 0:
         return {}
     if len(G) == 1:
@@ -223,7 +228,7 @@ def fm3_layout(
             nnodes, _ = A.shape
             k = dom_size / np.sqrt(nnodes)
         pos = _sparse_FM3(
-            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl
+            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl, nodes_ite_arr
         )
     except ValueError:
         A = nx.to_numpy_array(G, weight=weight)
@@ -232,7 +237,7 @@ def fm3_layout(
             nnodes, _ = A.shape
             k = dom_size / np.sqrt(nnodes)
         pos = _FM3(
-            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl
+            A, k, pos_arr, fixed, iterations, threshold, dim, seed, drag_arr, pin_arr, C, dl, nodes_ite_arr
         )
     if fixed is None and scale is not None:
         pos = _rescale_layout(pos, scale=scale) + center
@@ -242,7 +247,7 @@ def fm3_layout(
 
 @nxu.np_random_state(7)
 def _FM3(
-    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055
+    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055, nodes_ite_arr=None
 ):
     # Position nodes in adjacency matrix A using Fruchterman-Reingold
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
@@ -265,6 +270,8 @@ def _FM3(
         drag_arr = [[float(1.0),float(1.0)] for i in range(nnodes)]
     if pin_arr is None:
         pin_arr = [float('-inf') for i in range(nnodes)]
+    if nodes_ite_arr is None:
+        nodes_ite_arr = [iterations for i in range(nnodes)]
 
     # optimal distance between nodes
     if k is None:
@@ -306,8 +313,13 @@ def _FM3(
                 pinning.append([1.0,1.0])
             else:
                 pinning.append([0.0,0.0])
-
-        pos += delta_pos * drag_arr * pinning
+        ite = []
+        for it in nodes_ite_arr:
+            if iteration < it:
+                ite.append([1.0, 1.0])
+            else:
+                ite.append([0.0, 0.0])
+        pos += delta_pos * drag_arr * pinning * ite
         # cool temperature
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
@@ -319,7 +331,7 @@ def _FM3(
 
 @nxu.np_random_state(7)
 def _sparse_FM3(
-    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055
+    A, k=None, pos=None, fixed=None, iterations=50, threshold=1e-4, dim=2, seed=None, drag_arr=None, pin_arr=None, C=0.04, dl=0.055, nodes_ite_arr=None
 ):
     # Position nodes in adjacency matrix A using Fruchterman-Reingold
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
@@ -353,7 +365,9 @@ def _sparse_FM3(
     if drag_arr is None:
         drag_arr = [[float(1.0),float(1.0)] for i in range(nnodes)]
     if pin_arr is None:
-            pin_arr = [float('-inf') for i in range(nnodes)]
+        pin_arr = [float('-inf') for i in range(nnodes)]
+    if nodes_ite_arr is None:
+            nodes_ite_arr = [iterations for i in range(nnodes)]
 
     # optimal distance between nodes
     if k is None:
@@ -395,7 +409,13 @@ def _sparse_FM3(
                 pinning.append([1.0,1.0])
             else:
                 pinning.append([0.0,0.0])
-        pos += delta_pos * drag_arr * pinning
+        ite = []
+        for it in nodes_ite_arr:
+            if iteration < it:
+                ite.append([1.0, 1.0])
+            else:
+                ite.append([0.0, 0.0])
+        pos += delta_pos * drag_arr * pinning * ite
         # cool temperature
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
