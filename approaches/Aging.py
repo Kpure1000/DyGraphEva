@@ -18,7 +18,6 @@ def Aging_g(Gi, Gi_1=None, Ai_1=None):
                     Neib_rem = Neib & Neib_1
                     Neib_del = Neib_1 - Neib
                     Neib_add = Neib - Neib_1
-                    # print("{0}: {1}".format(node, Neib_add))
                     for neib in Neib_rem:
                         A_rem += Ai_1[neib]
                     for neib in Neib_del:
@@ -27,7 +26,10 @@ def Aging_g(Gi, Gi_1=None, Ai_1=None):
                         if neib in Ai_1:
                             A_add += Ai_1[neib]
                     A_tot = A_rem + A_del + A_add
-                    Ai[node] = Ai_1[node] * (A_rem / A_tot) + 1.0
+                    if A_tot > 0:
+                        Ai[node] = Ai_1[node] * (A_rem / A_tot) + 1.0
+                    else:
+                        Ai[node] = Ai_1[node] + 1.0
                     # Ai[node] = Ai_1[node] * np.floor(A_rem / A_tot) + 1.0
                 else:
                     Ai[node] = Ai_1[node] + 1.0
@@ -76,7 +78,7 @@ def Aging(gs, beta=1, weight='weight', seed=1):
     # for i in range(0, len(gs)):
     for i, G in enumerate(gs):
         # if i==0:
-            # Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
+        # Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
         from FM3 import fm3_layout
         Li_1 = fr_layout(G=G,
                          pos=Li_1,
