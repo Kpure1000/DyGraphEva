@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<query id="463099">:facetid:toc:\"db/journals/tvcg/tvcg22.bht\"</query>
+<status code="200">OK</status>
+<time unit="msecs">8.54</time>
+<completions total="1" computed="1" sent="1">
+<c sc="242" dc="242" oc="242" id="38579183">:facetid:toc:db/journals/tvcg/tvcg22.bht</c>
+</completions>
+<hits total="242" computed="242" sent="242" first="0">
+<hit score="1" id="2487751">
+<info><authors><author pid="168/8963">Amin Abbasloo</author><author pid="147/7020">Vitalis Wiens</author><author pid="120/6356">Max Hermann</author><author pid="72/1969-1">Thomas Schultz 0001</author></authors><title>Visualizing Tensor Normal Distributions at Multiple Levels of Detail.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>975-984</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AbbaslooWH016</key><doi>10.1109/TVCG.2015.2467031</doi><ee>https://doi.org/10.1109/TVCG.2015.2467031</ee><url>https://dblp.org/rec/journals/tvcg/AbbaslooWH016</url></info>
+<url>URL#2487751</url>
+</hit>
+<hit score="1" id="2487752">
+<info><authors><author pid="206/9523">Ali K. Al-Awami</author><author pid="53/531">Johanna Beyer</author><author pid="153/7790">Daniel Haehn</author><author pid="127/7210">Narayanan Kasthuri</author><author pid="70/6445">Jeff W. Lichtman</author><author pid="p/HanspeterPfister">Hanspeter Pfister</author><author pid="30/2860">Markus Hadwiger</author></authors><title>NeuroBlocks - Visual Tracking of Segmentation and Proofreading for Large Connectomics Projects.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>738-746</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Ai-AwamiBHKLPH16</key><doi>10.1109/TVCG.2015.2467441</doi><ee>https://doi.org/10.1109/TVCG.2015.2467441</ee><url>https://dblp.org/rec/journals/tvcg/Ai-AwamiBHKLPH16</url></info>
+<url>URL#2487752</url>
+</hit>
+<hit score="1" id="2487753">
+<info><authors><author pid="170/1650">Yael Albo</author><author pid="02/6434">Joel Lanir</author><author pid="60/7514">Peter Bak</author><author pid="25/5419">Sheizaf Rafaeli</author></authors><title>Off the Radar: Comparative Evaluation of Radial Visualization Solutions for Composite Indicators.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>569-578</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AlboLBR16</key><doi>10.1109/TVCG.2015.2467322</doi><ee>https://doi.org/10.1109/TVCG.2015.2467322</ee><url>https://dblp.org/rec/journals/tvcg/AlboLBR16</url></info>
+<url>URL#2487753</url>
+</hit>
+<hit score="1" id="2487754">
+<info><authors><author pid="40/6680">Juan Gerardo Alcázar</author><author pid="g/RonaldNGoldman">Ron Goldman 0002</author></authors><title>Finding the Axis of Revolution of an Algebraic Surface of Revolution.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2082-2093</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AlcazarG16</key><doi>10.1109/TVCG.2015.2498602</doi><ee>https://doi.org/10.1109/TVCG.2015.2498602</ee><url>https://dblp.org/rec/journals/tvcg/AlcazarG16</url></info>
+<url>URL#2487754</url>
+</hit>
+<hit score="1" id="2487755">
+<info><authors><author pid="129/2170">Eric C. Alexander</author><author pid="g/MichaelGleicher">Michael Gleicher</author></authors><title>Task-Driven Comparison of Topic Models.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>320-329</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AlexanderG16</key><doi>10.1109/TVCG.2015.2467618</doi><ee>https://doi.org/10.1109/TVCG.2015.2467618</ee><url>https://dblp.org/rec/journals/tvcg/AlexanderG16</url></info>
+<url>URL#2487755</url>
+</hit>
+<hit score="1" id="2487756">
+<info><authors><author pid="52/7981">Marco Ament</author><author pid="22/4239">Carsten Dachsbacher</author></authors><title>Anisotropic Ambient Volume Shading.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>1015-1024</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AmentD16</key><doi>10.1109/TVCG.2015.2467963</doi><ee>https://doi.org/10.1109/TVCG.2015.2467963</ee><url>https://dblp.org/rec/journals/tvcg/AmentD16</url></info>
+<url>URL#2487756</url>
+</hit>
+<hit score="1" id="2487757">
+<info><authors><author pid="86/6871">Anushka Anand</author><author pid="71/2250">Justin Talbot</author></authors><title>Automatic Selection of Partitioning Variables for Small Multiple Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>669-677</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AnandT16</key><doi>10.1109/TVCG.2015.2467323</doi><ee>https://doi.org/10.1109/TVCG.2015.2467323</ee><url>https://dblp.org/rec/journals/tvcg/AnandT16</url></info>
+<url>URL#2487757</url>
+</hit>
+<hit score="1" id="2487758">
+<info><authors><author pid="31/6475">Sheldon Andrews</author><author pid="16/5571">Marek Teichmann</author><author pid="56/6229">Paul G. Kry</author></authors><title>Blended Linear Models for Reduced Compliant Mechanical Systems.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1209-1222</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AndrewsTK16</key><doi>10.1109/TVCG.2015.2453951</doi><ee>https://doi.org/10.1109/TVCG.2015.2453951</ee><url>https://dblp.org/rec/journals/tvcg/AndrewsTK16</url></info>
+<url>URL#2487758</url>
+</hit>
+<hit score="1" id="2487759">
+<info><authors><author pid="125/7962">Murat Arikan</author><author pid="116/0834">Reinhold Preiner</author><author pid="00/4132-1">Michael Wimmer 0001</author></authors><title>Multi-Depth-Map Raytracing for Efficient Large-Scene Reconstruction.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1127-1137</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ArikanPW16</key><doi>10.1109/TVCG.2015.2430333</doi><ee>https://doi.org/10.1109/TVCG.2015.2430333</ee><url>https://dblp.org/rec/journals/tvcg/ArikanPW16</url></info>
+<url>URL#2487759</url>
+</hit>
+<hit score="1" id="2487760">
+<info><authors><author pid="137/2156">Tushar M. Athawale</author><author pid="141/8916">Elham Sakhaee</author><author pid="80/6654">Alireza Entezari</author></authors><title>Isosurface Visualization of Data with Nonparametric Models for Uncertainty.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>777-786</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/AthawaleSE16</key><doi>10.1109/TVCG.2015.2467958</doi><ee>https://doi.org/10.1109/TVCG.2015.2467958</ee><url>https://dblp.org/rec/journals/tvcg/AthawaleSE16</url></info>
+<url>URL#2487760</url>
+</hit>
+<hit score="1" id="2487761">
+<info><authors><author pid="34/9377">Benjamin Bach</author><author pid="53/10398">Conglei Shi</author><author pid="159/1323">Nicolas Heulot</author><author pid="74/1485">Tara M. Madhyastha</author><author pid="02/1063">Thomas J. Grabowski</author><author pid="95/48">Pierre Dragicevic</author></authors><title>Time Curves: Folding Time to Visualize Patterns of Temporal Evolution in Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>559-568</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BachSHMGD16</key><doi>10.1109/TVCG.2015.2467851</doi><ee>https://doi.org/10.1109/TVCG.2015.2467851</ee><url>https://dblp.org/rec/journals/tvcg/BachSHMGD16</url></info>
+<url>URL#2487761</url>
+</hit>
+<hit score="1" id="2487762">
+<info><authors><author pid="186/1858">Akash Bapat</author><author pid="27/5341">Enrique Dunn</author><author pid="19/6011">Jan-Michael Frahm</author></authors><title>Towards Kilo-Hertz 6-DoF Visual Tracking Using an Egocentric Cluster of Rolling Shutter Cameras.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2358-2367</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BapatDF16</key><doi>10.1109/TVCG.2016.2593757</doi><ee>https://doi.org/10.1109/TVCG.2016.2593757</ee><url>https://dblp.org/rec/journals/tvcg/BapatDF16</url></info>
+<url>URL#2487762</url>
+</hit>
+<hit score="1" id="2487763">
+<info><authors><author pid="175/2864">A. Barbosa</author><author pid="63/3726">Fernando Vieira Paulovich</author><author pid="18/4238">Afonso Paiva 0001</author><author pid="g/SiomeGoldenstein">Siome Goldenstein</author><author pid="71/6208">Fabiano Petronetto</author><author pid="59/17">Luis Gustavo Nonato</author></authors><title>Visualizing and Interacting with Kernelized Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1314-1325</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BarbosaPPGPN16</key><doi>10.1109/TVCG.2015.2464797</doi><ee>https://doi.org/10.1109/TVCG.2015.2464797</ee><url>https://dblp.org/rec/journals/tvcg/BarbosaPPGPN16</url></info>
+<url>URL#2487763</url>
+</hit>
+<hit score="1" id="2487764">
+<info><authors><author pid="172/4603">James Baumeister</author><author pid="206/8529">Jillian Dorrian</author><author pid="177/6248">Siobhan Banks</author><author pid="177/6282">Alex Chatburn</author><author pid="85/213">Ross T. Smith</author><author pid="171/4041">Mary A. Carskadon</author><author pid="177/6220">Kurt Lushington</author><author pid="09/6739">Bruce H. Thomas</author></authors><title>Augmented Reality as a Countermeasure for Sleep Deprivation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1396-1405</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BaumeisterDBCSC16</key><doi>10.1109/TVCG.2016.2518133</doi><ee>https://doi.org/10.1109/TVCG.2016.2518133</ee><url>https://dblp.org/rec/journals/tvcg/BaumeisterDBCSC16</url></info>
+<url>URL#2487764</url>
+</hit>
+<hit score="1" id="2487765">
+<info><authors><author pid="b/FabianBeck">Fabian Beck 0001</author><author pid="77/9545">Sebastian Koch</author><author pid="w/DanielWeiskopf">Daniel Weiskopf</author></authors><title>Visual Analysis and Dissemination of Scientific Literature Collections with SurVis.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>180-189</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BeckKW16</key><doi>10.1109/TVCG.2015.2467757</doi><ee>https://doi.org/10.1109/TVCG.2015.2467757</ee><url>https://dblp.org/rec/journals/tvcg/BeckKW16</url></info>
+<url>URL#2487765</url>
+</hit>
+<hit score="1" id="2487766">
+<info><authors><author pid="90/8602">Kevin Bensema</author><author pid="87/3301">Luke J. Gosink</author><author pid="36/7294">Harald Obermaier</author><author pid="21/4648">Kenneth I. Joy</author></authors><title>Modality-Driven Classification and Visualization of Ensemble Variance.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2289-2299</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BensemaGOJ16</key><doi>10.1109/TVCG.2015.2507569</doi><ee>https://doi.org/10.1109/TVCG.2015.2507569</ee><url>https://dblp.org/rec/journals/tvcg/BensemaGOJ16</url></info>
+<url>URL#2487766</url>
+</hit>
+<hit score="1" id="2487767">
+<info><authors><author pid="138/0872">Tanja Blascheck</author><author pid="153/1223">Markus John</author><author pid="119/8784">Kuno Kurzhals</author><author pid="79/5164">Steffen Koch 0001</author><author pid="e/ThomasErtl">Thomas Ertl</author></authors><title>VA2: A Visual Analytics Approach for // Evaluating Visual Analytics Applications.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>61-70</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BlascheckJKKE16</key><doi>10.1109/TVCG.2015.2467871</doi><ee>https://doi.org/10.1109/TVCG.2015.2467871</ee><url>https://dblp.org/rec/journals/tvcg/BlascheckJKKE16</url></info>
+<url>URL#2487767</url>
+</hit>
+<hit score="1" id="2487768">
+<info><authors><author pid="46/2207">Michelle A. Borkin</author><author pid="137/2122">Zoya Bylinskii</author><author pid="19/8355">Nam Wook Kim</author><author pid="170/1615">Constance May Bainbridge</author><author pid="137/2136">Chelsea S. Yeh</author><author pid="170/1721">Daniel Borkin</author><author pid="p/HanspeterPfister">Hanspeter Pfister</author><author pid="99/5538">Aude Oliva</author></authors><title>Beyond Memorability: Visualization Recognition and Recall.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>519-528</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BorkinBKBYBPO16</key><doi>10.1109/TVCG.2015.2467732</doi><ee>https://doi.org/10.1109/TVCG.2015.2467732</ee><url>https://dblp.org/rec/journals/tvcg/BorkinBKBYBPO16</url></info>
+<url>URL#2487768</url>
+</hit>
+<hit score="1" id="2487769">
+<info><authors><author pid="131/6531">Quirijn W. Bouts</author><author pid="21/6679">Tim Dwyer</author><author pid="34/5069">Jason Dykes</author><author pid="s/BettinaSpeckmann">Bettina Speckmann</author><author pid="123/9643">Sarah Goodwin</author><author pid="h/NathalieHenry">Nathalie Henry Riche</author><author pid="c/MSheelaghTCarpendale">Sheelagh Carpendale</author><author pid="183/7856">Ariel Liebman</author></authors><title>Visual Encoding of Dissimilarity Data via Topology-Preserving Map Deformation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2200-2213</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BoutsDDSGRCL16</key><doi>10.1109/TVCG.2015.2500225</doi><ee>https://doi.org/10.1109/TVCG.2015.2500225</ee><url>https://dblp.org/rec/journals/tvcg/BoutsDDSGRCL16</url></info>
+<url>URL#2487769</url>
+</hit>
+<hit score="1" id="2487770">
+<info><authors><author pid="153/7823">Jeremy Boy</author><author pid="170/1633">Louis Eveillard</author><author pid="56/3141">Françoise Détienne</author><author pid="f/JeanDanielFekete">Jean-Daniel Fekete</author></authors><title>Suggested Interactivity: Seeking Perceived Affordances for Information Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>639-648</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BoyEDF16</key><doi>10.1109/TVCG.2015.2467201</doi><ee>https://doi.org/10.1109/TVCG.2015.2467201</ee><url>https://dblp.org/rec/journals/tvcg/BoyEDF16</url></info>
+<url>URL#2487770</url>
+</hit>
+<hit score="1" id="2487771">
+<info><authors><author pid="55/7739">Matthew Brehmer</author><author pid="170/1709">Jocelyn Ng</author><author pid="170/1645">Kevin Tate</author><author pid="m/TMunzner">Tamara Munzner</author></authors><title>Matches, Mismatches, and Methods: Multiple-View Workflows for Energy Portfolio Analysis.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>449-458</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/BrehmerNTM16</key><doi>10.1109/TVCG.2015.2466971</doi><ee>https://doi.org/10.1109/TVCG.2015.2466971</ee><url>https://dblp.org/rec/journals/tvcg/BrehmerNTM16</url></info>
+<url>URL#2487771</url>
+</hit>
+<hit score="1" id="2487772">
+<info><authors><author pid="78/1510">Thomas Butkiewicz</author><author pid="170/1635">Andrew H. Stevens</author></authors><title>Effectiveness of Structured Textures on Dynamically Changing Terrain-like Surfaces.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>926-934</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ButkiewiczS16</key><doi>10.1109/TVCG.2015.2467962</doi><ee>https://doi.org/10.1109/TVCG.2015.2467962</ee><url>https://dblp.org/rec/journals/tvcg/ButkiewiczS16</url></info>
+<url>URL#2487772</url>
+</hit>
+<hit score="1" id="2487773">
+<info><authors><author pid="170/1665">Lydia Byrne</author><author pid="89/6392">Daniel Angus</author><author pid="30/5296">Janet Wiles</author></authors><title>Acquired Codes of Meaning in Data Visualization and Infographics: Beyond Perceptual Primitives.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>509-518</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ByrneAW16</key><doi>10.1109/TVCG.2015.2467321</doi><ee>https://doi.org/10.1109/TVCG.2015.2467321</ee><url>https://dblp.org/rec/journals/tvcg/ByrneAW16</url></info>
+<url>URL#2487773</url>
+</hit>
+<hit score="1" id="2487774">
+<info><authors><author pid="134/6394">Jan Byska</author><author pid="149/0957">Mathieu Le Muzic</author><author pid="g/MEGroller">M. Eduard Gröller</author><author pid="21/4861">Ivan Viola</author><author pid="76/6255">Barbora Kozlíková</author></authors><title>AnimoAminoMiner: Exploration of Protein Tunnels and their Properties in Molecular Dynamics.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>747-756</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ByskaMGVK16</key><doi>10.1109/TVCG.2015.2467434</doi><ee>https://doi.org/10.1109/TVCG.2015.2467434</ee><url>https://dblp.org/rec/journals/tvcg/ByskaMGVK16</url></info>
+<url>URL#2487774</url>
+</hit>
+<hit score="1" id="2487775">
+<info><authors><author pid="81/6597">Carlo Camporesi</author><author pid="k/MarceloKallmann">Marcelo Kallmann</author></authors><title>The Effects of Avatars, Stereo Vision and Display Size on Reaching and Motion Reproduction.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1592-1604</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/CamporesiK16</key><doi>10.1109/TVCG.2015.2440231</doi><ee>https://doi.org/10.1109/TVCG.2015.2440231</ee><url>https://dblp.org/rec/journals/tvcg/CamporesiK16</url></info>
+<url>URL#2487775</url>
+</hit>
+<hit score="1" id="2487776">
+<info><authors><author pid="66/5146">Nan Cao</author><author pid="11/5853">Yu-Ru Lin</author><author pid="13/6295">David Gotz</author></authors><title>UnTangle Map: Visual Analysis of Probabilistic Multi-Label Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1149-1163</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/CaoLG16</key><doi>10.1109/TVCG.2015.2424878</doi><ee>https://doi.org/10.1109/TVCG.2015.2424878</ee><url>https://dblp.org/rec/journals/tvcg/CaoLG16</url></info>
+<url>URL#2487776</url>
+</hit>
+<hit score="1" id="2487777">
+<info><authors><author pid="66/5146">Nan Cao</author><author pid="53/10398">Conglei Shi</author><author pid="30/5660">W. Sabrina Lin</author><author pid="39/2936">Jie Lu</author><author pid="11/5853">Yu-Ru Lin</author><author pid="62/1273">Ching-Yung Lin</author></authors><title>TargetVue: Visual Analysis of Anomalous User Behaviors in Online Communication Systems.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>280-289</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/CaoSLLLL16</key><doi>10.1109/TVCG.2015.2467196</doi><ee>https://doi.org/10.1109/TVCG.2015.2467196</ee><url>https://dblp.org/rec/journals/tvcg/CaoSLLLL16</url></info>
+<url>URL#2487777</url>
+</hit>
+<hit score="1" id="2487778">
+<info><authors><author pid="32/6098-3">Yin Chen 0003</author><author pid="59/6895">Zhi-Quan Cheng</author><author pid="182/2770">Chao Lai</author><author pid="m/RalphRMartin">Ralph R. Martin</author><author pid="19/6154">Gang Dang</author></authors><title>Realtime Reconstruction of an Animating Human Body from a Single Depth Camera.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>2000-2011</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenCLMD16</key><doi>10.1109/TVCG.2015.2478779</doi><ee>https://doi.org/10.1109/TVCG.2015.2478779</ee><url>https://dblp.org/rec/journals/tvcg/ChenCLMD16</url></info>
+<url>URL#2487778</url>
+</hit>
+<hit score="1" id="2487779">
+<info><authors><author pid="14/928-1">Qing Chen 0001</author><author pid="59/11438">Yuanzhe Chen</author><author pid="76/6661">Dongyu Liu</author><author pid="53/10398">Conglei Shi</author><author pid="49/6702">Yingcai Wu</author><author pid="65/1792">Huamin Qu</author></authors><title>PeakVizor: Visual Analytics of Peaks in Video Clickstreams from Massive Open Online Courses.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2315-2330</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenCLSWQ16</key><doi>10.1109/TVCG.2015.2505305</doi><ee>https://doi.org/10.1109/TVCG.2015.2505305</ee><url>https://dblp.org/rec/journals/tvcg/ChenCLSWQ16</url></info>
+<url>URL#2487779</url>
+</hit>
+<hit score="1" id="2487780">
+<info><authors><author pid="25/2383">Chun-Ming Chen</author><author pid="58/7687">Soumya Dutta</author><author pid="122/8675">Xiaotong Liu</author><author pid="170/1642">Gregory Heinlein</author><author pid="61/6829">Han-Wei Shen</author><author pid="125/9229">Jen-Ping Chen</author></authors><title>Visualization and Analysis of Rotating Stall for Transonic Jet Engine Simulation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>847-856</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenDLHSC16</key><doi>10.1109/TVCG.2015.2467952</doi><ee>https://doi.org/10.1109/TVCG.2015.2467952</ee><url>https://dblp.org/rec/journals/tvcg/ChenDLHSC16</url></info>
+<url>URL#2487780</url>
+</hit>
+<hit score="1" id="2487781">
+<info><authors><author pid="50/6996-1">Min Chen 0001</author><author pid="89/11439">Amos Golan</author></authors><title>What May Visualization Processes Optimize?</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2619-2632</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenG16</key><doi>10.1109/TVCG.2015.2513410</doi><ee>https://doi.org/10.1109/TVCG.2015.2513410</ee><url>https://dblp.org/rec/journals/tvcg/ChenG16</url></info>
+<url>URL#2487781</url>
+</hit>
+<hit score="1" id="2487782">
+<info><authors><author pid="72/11186">Mingcheng Chen</author><author pid="176/9025">Shawn C. Shadden</author><author pid="80/2143">John C. Hart</author></authors><title>Fast Coherent Particle Advection through Time-Varying Unstructured Flow Datasets.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1959-1972</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenSH16</key><doi>10.1109/TVCG.2015.2476795</doi><ee>https://doi.org/10.1109/TVCG.2015.2476795</ee><url>https://dblp.org/rec/journals/tvcg/ChenSH16</url></info>
+<url>URL#2487782</url>
+</hit>
+<hit score="1" id="2487783">
+<info><authors><author pid="156/9600-1">Siming Chen 0001</author><author pid="36/2050">Xiaoru Yuan</author><author pid="151/3130">Zhenhuang Wang</author><author pid="117/1754-4">Cong Guo 0004</author><author pid="51/239-4">Jie Liang 0004</author><author pid="49/8023">Zuchao Wang</author><author pid="159/1410">Xiaolong Luke Zhang</author><author pid="97/1711">Jiawan Zhang</author></authors><title>Interactive Visual Discovering of Movement Patterns from Sparsely Sampled Geo-tagged Social Media Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>270-279</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChenYWGLWZZ16</key><doi>10.1109/TVCG.2015.2467619</doi><ee>https://doi.org/10.1109/TVCG.2015.2467619</ee><url>https://dblp.org/rec/journals/tvcg/ChenYWGLWZZ16</url></info>
+<url>URL#2487783</url>
+</hit>
+<hit score="1" id="2487784">
+<info><authors><author pid="119/3223">Shenghui Cheng</author><author pid="26/6494">Klaus Mueller 0001</author></authors><title>The Data Context Map: Fusing Data and Attributes into a Unified Display.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>121-130</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChengM16</key><doi>10.1109/TVCG.2015.2467552</doi><ee>https://doi.org/10.1109/TVCG.2015.2467552</ee><url>https://dblp.org/rec/journals/tvcg/ChengM16</url></info>
+<url>URL#2487784</url>
+</hit>
+<hit score="1" id="2487785">
+<info><authors><author pid="131/0654">Ke-Li Cheng</author><author pid="11/914-1">Ruofeng Tong 0001</author><author pid="88/5071-1">Min Tang 0001</author><author pid="186/1960">Jing-Ye Qian</author><author pid="14/4549">Michel Sarkis</author></authors><title>Parametric Human Body Reconstruction Based on Sparse Key Points.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2467-2479</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChengTTQS16</key><doi>10.1109/TVCG.2015.2511751</doi><ee>https://doi.org/10.1109/TVCG.2015.2511751</ee><url>https://dblp.org/rec/journals/tvcg/ChengTTQS16</url></info>
+<url>URL#2487785</url>
+</hit>
+<hit score="1" id="2487786">
+<info><authors><author pid="37/6727">Luca Chittaro</author></authors><title>Designing Serious Games for Safety Education: &quot;Learn to Brace&quot; versus Traditional Pictorials for Aircraft Passengers.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1527-1539</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Chittaro16</key><doi>10.1109/TVCG.2015.2443787</doi><ee>https://doi.org/10.1109/TVCG.2015.2443787</ee><url>https://dblp.org/rec/journals/tvcg/Chittaro16</url></info>
+<url>URL#2487786</url>
+</hit>
+<hit score="1" id="2487787">
+<info><authors><author pid="50/11181">Isaac Cho</author><author pid="82/4583">Wenwen Dou</author><author pid="58/4775-1">Derek Xiaoyu Wang</author><author pid="46/2295">Eric Sauda</author><author pid="31/1379">William Ribarsky</author></authors><title>VAiRoma: A Visual Analytics System for Making Sense of Places, Times, and Events in Roman History.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>210-219</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ChoDWSR16</key><doi>10.1109/TVCG.2015.2467971</doi><ee>https://doi.org/10.1109/TVCG.2015.2467971</ee><url>https://dblp.org/rec/journals/tvcg/ChoDWSR16</url></info>
+<url>URL#2487787</url>
+</hit>
+<hit score="1" id="2487788">
+<info><authors><author pid="38/9544">Aurélie Cohé</author><author pid="170/1711">Bastien Liutkus</author><author pid="98/6645">Gilles Bailly</author><author pid="e/JamesREagan">James Eagan</author><author pid="65/5222">Eric Lecolinet</author></authors><title>SchemeLens: A Content-Aware Vector-Based Fisheye Technique for Navigating Large Systems Diagrams.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>330-338</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/CoheLBEL16</key><doi>10.1109/TVCG.2015.2467035</doi><ee>https://doi.org/10.1109/TVCG.2015.2467035</ee><url>https://dblp.org/rec/journals/tvcg/CoheLBEL16</url></info>
+<url>URL#2487788</url>
+</hit>
+<hit score="1" id="2487789">
+<info><authors><author pid="81/1865">Cyril Crassin</author><author pid="75/4325">Morgan McGuire</author><author pid="11/3211">Kayvon Fatahalian</author><author pid="16/31">Aaron E. Lefohn</author></authors><title>Aggregate G-Buffer Anti-Aliasing -Extended Version-.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2215-2228</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/CrassinMFL16</key><doi>10.1109/TVCG.2016.2586073</doi><ee>https://doi.org/10.1109/TVCG.2016.2586073</ee><url>https://dblp.org/rec/journals/tvcg/CrassinMFL16</url></info>
+<url>URL#2487789</url>
+</hit>
+<hit score="1" id="2487790">
+<info><authors><author pid="15/8092-4">Hao Deng 0004</author><author pid="96/5556-1">Liqiang Zhang 0001</author><author pid="24/10103">Xiancheng Mao</author><author pid="65/1792">Huamin Qu</author></authors><title>Interactive Urban Context-Aware Visualization via Multiple Disocclusion Operators.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1862-1874</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/DengZMQ16</key><doi>10.1109/TVCG.2015.2469661</doi><ee>https://doi.org/10.1109/TVCG.2015.2469661</ee><url>https://dblp.org/rec/journals/tvcg/DengZMQ16</url></info>
+<url>URL#2487790</url>
+</hit>
+<hit score="1" id="2487791">
+<info><authors><author pid="05/3742">Christian Dick</author><author pid="186/2029">Marcus Rogowsky</author><author pid="w/RudigerWestermann">Rüdiger Westermann</author></authors><title>Solving the Fluid Pressure Poisson Equation Using Multigrid - Evaluation and Improvements.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2480-2492</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/DickRW16</key><doi>10.1109/TVCG.2015.2511734</doi><ee>https://doi.org/10.1109/TVCG.2015.2511734</ee><url>https://dblp.org/rec/journals/tvcg/DickRW16</url></info>
+<url>URL#2487791</url>
+</hit>
+<hit score="1" id="2487792">
+<info><authors><author pid="57/57">Weiming Dong</author><author pid="126/3071">Fuzhang Wu</author><author pid="25/11202">Yan Kong</author><author pid="29/3230">Xing Mei</author><author pid="18/4993">Tong-Yee Lee</author><author pid="45/5193-1">Xiaopeng Zhang 0001</author></authors><title>Image Retargeting by Texture-Aware Synthesis.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1088-1101</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/DongWKML016</key><doi>10.1109/TVCG.2015.2440255</doi><ee>https://doi.org/10.1109/TVCG.2015.2440255</ee><url>https://dblp.org/rec/journals/tvcg/DongWKML016</url></info>
+<url>URL#2487792</url>
+</hit>
+<hit score="1" id="2487793">
+<info><authors><author pid="01/3807">Funda Durupinar</author><author pid="26/4312">Ugur Güdükbay</author><author pid="183/7463">Aytek Aman</author><author pid="b/NIBadler">Norman I. Badler</author></authors><title>Psychological Parameters for Crowd Simulation: From Audiences to Mobs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2145-2159</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/DurupinarGAB16</key><doi>10.1109/TVCG.2015.2501801</doi><ee>https://doi.org/10.1109/TVCG.2015.2501801</ee><url>https://dblp.org/rec/journals/tvcg/DurupinarGAB16</url></info>
+<url>URL#2487793</url>
+</hit>
+<hit score="1" id="2487794">
+<info><authors><author pid="58/7687">Soumya Dutta</author><author pid="61/6829">Han-Wei Shen</author></authors><title>Distribution Driven Extraction and Tracking of Features for Time-varying Data Analysis.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>837-846</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/DuttaS16</key><doi>10.1109/TVCG.2015.2467436</doi><ee>https://doi.org/10.1109/TVCG.2015.2467436</ee><url>https://dblp.org/rec/journals/tvcg/DuttaS16</url></info>
+<url>URL#2487794</url>
+</hit>
+<hit score="1" id="2487795">
+<info><authors><author pid="25/10660">Stef van den Elzen</author><author pid="83/1743">Danny Holten</author><author pid="86/1292">Jorik Blaas</author><author pid="22/4877">Jarke J. van Wijk</author></authors><title>Reducing Snapshots to Points: A Visual Analytics Approach to Dynamic Network Exploration.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>1-10</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ElzenHBW16</key><doi>10.1109/TVCG.2015.2468078</doi><ee>https://doi.org/10.1109/TVCG.2015.2468078</ee><url>https://dblp.org/rec/journals/tvcg/ElzenHBW16</url></info>
+<url>URL#2487795</url>
+</hit>
+<hit score="1" id="2487796">
+<info><authors><author pid="17/1152-5">Wei Feng 0005</author><author pid="181/2848">Ying Yang</author><author pid="30/1933">Liang Wan</author><author pid="156/1169">Changguo Yu</author></authors><title>Tone-Mapped Mean-Shift Based Environment Map Sampling.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2187-2199</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FengYWY16</key><doi>10.1109/TVCG.2015.2500236</doi><ee>https://doi.org/10.1109/TVCG.2015.2500236</ee><url>https://dblp.org/rec/journals/tvcg/FengYWY16</url></info>
+<url>URL#2487796</url>
+</hit>
+<hit score="1" id="2487797">
+<info><authors><author pid="29/7528">Florian Ferstl</author><author pid="88/5021">Kai Bürger</author><author pid="w/RudigerWestermann">Rüdiger Westermann</author></authors><title>Streamline Variability Plots for Characterizing the Uncertainty in Vector Field Ensembles.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>767-776</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FerstlBW16</key><doi>10.1109/TVCG.2015.2467204</doi><ee>https://doi.org/10.1109/TVCG.2015.2467204</ee><url>https://dblp.org/rec/journals/tvcg/FerstlBW16</url></info>
+<url>URL#2487797</url>
+</hit>
+<hit score="1" id="2487798">
+<info><authors><author pid="f/LDFloriani">Leila De Floriani</author></authors><title>A Message from the Editor-in-Chief.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1035</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Floriani16</key><doi>10.1109/TVCG.2015.2507279</doi><ee>https://doi.org/10.1109/TVCG.2015.2507279</ee><url>https://dblp.org/rec/journals/tvcg/Floriani16</url></info>
+<url>URL#2487798</url>
+</hit>
+<hit score="1" id="2487799">
+<info><authors><author pid="f/LDFloriani">Leila De Floriani</author></authors><title>Editor&apos;s Note.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1179-1180</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Floriani16a</key><doi>10.1109/TVCG.2016.2515318</doi><ee>https://doi.org/10.1109/TVCG.2016.2515318</ee><url>https://dblp.org/rec/journals/tvcg/Floriani16a</url></info>
+<url>URL#2487799</url>
+</hit>
+<hit score="1" id="2487800">
+<info><authors><author pid="f/LDFloriani">Leila De Floriani</author></authors><title>Editor&apos;s Note.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2507</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Floriani16b</key><doi>10.1109/TVCG.2016.2615841</doi><ee>https://doi.org/10.1109/TVCG.2016.2615841</ee><url>https://dblp.org/rec/journals/tvcg/Floriani16b</url></info>
+<url>URL#2487800</url>
+</hit>
+<hit score="1" id="2487801">
+<info><authors><author pid="f/LDFloriani">Leila De Floriani</author><author pid="s/DieterSchmalstieg">Dieter Schmalstieg</author></authors><title>Message from the Editor-in-Chief and from the Associate Editor-in-Chief.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>i</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FlorianiS16</key><doi>10.1109/TVCG.2016.2603558</doi><ee>https://doi.org/10.1109/TVCG.2016.2603558</ee><url>https://dblp.org/rec/journals/tvcg/FlorianiS16</url></info>
+<url>URL#2487801</url>
+</hit>
+<hit score="1" id="2487802">
+<info><authors><author pid="133/0437">Alexey Fofonov</author><author pid="08/8698">Vladimir Molchanov</author><author pid="l/LarsLinsen">Lars Linsen</author></authors><title>Visual Analysis of Multi-Run Spatio-Temporal Simulations Using Isocontour Similarity for Projected Views.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>2037-2050</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FofonovML16</key><doi>10.1109/TVCG.2015.2498554</doi><ee>https://doi.org/10.1109/TVCG.2015.2498554</ee><url>https://dblp.org/rec/journals/tvcg/FofonovML16</url></info>
+<url>URL#2487802</url>
+</hit>
+<hit score="1" id="2487803">
+<info><authors><author pid="144/4871">Sebastian Freitag</author><author pid="35/7361">Benjamin Weyers</author><author pid="k/TorstenKuhlen">Torsten W. Kuhlen</author></authors><title>Examining Rotation Gain in CAVE-like Virtual Environments.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1462-1471</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FreitagWK16</key><doi>10.1109/TVCG.2016.2518298</doi><ee>https://doi.org/10.1109/TVCG.2016.2518298</ee><url>https://dblp.org/rec/journals/tvcg/FreitagWK16</url></info>
+<url>URL#2487803</url>
+</hit>
+<hit score="1" id="2487804">
+<info><authors><author pid="143/9539">Sebastian Friston</author><author pid="39/112">Per Karlström</author><author pid="55/1675">Anthony Steed</author></authors><title>The Effects of Low Latency on Pointing and Steering Tasks.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1605-1615</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FristonKS16</key><doi>10.1109/TVCG.2015.2446467</doi><ee>https://doi.org/10.1109/TVCG.2015.2446467</ee><url>https://dblp.org/rec/journals/tvcg/FristonKS16</url></info>
+<url>URL#2487804</url>
+</hit>
+<hit score="1" id="2487805">
+<info><authors><author pid="143/9539">Sebastian Friston</author><author pid="55/1675">Anthony Steed</author><author pid="169/2392">Simon Tilbury</author><author pid="g/GeorgiGaydadjiev">Georgi Gaydadjiev</author></authors><title>Construction and Evaluation of an Ultra Low Latency Frameless Renderer for VR.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1377-1386</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FristonSTG16</key><doi>10.1109/TVCG.2016.2518079</doi><ee>https://doi.org/10.1109/TVCG.2016.2518079</ee><url>https://dblp.org/rec/journals/tvcg/FristonSTG16</url></info>
+<url>URL#2487805</url>
+</hit>
+<hit score="1" id="2487806">
+<info><authors><author pid="24/9740">Franz G. Fuchs</author><author pid="04/8179">Jon Mikkelsen Hjelmervik</author></authors><title>Interactive Isogeometric Volume Visualization with Pixel-Accurate Geometry.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1102-1114</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FuchsH16</key><doi>10.1109/TVCG.2015.2430337</doi><ee>https://doi.org/10.1109/TVCG.2015.2430337</ee><url>https://dblp.org/rec/journals/tvcg/FuchsH16</url></info>
+<url>URL#2487806</url>
+</hit>
+<hit score="1" id="2487807">
+<info><authors><author pid="142/3133">Johanna Fulda</author><author pid="55/7739">Matthew Brehmer</author><author pid="m/TMunzner">Tamara Munzner</author></authors><title>TimeLineCurator: Interactive Authoring of Visual Timelines from Unstructured Text.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>300-309</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/FuldaBM16</key><doi>10.1109/TVCG.2015.2467531</doi><ee>https://doi.org/10.1109/TVCG.2015.2467531</ee><url>https://dblp.org/rec/journals/tvcg/FuldaBM16</url></info>
+<url>URL#2487807</url>
+</hit>
+<hit score="1" id="2487808">
+<info><authors><author pid="26/8378">Xifeng Gao</author><author pid="69/4524">Tobias Martin</author><author pid="02/8775">Sai Deng</author><author pid="c/ElaineCohen">Elaine Cohen</author><author pid="23/6641">Zhigang Deng</author><author pid="62/1670">Guoning Chen</author></authors><title>Structured Volume Decomposition via Generalized Sweeping.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1899-1911</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GaoMDCDC16</key><doi>10.1109/TVCG.2015.2473835</doi><ee>https://doi.org/10.1109/TVCG.2015.2473835</ee><url>https://dblp.org/rec/journals/tvcg/GaoMDCDC16</url></info>
+<url>URL#2487808</url>
+</hit>
+<hit score="1" id="2487809">
+<info><authors><author pid="91/6762">Michael Glueck</author><author pid="27/4648">Peter Hamilton</author><author pid="60/5884">Fanny Chevalier</author><author pid="19/6330">Simon Breslav</author><author pid="00/6056">Azam Khan</author><author pid="w/DanielWigdor">Daniel J. Wigdor</author><author pid="10/6530">Michael Brudno</author></authors><title>PhenoBlocks: Phenotype Comparison Visualizations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>101-110</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GlueckHCBKWB16</key><doi>10.1109/TVCG.2015.2467733</doi><ee>https://doi.org/10.1109/TVCG.2015.2467733</ee><url>https://dblp.org/rec/journals/tvcg/GlueckHCBKWB16</url></info>
+<url>URL#2487809</url>
+</hit>
+<hit score="1" id="2487810">
+<info><authors><author pid="123/9643">Sarah Goodwin</author><author pid="34/5069">Jason Dykes</author><author pid="68/835">Aidan Slingsby</author><author pid="45/7528">Cagatay Turkay</author></authors><title>Visualizing Multiple Variables Across Scale and Geography.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>599-608</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GoodwinDST16</key><doi>10.1109/TVCG.2015.2467199</doi><ee>https://doi.org/10.1109/TVCG.2015.2467199</ee><url>https://dblp.org/rec/journals/tvcg/GoodwinDST16</url></info>
+<url>URL#2487810</url>
+</hit>
+<hit score="1" id="2487811">
+<info><authors><author pid="177/6264">Larry Greunke</author><author pid="81/2928">Amela Sadagic</author></authors><title>Taking Immersive VR Leap in Training of Landing Signal Officers.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1482-1491</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GreunkeS16</key><doi>10.1109/TVCG.2016.2518098</doi><ee>https://doi.org/10.1109/TVCG.2016.2518098</ee><url>https://dblp.org/rec/journals/tvcg/GreunkeS16</url></info>
+<url>URL#2487811</url>
+</hit>
+<hit score="1" id="2487812">
+<info><authors><author pid="42/117">Theresia Gschwandtner</author><author pid="31/8486">Markus Bögl</author><author pid="34/10211-1">Paolo Federico 0001</author><author pid="48/4040">Silvia Miksch</author></authors><title>Visual Encodings of Temporal Uncertainty: A Comparative User Study.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>539-548</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GschwandtnerBFM16</key><doi>10.1109/TVCG.2015.2467752</doi><ee>https://doi.org/10.1109/TVCG.2015.2467752</ee><url>https://dblp.org/rec/journals/tvcg/GschwandtnerBFM16</url></info>
+<url>URL#2487812</url>
+</hit>
+<hit score="1" id="2487813">
+<info><authors><author pid="83/5894">Yi Gu</author><author pid="w/ChaoliWang">Chaoli Wang 0001</author><author pid="26/2029">Tom Peterka</author><author pid="98/3235">Robert L. Jacob</author><author pid="65/10657">Seung Hyun Kim</author></authors><title>Mining Graphs for Understanding Time-Varying Volumetric Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>965-974</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuWPJK16</key><doi>10.1109/TVCG.2015.2468031</doi><ee>https://doi.org/10.1109/TVCG.2015.2468031</ee><url>https://dblp.org/rec/journals/tvcg/GuWPJK16</url></info>
+<url>URL#2487813</url>
+</hit>
+<hit score="1" id="2487814">
+<info><authors><author pid="46/4187">Tobias Günther</author><author pid="78/2379">Maik Schulze</author><author pid="t/HolgerTheisel">Holger Theisel</author></authors><title>Rotation Invariant Vortices for Flow Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>817-826</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuntherST16</key><doi>10.1109/TVCG.2015.2467200</doi><ee>https://doi.org/10.1109/TVCG.2015.2467200</ee><url>https://dblp.org/rec/journals/tvcg/GuntherST16</url></info>
+<url>URL#2487814</url>
+</hit>
+<hit score="1" id="2487815">
+<info><authors><author pid="12/5941">Hua Guo</author><author pid="48/8738">Steven R. Gomez</author><author pid="37/2206">Caroline Ziemkiewicz</author><author pid="87/6639">David H. Laidlaw</author></authors><title>A Case Study Using Visualization Interaction Logs and Insight Metrics to Understand How Analysts Arrive at Insights.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>51-60</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuoGZL16</key><doi>10.1109/TVCG.2015.2467613</doi><ee>https://doi.org/10.1109/TVCG.2015.2467613</ee><url>https://dblp.org/rec/journals/tvcg/GuoGZL16</url></info>
+<url>URL#2487815</url>
+</hit>
+<hit score="1" id="2487816">
+<info><authors><author pid="78/8756">Hanqi Guo 0001</author><author pid="47/6578">Wenbin He</author><author pid="26/2029">Tom Peterka</author><author pid="61/6829">Han-Wei Shen</author><author pid="179/3802">Scott M. Collis</author><author pid="179/3790">Jonathan J. Helmus</author></authors><title>Finite-Time Lyapunov Exponents and Lagrangian Coherent Structures in Uncertain Unsteady Flows.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1672-1682</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuoHPSCH16</key><doi>10.1109/TVCG.2016.2534560</doi><ee>https://doi.org/10.1109/TVCG.2016.2534560</ee><url>https://dblp.org/rec/journals/tvcg/GuoHPSCH16</url></info>
+<url>URL#2487816</url>
+</hit>
+<hit score="1" id="2487817">
+<info><authors><author pid="78/8756">Hanqi Guo 0001</author><author pid="55/9999">Carolyn L. Phillips</author><author pid="26/2029">Tom Peterka</author><author pid="162/2571">Dmitry A. Karpeyev</author><author pid="138/7794">Andreas Glatz</author></authors><title>Extracting, Tracking, and Visualizing Magnetic Flux Vortices in 3D Complex-Valued Superconductor Simulation Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>827-836</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuoPPKG16</key><doi>10.1109/TVCG.2015.2466838</doi><ee>https://doi.org/10.1109/TVCG.2015.2466838</ee><url>https://dblp.org/rec/journals/tvcg/GuoPPKG16</url></info>
+<url>URL#2487817</url>
+</hit>
+<hit score="1" id="2487818">
+<info><authors><author pid="131/6117">Xinqing Guo</author><author pid="33/382">Zhan Yu</author><author pid="k/SingBingKang">Sing Bing Kang</author><author pid="151/8906">Haiting Lin</author><author pid="58/4808">Jingyi Yu</author></authors><title>Enhancing Light Fields through Ray-Space Stitching.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1852-1861</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuoYKLY16</key><doi>10.1109/TVCG.2015.2476805</doi><ee>https://doi.org/10.1109/TVCG.2015.2476805</ee><url>https://dblp.org/rec/journals/tvcg/GuoYKLY16</url></info>
+<url>URL#2487818</url>
+</hit>
+<hit score="1" id="2487819">
+<info><authors><author pid="42/3840">Kunal Gupta</author><author pid="57/6046">Gun A. Lee</author><author pid="b/MarkBillinghurst">Mark Billinghurst</author></authors><title>Do You See What I See? The Effect of Gaze Tracking on Task Space Remote Collaboration.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2413-2422</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GuptaLB16</key><doi>10.1109/TVCG.2016.2593778</doi><ee>https://doi.org/10.1109/TVCG.2016.2593778</ee><url>https://dblp.org/rec/journals/tvcg/GuptaLB16</url></info>
+<url>URL#2487819</url>
+</hit>
+<hit score="1" id="2487820">
+<info><authors><author pid="16/6162">Attila Gyulassy</author><author pid="17/2680">Aaron Knoll</author><author pid="170/1606">Kah Chun Lau</author><author pid="08/6391-1">Bei Wang 0001</author><author pid="20/3591">Peer-Timo Bremer</author><author pid="21/5623">Michael E. Papka</author><author pid="36/5708">Larry A. Curtiss</author><author pid="02/2574">Valerio Pascucci</author></authors><title>Interstitial and Interlayer Ion Diffusion Geometry Extraction in Graphitic Nanosphere Battery Materials.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>916-925</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/GyulassyKLWBPCP16</key><doi>10.1109/TVCG.2015.2467432</doi><ee>https://doi.org/10.1109/TVCG.2015.2467432</ee><url>https://dblp.org/rec/journals/tvcg/GyulassyKLWBPCP16</url></info>
+<url>URL#2487820</url>
+</hit>
+<hit score="1" id="2487821">
+<info><authors><author pid="155/6916">Claudia Hänel</author><author pid="35/7361">Benjamin Weyers</author><author pid="06/1510-1">Bernd Hentschel 0001</author><author pid="k/TorstenKuhlen">Torsten W. Kuhlen</author></authors><title>Visual Quality Adjustment for Volume Rendering in a Head-Tracked Virtual Environment.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1472-1481</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HanelWHK16</key><doi>10.1109/TVCG.2016.2518338</doi><ee>https://doi.org/10.1109/TVCG.2016.2518338</ee><url>https://dblp.org/rec/journals/tvcg/HanelWHK16</url></info>
+<url>URL#2487821</url>
+</hit>
+<hit score="1" id="2487822">
+<info><authors><author pid="n/CharlesDHansen">Charles D. Hansen</author><author pid="21/4861">Ivan Viola</author><author pid="36/2050">Xiaoru Yuan</author></authors><title>Guest Editor&apos;s Introduction to the Special Section on the 2016 IEEE Pacific Visualization Symposium.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1638-1639</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HansenVY16</key><doi>10.1109/TVCG.2016.2541978</doi><ee>https://doi.org/10.1109/TVCG.2016.2541978</ee><url>https://dblp.org/rec/journals/tvcg/HansenVY16</url></info>
+<url>URL#2487822</url>
+</hit>
+<hit score="1" id="2487823">
+<info><authors><author pid="148/0433">Lihua Hao</author><author pid="85/292">Christopher G. Healey</author><author pid="170/1623">Steffen A. Bass</author></authors><title>Effective Visualization of Temporal Ensembles.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>787-796</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HaoHB16</key><doi>10.1109/TVCG.2015.2468093</doi><ee>https://doi.org/10.1109/TVCG.2015.2468093</ee><url>https://dblp.org/rec/journals/tvcg/HaoHB16</url></info>
+<url>URL#2487823</url>
+</hit>
+<hit score="1" id="2487824">
+<info><authors><author pid="58/1978">Steve Haroz</author><author pid="24/4650">Robert Kosara</author><author pid="56/11301">Steven L. Franconeri</author></authors><title>The Connected Scatterplot for Presenting Paired Time Series.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2174-2186</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HarozKF16</key><doi>10.1109/TVCG.2015.2502587</doi><ee>https://doi.org/10.1109/TVCG.2015.2502587</ee><url>https://dblp.org/rec/journals/tvcg/HarozKF16</url></info>
+<url>URL#2487824</url>
+</hit>
+<hit score="1" id="2487825">
+<info><authors><author pid="86/6437">Andreas Daniel Hartl</author><author pid="55/398">Clemens Arth</author><author pid="22/1550">Jens Grubert</author><author pid="s/DieterSchmalstieg">Dieter Schmalstieg</author></authors><title>Efficient Verification of Holograms Using Mobile Augmented Reality.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1843-1851</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HartlAGS16</key><doi>10.1109/TVCG.2015.2498612</doi><ee>https://doi.org/10.1109/TVCG.2015.2498612</ee><url>https://dblp.org/rec/journals/tvcg/HartlAGS16</url></info>
+<url>URL#2487825</url>
+</hit>
+<hit score="1" id="2487826">
+<info><authors><author pid="116/0623">Florian Heimerl</author><author pid="76/5895-6">Qi Han 0006</author><author pid="79/5164">Steffen Koch 0001</author><author pid="e/ThomasErtl">Thomas Ertl</author></authors><title>CiteRivers: Visual Analytics of Citation Patterns.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>190-199</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HeimerlHKE16</key><doi>10.1109/TVCG.2015.2467621</doi><ee>https://doi.org/10.1109/TVCG.2015.2467621</ee><url>https://dblp.org/rec/journals/tvcg/HeimerlHKE16</url></info>
+<url>URL#2487826</url>
+</hit>
+<hit score="1" id="2487827">
+<info><authors><author pid="120/6356">Max Hermann</author><author pid="122/0967">Anja C. Schunke</author><author pid="72/1969-1">Thomas Schultz 0001</author><author pid="28/4015">Reinhard Klein</author></authors><title>Accurate Interactive Visualization of Large Deformations and Variability in Biomedical Image Ensembles.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>708-717</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HermannS0K16</key><doi>10.1109/TVCG.2015.2467198</doi><ee>https://doi.org/10.1109/TVCG.2015.2467198</ee><url>https://dblp.org/rec/journals/tvcg/HermannS0K16</url></info>
+<url>URL#2487827</url>
+</hit>
+<hit score="1" id="2487828">
+<info><authors><author pid="01/2294">Uta Hinrichs</author><author pid="170/1583">Stefania Forlini</author><author pid="170/1575">Bridget Moynihan</author></authors><title>Speculative Practices: Utilizing InfoVis to Explore Untapped Literary Collections.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>429-438</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HinrichsFM16</key><doi>10.1109/TVCG.2015.2467452</doi><ee>https://doi.org/10.1109/TVCG.2015.2467452</ee><url>https://dblp.org/rec/journals/tvcg/HinrichsFM16</url></info>
+<url>URL#2487828</url>
+</hit>
+<hit score="1" id="2487829">
+<info><authors><author pid="117/3193">Trevor Hogan</author><author pid="01/2294">Uta Hinrichs</author><author pid="82/4973">Eva Hornecker</author></authors><title>The Elicitation Interview Technique: Capturing People&apos;s Experiences of Data Representations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2579-2593</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HoganHH16</key><doi>10.1109/TVCG.2015.2511718</doi><ee>https://doi.org/10.1109/TVCG.2015.2511718</ee><url>https://dblp.org/rec/journals/tvcg/HoganHH16</url></info>
+<url>URL#2487829</url>
+</hit>
+<hit score="1" id="2487830">
+<info><authors><author pid="70/6697">Wenchao Hu</author><author pid="09/1718">Zhonggui Chen</author><author pid="02/3812">Hao Pan</author><author pid="90/6896">Yizhou Yu</author><author pid="25/5353">Eitan Grinspun</author><author pid="49/4096">Wenping Wang</author></authors><title>Surface Mosaic Synthesis with Irregular Tiles.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1302-1313</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HuCPYGW16</key><doi>10.1109/TVCG.2015.2498620</doi><ee>https://doi.org/10.1109/TVCG.2015.2498620</ee><url>https://dblp.org/rec/journals/tvcg/HuCPYGW16</url></info>
+<url>URL#2487830</url>
+</hit>
+<hit score="1" id="2487831">
+<info><authors><author pid="58/8294">Shi-Sheng Huang</author><author pid="19/5752">Hongbo Fu</author><author pid="182/2724">Ling-Yu Wei</author><author pid="h/ShiMinHu">Shi-Min Hu 0001</author></authors><title>Support Substructures: Support-Induced Part-Level Structural Representation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>2024-2036</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HuangFWH16</key><doi>10.1109/TVCG.2015.2473845</doi><ee>https://doi.org/10.1109/TVCG.2015.2473845</ee><url>https://dblp.org/rec/journals/tvcg/HuangFWH16</url></info>
+<url>URL#2487831</url>
+</hit>
+<hit score="1" id="2487832">
+<info><authors><author pid="30/7179">Yazhou Huang</author><author pid="k/MarceloKallmann">Marcelo Kallmann</author></authors><title>Planning Motions and Placements for Virtual Demonstrators.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1568-1579</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HuangK16</key><doi>10.1109/TVCG.2015.2446494</doi><ee>https://doi.org/10.1109/TVCG.2015.2446494</ee><url>https://dblp.org/rec/journals/tvcg/HuangK16</url></info>
+<url>URL#2487832</url>
+</hit>
+<hit score="1" id="2487833">
+<info><authors><author pid="151/3120">Xiaoke Huang</author><author pid="72/6144-3">Ye Zhao 0003</author><author pid="79/1552-23">Chao Ma 0023</author><author pid="62/5839-1">Jing Yang 0001</author><author pid="118/4187">Xinyue Ye</author><author pid="74/3128">Chong Zhang</author></authors><title>TrajGraph: A Graph-Based Visual Analytics Approach to Studying Urban Network Centralities Using Taxi Trajectory Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>160-169</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/HuangZMYYZ16</key><doi>10.1109/TVCG.2015.2467771</doi><ee>https://doi.org/10.1109/TVCG.2015.2467771</ee><url>https://dblp.org/rec/journals/tvcg/HuangZMYYZ16</url></info>
+<url>URL#2487833</url>
+</hit>
+<hit score="1" id="2487834">
+<info><authors><author pid="64/9919">Yuta Itoh 0001</author><author pid="98/186">Toshiyuki Amano</author><author pid="50/1009">Daisuke Iwai</author><author pid="k/GudrunKlinker">Gudrun Klinker</author></authors><title>Gaussian Light Field: Estimation of Viewpoint-Dependent Blur for Optical See-Through Head-Mounted Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2368-2376</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ItohAIK16</key><doi>10.1109/TVCG.2016.2593779</doi><ee>https://doi.org/10.1109/TVCG.2016.2593779</ee><url>https://dblp.org/rec/journals/tvcg/ItohAIK16</url></info>
+<url>URL#2487834</url>
+</hit>
+<hit score="1" id="2487835">
+<info><authors><author pid="23/10660">Dominik Jäckle</author><author pid="82/1511-1">Fabian Fischer 0001</author><author pid="81/2498">Tobias Schreck</author><author pid="k/DanielAKeim">Daniel A. Keim</author></authors><title>Temporal MDS Plots for Analysis of Multivariate Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>141-150</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JackleFSK16</key><doi>10.1109/TVCG.2015.2467553</doi><ee>https://doi.org/10.1109/TVCG.2015.2467553</ee><url>https://dblp.org/rec/journals/tvcg/JackleFSK16</url></info>
+<url>URL#2487835</url>
+</hit>
+<hit score="1" id="2487836">
+<info><authors><author pid="43/7459">Bret Jackson</author><author pid="42/3096">Daniel F. Keefe</author></authors><title>Lift-Off: Using Reference Imagery and Freehand Sketching to Create 3D Models in VR.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1442-1451</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JacksonK16</key><doi>10.1109/TVCG.2016.2518099</doi><ee>https://doi.org/10.1109/TVCG.2016.2518099</ee><url>https://dblp.org/rec/journals/tvcg/JacksonK16</url></info>
+<url>URL#2487836</url>
+</hit>
+<hit score="1" id="2487837">
+<info><authors><author pid="146/6241">Sujin Jang</author><author pid="e/NiklasElmqvist">Niklas Elmqvist</author><author pid="01/6965">Karthik Ramani</author></authors><title>MotionFlow: Visual Abstraction and Aggregation of Sequential Patterns in Human Motion Tracking Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>21-30</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JangER16</key><doi>10.1109/TVCG.2015.2468292</doi><ee>https://doi.org/10.1109/TVCG.2015.2468292</ee><url>https://dblp.org/rec/journals/tvcg/JangER16</url></info>
+<url>URL#2487837</url>
+</hit>
+<hit score="1" id="2487838">
+<info><authors><author pid="43/8756">Stefan Jänicke</author><author pid="170/1685">Josef Focht</author><author pid="s/GerikScheuermann">Gerik Scheuermann</author></authors><title>Interactive Visual Profiling of Musicians.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>200-209</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JanickeFS16</key><doi>10.1109/TVCG.2015.2467620</doi><ee>https://doi.org/10.1109/TVCG.2015.2467620</ee><url>https://dblp.org/rec/journals/tvcg/JanickeFS16</url></info>
+<url>URL#2487838</url>
+</hit>
+<hit score="1" id="2487839">
+<info><authors><author pid="65/4982">Yvonne Jansen</author><author pid="07/848">Kasper Hornbæk</author></authors><title>A Psychophysical Investigation of Size as a Physical Variable.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>479-488</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JansenH16</key><doi>10.1109/TVCG.2015.2467951</doi><ee>https://doi.org/10.1109/TVCG.2015.2467951</ee><url>https://dblp.org/rec/journals/tvcg/JansenH16</url></info>
+<url>URL#2487839</url>
+</hit>
+<hit score="1" id="2487840">
+<info><authors><author pid="168/5454">Tim Jerman</author><author pid="28/6983">Franjo Pernus</author><author pid="54/6647">Bostjan Likar</author><author pid="06/363">Ziga Spiclin</author></authors><title>Blob Enhancement and Visualization for Improved Intracranial Aneurysm Detection.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1705-1717</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JermanPLS16</key><doi>10.1109/TVCG.2015.2446493</doi><ee>https://doi.org/10.1109/TVCG.2015.2446493</ee><url>https://dblp.org/rec/journals/tvcg/JermanPLS16</url></info>
+<url>URL#2487840</url>
+</hit>
+<hit score="1" id="2487841">
+<info><authors><author pid="137/5642">Haiyong Jiang</author><author pid="17/1760">Liangliang Nan</author><author pid="94/1731-1">Dong-Ming Yan 0001</author><author pid="57/57">Weiming Dong</author><author pid="45/5193-1">Xiaopeng Zhang 0001</author><author pid="98/5522">Peter Wonka</author></authors><title>Automatic Constraint Detection for 2D Layout Regularization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1933-1944</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JiangNYD0W16</key><doi>10.1109/TVCG.2015.2480059</doi><ee>https://doi.org/10.1109/TVCG.2015.2480059</ee><url>https://dblp.org/rec/journals/tvcg/JiangNYD0W16</url></info>
+<url>URL#2487841</url>
+</hit>
+<hit score="1" id="2487842">
+<info><authors><author pid="02/575">Jimmy Johansson 0001</author><author pid="46/1347">Camilla Forsell</author></authors><title>Evaluation of Parallel Coordinates: Overview, Categorization and Guidelines for Future Research.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>579-588</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JohanssonF16</key><doi>10.1109/TVCG.2015.2466992</doi><ee>https://doi.org/10.1109/TVCG.2015.2466992</ee><url>https://dblp.org/rec/journals/tvcg/JohanssonF16</url></info>
+<url>URL#2487842</url>
+</hit>
+<hit score="1" id="2487843">
+<info><authors><author pid="13/10766">Daniel Jönsson</author><author pid="76/3945">Martin Falk</author><author pid="44/4430">Anders Ynnerman</author></authors><title>Intuitive Exploration of Volumetric Data Using Dynamic Galleries.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>896-905</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/JonssonFY16</key><doi>10.1109/TVCG.2015.2467294</doi><ee>https://doi.org/10.1109/TVCG.2015.2467294</ee><url>https://dblp.org/rec/journals/tvcg/JonssonFY16</url></info>
+<url>URL#2487843</url>
+</hit>
+<hit score="1" id="2487844">
+<info><authors><author pid="132/3933">Viktor Kämpe</author><author pid="32/1576">Erik Sintorn</author><author pid="185/2771">Dan Dolonius</author><author pid="05/6049">Ulf Assarsson</author></authors><title>Fast, Memory-Efficient Construction of Voxelized Shadows.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2239-2248</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KampeSDA16</key><doi>10.1109/TVCG.2016.2539955</doi><ee>https://doi.org/10.1109/TVCG.2016.2539955</ee><url>https://dblp.org/rec/journals/tvcg/KampeSDA16</url></info>
+<url>URL#2487844</url>
+</hit>
+<hit score="1" id="2487845">
+<info><authors><author pid="170/1700">Christopher P. Kappe</author><author pid="170/1587">Lucas Schutz</author><author pid="170/1661">Stefan Gunther</author><author pid="115/9202">Lars Hufnagel</author><author pid="170/1718">Steffen Lemke</author><author pid="16/914">Heike Leitte</author></authors><title>Reconstruction and Visualization of Coordinated 3D Cell Migration Based on Optical Flow.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>995-1004</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KappeSGHLL16</key><doi>10.1109/TVCG.2015.2467291</doi><ee>https://doi.org/10.1109/TVCG.2015.2467291</ee><url>https://dblp.org/rec/journals/tvcg/KappeSGHLL16</url></info>
+<url>URL#2487845</url>
+</hit>
+<hit score="1" id="2487846">
+<info><authors><author pid="92/1207">Norihiko Kawai</author><author pid="55/182">Tomokazu Sato</author><author pid="98/574">Naokazu Yokoya</author></authors><title>Diminished Reality Based on Image Inpainting Considering Background Geometry.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1236-1247</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KawaiSY16</key><doi>10.1109/TVCG.2015.2462368</doi><ee>https://doi.org/10.1109/TVCG.2015.2462368</ee><url>https://dblp.org/rec/journals/tvcg/KawaiSY16</url></info>
+<url>URL#2487846</url>
+</hit>
+<hit score="1" id="2487847">
+<info><authors><author pid="85/2585">Matthew Kay 0001</author><author pid="27/4508">Jeffrey Heer</author></authors><title>Beyond Weber&apos;s Law: A Second Look at Ranking Visualizations of Correlation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>469-478</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KayH16</key><doi>10.1109/TVCG.2015.2467671</doi><ee>https://doi.org/10.1109/TVCG.2015.2467671</ee><url>https://dblp.org/rec/journals/tvcg/KayH16</url></info>
+<url>URL#2487847</url>
+</hit>
+<hit score="1" id="2487848">
+<info><authors><author pid="133/8429">Steve Kieffer</author><author pid="21/6679">Tim Dwyer</author><author pid="m/KimMarriott">Kim Marriott</author><author pid="33/6209">Michael Wybrow</author></authors><title>HOLA: Human-like Orthogonal Network Layout.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>349-358</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KiefferDMW16</key><doi>10.1109/TVCG.2015.2467451</doi><ee>https://doi.org/10.1109/TVCG.2015.2467451</ee><url>https://dblp.org/rec/journals/tvcg/KiefferDMW16</url></info>
+<url>URL#2487848</url>
+</hit>
+<hit score="1" id="2487849">
+<info><authors><author pid="61/9605-1">Young Min Kim 0001</author><author pid="18/4874">Junghyun Cho</author><author pid="18/2136">Sang Chul Ahn</author></authors><title>3D Modeling from Photos Given Topological Information.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2070-2081</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KimCA16</key><doi>10.1109/TVCG.2015.2505307</doi><ee>https://doi.org/10.1109/TVCG.2015.2505307</ee><url>https://dblp.org/rec/journals/tvcg/KimCA16</url></info>
+<url>URL#2487849</url>
+</hit>
+<hit score="1" id="2487850">
+<info><authors><author pid="86/8831">Hannah Kim</author><author pid="07/2074">Jaegul Choo</author><author pid="78/5322">Haesun Park</author><author pid="19/7983">Alex Endert</author></authors><title>InterAxis: Steering Scatterplot Axes via Observation-Level Interaction.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>131-140</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KimCPE16</key><doi>10.1109/TVCG.2015.2467615</doi><ee>https://doi.org/10.1109/TVCG.2015.2467615</ee><url>https://dblp.org/rec/journals/tvcg/KimCPE16</url></info>
+<url>URL#2487850</url>
+</hit>
+<hit score="1" id="2487851">
+<info><authors><author pid="10/10433">Yeonjoon Kim</author><author pid="186/1849">Hangil Park</author><author pid="165/9833">Seungbae Bang</author><author pid="74/1889">Sung-Hee Lee</author></authors><title>Retargeting Human-Object Interaction to Virtual Avatars.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2405-2412</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KimPBL16</key><doi>10.1109/TVCG.2016.2593780</doi><ee>https://doi.org/10.1109/TVCG.2016.2593780</ee><url>https://dblp.org/rec/journals/tvcg/KimPBL16</url></info>
+<url>URL#2487851</url>
+</hit>
+<hit score="1" id="2487852">
+<info><authors><author pid="76/6965">Gordon L. Kindlmann</author><author pid="04/11515">Charisee Chiw</author><author pid="06/11515">Nicholas Seltzer</author><author pid="12/11515">Lamont Samuels</author><author pid="r/JohnHReppy">John H. Reppy</author></authors><title>Diderot: a Domain-Specific Language for Portable Parallel Scientific Visualization and Image Analysis.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>867-876</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KindlmannCSSR16</key><doi>10.1109/TVCG.2015.2467449</doi><ee>https://doi.org/10.1109/TVCG.2015.2467449</ee><url>https://dblp.org/rec/journals/tvcg/KindlmannCSSR16</url></info>
+<url>URL#2487852</url>
+</hit>
+<hit score="1" id="2487853">
+<info><authors><author pid="120/6344">Paul Klemm</author><author pid="120/6338">Kai Lawonn</author><author pid="80/7090">Sylvia Glaßer</author><author pid="126/0457">Uli Niemann</author><author pid="69/11270">Katrin Hegenscheid</author><author pid="64/10859">Henry Völzke</author><author pid="p/BPreim">Bernhard Preim</author></authors><title>3D Regression Heat Map Analysis of Population Study Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>81-90</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KlemmLGNHVP16</key><doi>10.1109/TVCG.2015.2468291</doi><ee>https://doi.org/10.1109/TVCG.2015.2468291</ee><url>https://dblp.org/rec/journals/tvcg/KlemmLGNHVP16</url></info>
+<url>URL#2487853</url>
+</hit>
+<hit score="1" id="2487854">
+<info><authors><author pid="25/11202">Yan Kong</author><author pid="57/57">Weiming Dong</author><author pid="29/3230">Xing Mei</author><author pid="97/7593">Chongyang Ma</author><author pid="18/4993">Tong-Yee Lee</author><author pid="51/4482">Siwei Lyu</author><author pid="53/520">Feiyue Huang</author><author pid="45/5193-1">Xiaopeng Zhang 0001</author></authors><title>Measuring and Predicting Visual Importance of Similar Objects.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2564-2578</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KongDMMLLHZ16</key><doi>10.1109/TVCG.2016.2515614</doi><ee>https://doi.org/10.1109/TVCG.2016.2515614</ee><url>https://dblp.org/rec/journals/tvcg/KongDMMLLHZ16</url></info>
+<url>URL#2487854</url>
+</hit>
+<hit score="1" id="2487855">
+<info><authors><author pid="39/9126">Pavel Krajcevski</author><author pid="m/DineshManocha">Dinesh Manocha</author></authors><title>Compressed Coverage Masks for Path Rendering on Mobile GPUs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2229-2238</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KrajcevskiM16</key><doi>10.1109/TVCG.2016.2516990</doi><ee>https://doi.org/10.1109/TVCG.2016.2516990</ee><url>https://dblp.org/rec/journals/tvcg/KrajcevskiM16</url></info>
+<url>URL#2487855</url>
+</hit>
+<hit score="1" id="2487856">
+<info><authors><author pid="180/8521">Gregory Kramida</author></authors><title>Resolving the Vergence-Accommodation Conflict in Head-Mounted Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1912-1931</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Kramida16</key><doi>10.1109/TVCG.2015.2473855</doi><ee>https://doi.org/10.1109/TVCG.2015.2473855</ee><url>https://dblp.org/rec/journals/tvcg/Kramida16</url></info>
+<url>URL#2487856</url>
+</hit>
+<hit score="1" id="2487857">
+<info><authors><author pid="121/8725">Josua Krause</author><author pid="14/3882">Adam Perer</author><author pid="92/4593">Harry Stavropoulos</author></authors><title>Supporting Iterative Cohort Construction with Visual Temporal Queries.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>91-100</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KrausePS16</key><doi>10.1109/TVCG.2015.2467622</doi><ee>https://doi.org/10.1109/TVCG.2015.2467622</ee><url>https://dblp.org/rec/journals/tvcg/KrausePS16</url></info>
+<url>URL#2487857</url>
+</hit>
+<hit score="1" id="2487858">
+<info><authors><author pid="119/8784">Kuno Kurzhals</author><author pid="51/9697">Marcel Hlawatsch</author><author pid="116/0623">Florian Heimerl</author><author pid="b/MichaelBurch">Michael Burch</author><author pid="e/ThomasErtl">Thomas Ertl</author><author pid="w/DanielWeiskopf">Daniel Weiskopf</author></authors><title>Gaze Stripes: Image-Based Visualization of Eye Tracking Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>1005-1014</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KurzhalsHHBEW16</key><doi>10.1109/TVCG.2015.2468091</doi><ee>https://doi.org/10.1109/TVCG.2015.2468091</ee><url>https://dblp.org/rec/journals/tvcg/KurzhalsHHBEW16</url></info>
+<url>URL#2487858</url>
+</hit>
+<hit score="1" id="2487859">
+<info><authors><author pid="30/7590">Tsz-Ho Kwok</author><author pid="41/883">Yanqiu Zhang</author><author pid="89/1688">Charlie C. L. Wang</author><author pid="27/2098">Yong-Jin Liu</author><author pid="57/3315-1">Kai Tang 0001</author></authors><title>Styling Evolution for Tight-Fitting Garments.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1580-1591</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KwokZWLT16</key><doi>10.1109/TVCG.2015.2446472</doi><ee>https://doi.org/10.1109/TVCG.2015.2446472</ee><url>https://dblp.org/rec/journals/tvcg/KwokZWLT16</url></info>
+<url>URL#2487859</url>
+</hit>
+<hit score="1" id="2487860">
+<info><authors><author pid="73/1969">Bum Chul Kwon</author><author pid="97/2562">Sung-Hee Kim</author><author pid="81/3234">Sukwon Lee</author><author pid="07/2074">Jaegul Choo</author><author pid="39/1730">Jina Huh</author><author pid="00/6789">Ji Soo Yi</author></authors><title>VisOHC: Designing Visual Analytics for Online Health Communities.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>71-80</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KwonKLCHY16</key><doi>10.1109/TVCG.2015.2467555</doi><ee>https://doi.org/10.1109/TVCG.2015.2467555</ee><url>https://dblp.org/rec/journals/tvcg/KwonKLCHY16</url></info>
+<url>URL#2487860</url>
+</hit>
+<hit score="1" id="2487861">
+<info><authors><author pid="87/575">Oh-Hyun Kwon</author><author pid="62/5695">Chris Muelder</author><author pid="63/728">Kyungwon Lee</author><author pid="93/5838">Kwan-Liu Ma</author></authors><title>A Study of Layout, Rendering, and Interaction Methods for Immersive Graph Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1802-1815</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/KwonMLM16</key><doi>10.1109/TVCG.2016.2520921</doi><ee>https://doi.org/10.1109/TVCG.2016.2520921</ee><url>https://dblp.org/rec/journals/tvcg/KwonMLM16</url></info>
+<url>URL#2487861</url>
+</hit>
+<hit score="1" id="2487862">
+<info><authors><author pid="170/1728">Matthias Labschutz</author><author pid="80/3704">Stefan Bruckner</author><author pid="g/MEGroller">M. Eduard Gröller</author><author pid="30/2860">Markus Hadwiger</author><author pid="07/4268">Peter Rautek</author></authors><title>JiTTree: A Just-in-Time Compiled Sparse GPU Volume Data Structure.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>1025-1034</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LabschutzBGHR16</key><doi>10.1109/TVCG.2015.2467331</doi><ee>https://doi.org/10.1109/TVCG.2015.2467331</ee><url>https://dblp.org/rec/journals/tvcg/LabschutzBGHR16</url></info>
+<url>URL#2487862</url>
+</hit>
+<hit score="1" id="2487863">
+<info><authors><author pid="76/8294">Chi-Fu William Lai</author><author pid="144/7479">Sai-Kit Yeung</author><author pid="04/7951">Xiaoqi Yan</author><author pid="38/803">Chi-Wing Fu</author><author pid="34/4366">Chi-Keung Tang</author></authors><title>3D Navigation on Impossible Figures via Dynamically Reconfigurable Maze.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2275-2288</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LaiYYFT16</key><doi>10.1109/TVCG.2015.2507584</doi><ee>https://doi.org/10.1109/TVCG.2015.2507584</ee><url>https://dblp.org/rec/journals/tvcg/LaiYYFT16</url></info>
+<url>URL#2487863</url>
+</hit>
+<hit score="1" id="2487864">
+<info><authors><author pid="55/7988">Tatiana von Landesberger</author><author pid="188/7230">Dennis Basgier</author><author pid="24/8930">Meike Becker</author></authors><title>Comparative Local Quality Assessment of 3D Medical Image Segmentations with Focus on Statistical Shape Model-Based Algorithms.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2537-2549</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LandesbergerBB16</key><doi>10.1109/TVCG.2015.2501813</doi><ee>https://doi.org/10.1109/TVCG.2015.2501813</ee><url>https://dblp.org/rec/journals/tvcg/LandesbergerBB16</url></info>
+<url>URL#2487864</url>
+</hit>
+<hit score="1" id="2487865">
+<info><authors><author pid="55/7988">Tatiana von Landesberger</author><author pid="170/1563">Felix Brodkorb</author><author pid="133/9076">Philipp Roskosch</author><author pid="a/NataliaVAndrienko">Natalia V. Andrienko</author><author pid="a/GennadyLAndrienko">Gennady L. Andrienko</author><author pid="44/6743">Andreas Kerren</author></authors><title>MobilityGraphs: Visual Analysis of Mass Mobility Dynamics via Spatio-Temporal Graphs and Clustering.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>11-20</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LandesbergerBRA16</key><doi>10.1109/TVCG.2015.2468111</doi><ee>https://doi.org/10.1109/TVCG.2015.2468111</ee><url>https://dblp.org/rec/journals/tvcg/LandesbergerBRA16</url></info>
+<url>URL#2487865</url>
+</hit>
+<hit score="1" id="2487866">
+<info><authors><author pid="91/2856">Tobias Langlotz</author><author pid="28/4203-5">Matthew Cook 0005</author><author pid="09/4241">Holger Regenbrecht</author></authors><title>Real-Time Radiometric Compensation for Optical See-Through Head-Mounted Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2385-2394</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LanglotzCR16</key><doi>10.1109/TVCG.2016.2593781</doi><ee>https://doi.org/10.1109/TVCG.2016.2593781</ee><url>https://dblp.org/rec/journals/tvcg/LanglotzCR16</url></info>
+<url>URL#2487866</url>
+</hit>
+<hit score="1" id="2487867">
+<info><authors><author pid="19/3612">Guillaume Lavoué</author><author pid="31/5962">Mohamed-Chaker Larabi</author><author pid="83/2939">Libor Vása</author></authors><title>On the Efficiency of Image Metrics for Evaluating the Visual Quality of 3D Models.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1987-1999</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LavoueLV16</key><doi>10.1109/TVCG.2015.2480079</doi><ee>https://doi.org/10.1109/TVCG.2015.2480079</ee><url>https://dblp.org/rec/journals/tvcg/LavoueLV16</url></info>
+<url>URL#2487867</url>
+</hit>
+<hit score="1" id="2487868">
+<info><authors><author pid="120/6338">Kai Lawonn</author><author pid="80/7090">Sylvia Glaßer</author><author pid="v/AnnaVilanova">Anna Vilanova</author><author pid="p/BPreim">Bernhard Preim</author><author pid="i/TobiasIsenberg1">Tobias Isenberg 0001</author></authors><title>Occlusion-free Blood Flow Animation with Wall Thickness Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>728-737</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LawonnGVP016</key><doi>10.1109/TVCG.2015.2467961</doi><ee>https://doi.org/10.1109/TVCG.2015.2467961</ee><url>https://dblp.org/rec/journals/tvcg/LawonnGVP016</url></info>
+<url>URL#2487868</url>
+</hit>
+<hit score="1" id="2487869">
+<info><authors><author pid="91/1425">Sangyoon Lee</author><author pid="22/2532">Hong Hua</author></authors><title>Effects of Configuration of Optical Combiner on Near-Field Depth Perception in Optical See-Through Head-Mounted Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1432-1441</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LeeH16</key><doi>10.1109/TVCG.2016.2518138</doi><ee>https://doi.org/10.1109/TVCG.2016.2518138</ee><url>https://dblp.org/rec/journals/tvcg/LeeH16</url></info>
+<url>URL#2487869</url>
+</hit>
+<hit score="1" id="2487870">
+<info><authors><author pid="00/6360">Jaebong Lee</author><author pid="73/4880">Bohyung Han</author><author pid="30/2061">Seungmoon Choi</author></authors><title>Motion Effects Synthesis for 4D Films.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2300-2314</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LeeHC16</key><doi>10.1109/TVCG.2015.2507591</doi><ee>https://doi.org/10.1109/TVCG.2015.2507591</ee><url>https://dblp.org/rec/journals/tvcg/LeeHC16</url></info>
+<url>URL#2487870</url>
+</hit>
+<hit score="1" id="2487871">
+<info><authors><author pid="91/1425">Sangyoon Lee</author><author pid="177/8153">Xinda Hu</author><author pid="22/2532">Hong Hua</author></authors><title>Effects of Optical Combiner and IPD Change for Convergence on Near-Field Depth Perception in an Optical See-Through HMD.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1540-1554</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LeeHH16</key><doi>10.1109/TVCG.2015.2440272</doi><ee>https://doi.org/10.1109/TVCG.2015.2440272</ee><url>https://dblp.org/rec/journals/tvcg/LeeHH16</url></info>
+<url>URL#2487871</url>
+</hit>
+<hit score="1" id="2487872">
+<info><authors><author pid="81/3234">Sukwon Lee</author><author pid="97/2562">Sung-Hee Kim</author><author pid="170/1564">Ya-Hsin Hung</author><author pid="27/6297">Heidi Lam</author><author pid="27/6664">Youn-Ah Kang</author><author pid="00/6789">Ji Soo Yi</author></authors><title>How do People Make Sense of Unfamiliar Visualizations?: A Grounded Model of Novice&apos;s Information Visualization Sensemaking.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>499-508</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LeeKHLKY16</key><doi>10.1109/TVCG.2015.2467195</doi><ee>https://doi.org/10.1109/TVCG.2015.2467195</ee><url>https://dblp.org/rec/journals/tvcg/LeeKHLKY16</url></info>
+<url>URL#2487872</url>
+</hit>
+<hit score="1" id="2487873">
+<info><authors><author pid="02/7990">Dirk J. Lehmann</author><author pid="t/HolgerTheisel">Holger Theisel</author></authors><title>Optimal Sets of Projections of High-Dimensional Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>609-618</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LehmannT16</key><doi>10.1109/TVCG.2015.2467132</doi><ee>https://doi.org/10.1109/TVCG.2015.2467132</ee><url>https://dblp.org/rec/journals/tvcg/LehmannT16</url></info>
+<url>URL#2487873</url>
+</hit>
+<hit score="1" id="2487874">
+<info><authors><author pid="118/2695">Xiaosheng Li</author><author pid="49/238">Xiaowei He</author><author pid="34/5679">Xuehui Liu</author><author pid="z/JianJZhang-1">Jian J. Zhang 0001</author><author pid="54/784">Baoquan Liu</author><author pid="20/6592">Enhua Wu</author></authors><title>Multiphase Interface Tracking with Fast Semi-Lagrangian Contouring.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1973-1986</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiHLZLW16</key><doi>10.1109/TVCG.2015.2476788</doi><ee>https://doi.org/10.1109/TVCG.2015.2476788</ee><url>https://dblp.org/rec/journals/tvcg/LiHLZLW16</url></info>
+<url>URL#2487874</url>
+</hit>
+<hit score="1" id="2487875">
+<info><authors><author pid="121/0837-2">Nannan Li 0002</author><author pid="34/1653">Shengfa Wang</author><author pid="92/2292">Ming Zhong</author><author pid="96/4421">Zhixun Su</author><author pid="79/627">Hong Qin</author></authors><title>Generalized Local-to-Global Shape Feature Detection Based on Graph Wavelets.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2094-2106</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiWZSQ16</key><doi>10.1109/TVCG.2015.2498557</doi><ee>https://doi.org/10.1109/TVCG.2015.2498557</ee><url>https://dblp.org/rec/journals/tvcg/LiWZSQ16</url></info>
+<url>URL#2487875</url>
+</hit>
+<hit score="1" id="2487876">
+<info><authors><author pid="48/5348-1">Jing Liao 0001</author><author pid="n/DiegoFNehab">Diego F. Nehab</author><author pid="25/6720">Hugues Hoppe</author><author pid="67/6038">Pedro V. Sander</author></authors><title>New Controls for Combining Images in Correspondence.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1875-1885</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiaoNHS16</key><doi>10.1109/TVCG.2015.2476794</doi><ee>https://doi.org/10.1109/TVCG.2015.2476794</ee><url>https://dblp.org/rec/journals/tvcg/LiaoNHS16</url></info>
+<url>URL#2487876</url>
+</hit>
+<hit score="1" id="2487877">
+<info><authors><author pid="25/7110">Peter Lincoln</author><author pid="177/6279">Alex Blate</author><author pid="94/5746">Montek Singh</author><author pid="85/3969">Turner Whitted</author><author pid="36/2946">Andrei State</author><author pid="83/6799">Anselmo Lastra</author><author pid="f/HenryFuchs">Henry Fuchs</author></authors><title>From Motion to Photons in 80 Microseconds: Towards Minimal Latency for Virtual and Augmented Reality.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1367-1376</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LincolnBSWSLF16</key><doi>10.1109/TVCG.2016.2518038</doi><ee>https://doi.org/10.1109/TVCG.2016.2518038</ee><url>https://dblp.org/rec/journals/tvcg/LincolnBSWSLF16</url></info>
+<url>URL#2487877</url>
+</hit>
+<hit score="1" id="2487878">
+<info><authors><author pid="89/4312">Peter Lindstrom 0001</author></authors><title>Editor&apos;s Note.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1932</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Lindstrom16</key><doi>10.1109/TVCG.2016.2581238</doi><ee>https://doi.org/10.1109/TVCG.2016.2581238</ee><url>https://dblp.org/rec/journals/tvcg/Lindstrom16</url></info>
+<url>URL#2487878</url>
+</hit>
+<hit score="1" id="2487879">
+<info><authors><author pid="137/2150">Mengchen Liu</author><author pid="22/904">Shixia Liu</author><author pid="170/1608">Xizhou Zhu</author><author pid="70/3365">Qinying Liao</author><author pid="72/5870">Furu Wei</author><author pid="p/ShimeiPan">Shimei Pan</author></authors><title>An Uncertainty-Aware Approach for Exploratory Microblog Retrieval.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>250-259</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuLZLWP16</key><doi>10.1109/TVCG.2015.2467554</doi><ee>https://doi.org/10.1109/TVCG.2015.2467554</ee><url>https://dblp.org/rec/journals/tvcg/LiuLZLWP16</url></info>
+<url>URL#2487879</url>
+</hit>
+<hit score="1" id="2487880">
+<info><authors><author pid="122/8675">Xiaotong Liu</author><author pid="61/6829">Han-Wei Shen</author></authors><title>Association Analysis for Visual Exploration of Multivariate Scientific Data Sets.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>955-964</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuS16</key><doi>10.1109/TVCG.2015.2467431</doi><ee>https://doi.org/10.1109/TVCG.2015.2467431</ee><url>https://dblp.org/rec/journals/tvcg/LiuS16</url></info>
+<url>URL#2487880</url>
+</hit>
+<hit score="1" id="2487881">
+<info><authors><author pid="22/904">Shixia Liu</author><author pid="s/GerikScheuermann">Gerik Scheuermann</author><author pid="53/5423">Shigeo Takahashi</author><author pid="21/6679">Tim Dwyer</author><author pid="49/6702">Yingcai Wu</author></authors><title>Guest Editors&apos; Introduction: Special Section on the IEEE Pacific Visualization Symposium 2015.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1786-1787</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuSTDW16</key><doi>10.1109/TVCG.2016.2553858</doi><ee>https://doi.org/10.1109/TVCG.2016.2553858</ee><url>https://dblp.org/rec/journals/tvcg/LiuSTDW16</url></info>
+<url>URL#2487881</url>
+</hit>
+<hit score="1" id="2487882">
+<info><authors><author pid="22/904">Shixia Liu</author><author pid="173/4974">Jialun Yin</author><author pid="134/4020">Xiting Wang</author><author pid="34/2915">Weiwei Cui</author><author pid="173/5368">Kelei Cao</author><author pid="p/JianPei">Jian Pei</author></authors><title>Online Visual Analytics of Text Streams.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2451-2466</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuYWCCP16</key><doi>10.1109/TVCG.2015.2509990</doi><ee>https://doi.org/10.1109/TVCG.2015.2509990</ee><url>https://dblp.org/rec/journals/tvcg/LiuYWCCP16</url></info>
+<url>URL#2487882</url>
+</hit>
+<hit score="1" id="2487883">
+<info><authors><author pid="27/2098">Yong-Jin Liu</author><author pid="55/2748">Cheng-Chi Yu</author><author pid="173/0901">Minjing Yu</author><author pid="57/3315-1">Kai Tang 0001</author><author pid="64/121">Deok-Soo Kim</author></authors><title>A Robust Divide and Conquer Algorithm for Progressive Medial Axes of Planar Shapes.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2522-2536</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuYYTK16</key><doi>10.1109/TVCG.2015.2511739</doi><ee>https://doi.org/10.1109/TVCG.2015.2511739</ee><url>https://dblp.org/rec/journals/tvcg/LiuYYTK16</url></info>
+<url>URL#2487883</url>
+</hit>
+<hit score="1" id="2487884">
+<info><authors><author pid="82/7814">Zhiguang Liu</author><author pid="145/5301">Liuyang Zhou</author><author pid="60/4971">Howard Leung</author><author pid="14/4870">Hubert P. H. Shum</author></authors><title>Kinect Posture Reconstruction Based on a Local Mixture of Gaussian Process Models.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2437-2450</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LiuZLS16</key><doi>10.1109/TVCG.2015.2510000</doi><ee>https://doi.org/10.1109/TVCG.2015.2510000</ee><url>https://dblp.org/rec/journals/tvcg/LiuZLS16</url></info>
+<url>URL#2487884</url>
+</hit>
+<hit score="1" id="2487885">
+<info><authors><author pid="149/0933">Mona Hosseinkhani Loorak</author><author pid="129/2196">Charles Perin</author><author pid="66/7983">Noreen Kamal</author><author pid="244/1200">Michael D. Hill</author><author pid="c/MSheelaghTCarpendale">Sheelagh Carpendale</author></authors><title>TimeSpan: Using Visualization to Explore Temporal Multi-dimensional Data of Stroke Patients.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>409-418</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LoorakPKHC16</key><doi>10.1109/TVCG.2015.2467325</doi><ee>https://doi.org/10.1109/TVCG.2015.2467325</ee><url>https://dblp.org/rec/journals/tvcg/LoorakPKHC16</url></info>
+<url>URL#2487885</url>
+</hit>
+<hit score="1" id="2487886">
+<info><authors><author pid="05/269">David López</author><author pid="20/2027">Lora Oehlberg</author><author pid="26/10411">Candemir Doger</author><author pid="i/TobiasIsenberg1">Tobias Isenberg 0001</author></authors><title>Towards An Understanding of Mobile Touch Navigation in a Stereoscopic Viewing Environment for 3D Data Exploration.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1616-1629</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LopezOD016</key><doi>10.1109/TVCG.2015.2440233</doi><ee>https://doi.org/10.1109/TVCG.2015.2440233</ee><url>https://dblp.org/rec/journals/tvcg/LopezOD016</url></info>
+<url>URL#2487886</url>
+</hit>
+<hit score="1" id="2487887">
+<info><authors><author pid="16/2558">Giusy Di Lorenzo</author><author pid="03/6684">Marco Luca Sbodio</author><author pid="38/118">Francesco Calabrese</author><author pid="48/4341">Michele Berlingerio</author><author pid="87/1696">Fabio Pinelli</author><author pid="76/4693">Rahul Nair</author></authors><title>AllAboard: Visual Exploration of Cellphone Mobility Data to Optimise Public Transport.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1036-1050</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LorenzoSCBPN16</key><doi>10.1109/TVCG.2015.2440259</doi><ee>https://doi.org/10.1109/TVCG.2015.2440259</ee><url>https://dblp.org/rec/journals/tvcg/LorenzoSCBPN16</url></info>
+<url>URL#2487887</url>
+</hit>
+<hit score="1" id="2487888">
+<info><authors><author pid="87/10398">Thomas Löwe</author><author pid="166/2792">Emmy-Charlotte Förster</author><author pid="04/2914">Georgia Albuquerque</author><author pid="41/8556">Jens-Peter Kreiss</author><author pid="m/MarcusAMagnor">Marcus A. Magnor</author></authors><title>Visual Analytics for Development and Evaluation of Order Selection Criteria for Autoregressive Processes.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>151-159</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LoweFAKM16</key><doi>10.1109/TVCG.2015.2467612</doi><ee>https://doi.org/10.1109/TVCG.2015.2467612</ee><url>https://dblp.org/rec/journals/tvcg/LoweFAKM16</url></info>
+<url>URL#2487888</url>
+</hit>
+<hit score="1" id="2487889">
+<info><authors><author pid="137/2585">Xuequan Lu</author><author pid="23/6641">Zhigang Deng</author><author pid="70/2079">Wenzhi Chen</author></authors><title>A Robust Scheme for Feature-Preserving Mesh Denoising.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1181-1194</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LuDC16</key><doi>10.1109/TVCG.2015.2500222</doi><ee>https://doi.org/10.1109/TVCG.2015.2500222</ee><url>https://dblp.org/rec/journals/tvcg/LuDC16</url></info>
+<url>URL#2487889</url>
+</hit>
+<hit score="1" id="2487890">
+<info><authors><author pid="154/1918">Yafeng Lu</author><author pid="170/1593">Michael Steptoe</author><author pid="170/1561">Sarah Burke</author><author pid="83/5522">Hong Wang</author><author pid="170/1619">Jiun-Yi Tsai</author><author pid="d/HasanDavulcu">Hasan Davulcu</author><author pid="96/641">Douglas C. Montgomery</author><author pid="91/1535">Steven R. Corman</author><author pid="81/5349">Ross Maciejewski</author></authors><title>Exploring Evolving Media Discourse Through Event Cueing.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>220-229</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/LuSBWTDMCM16</key><doi>10.1109/TVCG.2015.2467991</doi><ee>https://doi.org/10.1109/TVCG.2015.2467991</ee><url>https://dblp.org/rec/journals/tvcg/LuSBWTDMCM16</url></info>
+<url>URL#2487890</url>
+</hit>
+<hit score="1" id="2487891">
+<info><authors><author pid="143/4646">Jacob B. Madsen</author><author pid="63/6425">Markus Tatzgern</author><author pid="53/6293">Claus B. Madsen</author><author pid="s/DieterSchmalstieg">Dieter Schmalstieg</author><author pid="27/2571">Denis Kalkofen</author></authors><title>Temporal Coherence Strategies for Augmented Reality Labeling.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1415-1423</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MadsenTMSK16</key><doi>10.1109/TVCG.2016.2518318</doi><ee>https://doi.org/10.1109/TVCG.2016.2518318</ee><url>https://dblp.org/rec/journals/tvcg/MadsenTMSK16</url></info>
+<url>URL#2487891</url>
+</hit>
+<hit score="1" id="2487892">
+<info><authors><author pid="22/5044">Éric Marchand</author><author pid="14/1212">Hideaki Uchiyama</author><author pid="45/6795">Fabien Spindler</author></authors><title>Pose Estimation for Augmented Reality: A Hands-On Survey.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2633-2651</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MarchandUS16</key><doi>10.1109/TVCG.2015.2513408</doi><ee>https://doi.org/10.1109/TVCG.2015.2513408</ee><url>https://dblp.org/rec/journals/tvcg/MarchandUS16</url></info>
+<url>URL#2487892</url>
+</hit>
+<hit score="1" id="2487893">
+<info><authors><author pid="31/8756">Joseph Marino</author><author pid="k/ArieEKaufman">Arie E. Kaufman</author></authors><title>Planar Visualization of Treelike Structures.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>906-915</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MarinoK16</key><doi>10.1109/TVCG.2015.2467413</doi><ee>https://doi.org/10.1109/TVCG.2015.2467413</ee><url>https://dblp.org/rec/journals/tvcg/MarinoK16</url></info>
+<url>URL#2487893</url>
+</hit>
+<hit score="1" id="2487894">
+<info><authors><author pid="17/1368">Dejan Markovic</author><author pid="33/6704">Fabio Antonacci</author><author pid="11/1386">Augusto Sarti</author><author pid="52/3820">Stefano Tubaro</author></authors><title>3D Beam Tracing Based on Visibility Lookup for Interactive Acoustic Modeling.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2262-2274</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MarkovicAST16</key><doi>10.1109/TVCG.2016.2515612</doi><ee>https://doi.org/10.1109/TVCG.2016.2515612</ee><url>https://dblp.org/rec/journals/tvcg/MarkovicAST16</url></info>
+<url>URL#2487894</url>
+</hit>
+<hit score="1" id="2487895">
+<info><authors><author pid="135/1703">Nina McCurdy</author><author pid="133/0396">Julie Lein</author><author pid="133/0356">Katherine Coles</author><author pid="77/1627">Miriah D. Meyer</author></authors><title>Poemage: Visualizing the Sonic Topology of a Poem.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>439-448</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/McCurdyLCM16</key><doi>10.1109/TVCG.2015.2467811</doi><ee>https://doi.org/10.1109/TVCG.2015.2467811</ee><url>https://dblp.org/rec/journals/tvcg/McCurdyLCM16</url></info>
+<url>URL#2487895</url>
+</hit>
+<hit score="1" id="2487896">
+<info><authors><author pid="46/9388">Nicolas Mellado</author><author pid="92/2085">Matteo Dellepiane</author><author pid="64/4471">Roberto Scopigno</author></authors><title>Relative Scale Estimation and 3D Registration of Multi-Modal Geometry Using Growing Least Squares.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2160-2173</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MelladoDS16</key><doi>10.1109/TVCG.2015.2505287</doi><ee>https://doi.org/10.1109/TVCG.2015.2505287</ee><url>https://dblp.org/rec/journals/tvcg/MelladoDS16</url></info>
+<url>URL#2487896</url>
+</hit>
+<hit score="1" id="2487897">
+<info><authors><author pid="32/3040">Qi Mo</author><author pid="50/3194">Hengchin Yeh</author><author pid="m/DineshManocha">Dinesh Manocha</author></authors><title>Tracing Analytic Ray Curves for Light and Sound Propagation in Non-Linear Media.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2493-2506</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MoYM16</key><doi>10.1109/TVCG.2015.2509996</doi><ee>https://doi.org/10.1109/TVCG.2015.2509996</ee><url>https://dblp.org/rec/journals/tvcg/MoYM16</url></info>
+<url>URL#2487897</url>
+</hit>
+<hit score="1" id="2487898">
+<info><authors><author pid="62/5695">Chris Muelder</author><author pid="145/5302">Biao Zhu</author><author pid="c/WeiChen1">Wei Chen 0001</author><author pid="z/HongxinZhang1">Hongxin Zhang 0001</author><author pid="93/5838">Kwan-Liu Ma</author></authors><title>Visual Analysis of Cloud Computing Performance Using Behavioral Lines.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1694-1704</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/MuelderZCZM16</key><doi>10.1109/TVCG.2016.2534558</doi><ee>https://doi.org/10.1109/TVCG.2016.2534558</ee><url>https://dblp.org/rec/journals/tvcg/MuelderZCZM16</url></info>
+<url>URL#2487898</url>
+</hit>
+<hit score="1" id="2487899">
+<info><authors><author pid="186/2002">Georges Nader</author><author pid="78/2022">Kai Wang</author><author pid="61/4903">Franck Hétroy-Wheeler</author><author pid="71/2361">Florent Dupont</author></authors><title>Just Noticeable Distortion Profile for Flat-Shaded 3D Mesh Surfaces.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2423-2436</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/NaderWHD16</key><doi>10.1109/TVCG.2015.2507578</doi><ee>https://doi.org/10.1109/TVCG.2015.2507578</ee><url>https://dblp.org/rec/journals/tvcg/NaderWHD16</url></info>
+<url>URL#2487899</url>
+</hit>
+<hit score="1" id="2487900">
+<info><authors><author pid="322/7771">Phong Hai Nguyen</author><author pid="x/KaiXu3">Kai Xu 0003</author><author pid="163/0223">Ashley Wheat</author><author pid="31/2549">B. L. William Wong</author><author pid="00/874">Simon Attfield</author><author pid="88/527">Bob Fields</author></authors><title>SensePath: Understanding the Sensemaking Process Through Analytic Provenance.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>41-50</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Nguyen0WWAF16</key><doi>10.1109/TVCG.2015.2467611</doi><ee>https://doi.org/10.1109/TVCG.2015.2467611</ee><url>https://dblp.org/rec/journals/tvcg/Nguyen0WWAF16</url></info>
+<url>URL#2487900</url>
+</hit>
+<hit score="1" id="2487901">
+<info><authors><author pid="46/10802">Erick Gomez Nieto</author><author pid="137/7992">Wallace Casaca</author><author pid="152/6350">Danilo Motta</author><author pid="175/2861">Ivar A. Hartmann</author><author pid="01/4008">Gabriel Taubin</author><author pid="59/17">Luis Gustavo Nonato</author></authors><title>Dealing with Multiple Requirements in Geometric Arrangements.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1223-1235</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/NietoCMHTN16</key><doi>10.1109/TVCG.2015.2489660</doi><ee>https://doi.org/10.1109/TVCG.2015.2489660</ee><url>https://dblp.org/rec/journals/tvcg/NietoCMHTN16</url></info>
+<url>URL#2487901</url>
+</hit>
+<hit score="1" id="2487902">
+<info><authors><author pid="118/2783">Arlind Nocaj</author><author pid="141/2735">Mark Ortmann</author><author pid="b/UlrikBrandes">Ulrik Brandes</author></authors><title>Adaptive Disentanglement Based on Local Clustering in Small-World Network Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1662-1671</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/NocajOB16</key><doi>10.1109/TVCG.2016.2534559</doi><ee>https://doi.org/10.1109/TVCG.2016.2534559</ee><url>https://dblp.org/rec/journals/tvcg/NocajOB16</url></info>
+<url>URL#2487902</url>
+</hit>
+<hit score="1" id="2487903">
+<info><authors><author pid="86/10381">José M. Noguera</author><author pid="01/5999">Juan-Roberto Jiménez 0001</author></authors><title>Mobile Volume Rendering: Past, Present and Future.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1164-1178</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/NogueraJ16</key><doi>10.1109/TVCG.2015.2430343</doi><ee>https://doi.org/10.1109/TVCG.2015.2430343</ee><url>https://dblp.org/rec/journals/tvcg/NogueraJ16</url></info>
+<url>URL#2487903</url>
+</hit>
+<hit score="1" id="2487904">
+<info><authors><author pid="36/7294">Harald Obermaier</author><author pid="90/8602">Kevin Bensema</author><author pid="21/4648">Kenneth I. Joy</author></authors><title>Visual Trends Analysis in Time-Varying Ensembles.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2331-2342</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ObermaierBJ16</key><doi>10.1109/TVCG.2015.2507592</doi><ee>https://doi.org/10.1109/TVCG.2015.2507592</ee><url>https://dblp.org/rec/journals/tvcg/ObermaierBJ16</url></info>
+<url>URL#2487904</url>
+</hit>
+<hit score="1" id="2487905">
+<info><authors><author pid="86/6246">Steffen Oeltze-Jafra</author><author pid="c/JRCebral">Juan R. Cebral</author><author pid="75/544">Gábor Janiga</author><author pid="p/BPreim">Bernhard Preim</author></authors><title>Cluster Analysis of Vortical Flow in Simulations of Cerebral Aneurysm Hemodynamics.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>757-766</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Oeltze-JafraCJP16</key><doi>10.1109/TVCG.2015.2467203</doi><ee>https://doi.org/10.1109/TVCG.2015.2467203</ee><url>https://dblp.org/rec/journals/tvcg/Oeltze-JafraCJP16</url></info>
+<url>URL#2487905</url>
+</hit>
+<hit score="1" id="2487906">
+<info><authors><author pid="160/4873">Yosuke Onoue</author><author pid="77/1883">Nobuyuki Kukimoto</author><author pid="86/5163">Naohisa Sakamoto</author><author pid="61/893">Koji Koyamada</author></authors><title>Minimizing the Number of Edges via Edge Concentration in Dense Layered Graphs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1652-1661</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/OnoueKSK16</key><doi>10.1109/TVCG.2016.2534519</doi><ee>https://doi.org/10.1109/TVCG.2016.2534519</ee><url>https://dblp.org/rec/journals/tvcg/OnoueKSK16</url></info>
+<url>URL#2487906</url>
+</hit>
+<hit score="1" id="2487907">
+<info><authors><author pid="121/5542">Alvitta Ottley</author><author pid="68/8929">Evan M. Peck</author><author pid="62/4858">Lane T. Harrison</author><author pid="53/5988">Daniel Afergan</author><author pid="37/2206">Caroline Ziemkiewicz</author><author pid="84/844">Holly A. Taylor</author><author pid="140/5705">Paul K. J. Han</author><author pid="69/1477">Remco Chang</author></authors><title>Improving Bayesian Reasoning: The Effects of Phrasing, Visualization, and Spatial Ability.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>529-538</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/OttleyPHAZTHC16</key><doi>10.1109/TVCG.2015.2467758</doi><ee>https://doi.org/10.1109/TVCG.2015.2467758</ee><url>https://dblp.org/rec/journals/tvcg/OttleyPHAZTHC16</url></info>
+<url>URL#2487907</url>
+</hit>
+<hit score="1" id="2487908">
+<info><authors><author pid="86/6729">Jonathan Palacios</author><author pid="23/7527">Harry Yeh</author><author pid="49/4096">Wenping Wang</author><author pid="47/722-9">Yue Zhang 0009</author><author pid="04/1753">Robert S. Laramee</author><author pid="175/2865">Ritesh Sharma</author><author pid="72/1969-1">Thomas Schultz 0001</author><author pid="68/5017">Eugene Zhang</author></authors><title>Feature Surfaces in Symmetric Tensor Fields Based on Eigenvalue Manifold.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1248-1260</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PalaciosYWZLSSZ16</key><doi>10.1109/TVCG.2015.2484343</doi><ee>https://doi.org/10.1109/TVCG.2015.2484343</ee><url>https://dblp.org/rec/journals/tvcg/PalaciosYWZLSSZ16</url></info>
+<url>URL#2487908</url>
+</hit>
+<hit score="1" id="2487909">
+<info><authors><author pid="61/11010">Cesar Palomo</author><author pid="34/3975">Zhan Guo</author><author pid="s/ClaudioTSilva">Cláudio T. Silva</author><author pid="f/JulianaFreire">Juliana Freire</author></authors><title>Visually Exploring Transportation Schedules.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>170-179</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PalomoGSF16</key><doi>10.1109/TVCG.2015.2467592</doi><ee>https://doi.org/10.1109/TVCG.2015.2467592</ee><url>https://dblp.org/rec/journals/tvcg/PalomoGSF16</url></info>
+<url>URL#2487909</url>
+</hit>
+<hit score="1" id="2487910">
+<info><authors><author pid="23/8301">Charilaos Papadopoulos</author><author pid="164/4197">Ievgeniia Gutenko</author><author pid="k/ArieEKaufman">Arie E. Kaufman</author></authors><title>VEEVVIE: Visual Explorer for Empirical Visualization, VR and Interaction Experiments.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>111-120</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PapadopoulosGK16</key><doi>10.1109/TVCG.2015.2467954</doi><ee>https://doi.org/10.1109/TVCG.2015.2467954</ee><url>https://dblp.org/rec/journals/tvcg/PapadopoulosGK16</url></info>
+<url>URL#2487910</url>
+</hit>
+<hit score="1" id="2487911">
+<info><authors><author pid="47/168">Kaloian Petkov</author><author pid="k/ArieEKaufman">Arie E. Kaufman</author></authors><title>Frameless Volume Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1076-1087</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PetkovK16</key><doi>10.1109/TVCG.2015.2440262</doi><ee>https://doi.org/10.1109/TVCG.2015.2440262</ee><url>https://dblp.org/rec/journals/tvcg/PetkovK16</url></info>
+<url>URL#2487911</url>
+</hit>
+<hit score="1" id="2487912">
+<info><authors><author pid="55/9399">Sebastian Pick</author><author pid="35/7361">Benjamin Weyers</author><author pid="06/1510-1">Bernd Hentschel 0001</author><author pid="k/TorstenKuhlen">Torsten W. Kuhlen</author></authors><title>Design and Evaluation of Data Annotation Workflows for CAVE-like Virtual Environments.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1452-1461</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PickWHK16</key><doi>10.1109/TVCG.2016.2518086</doi><ee>https://doi.org/10.1109/TVCG.2016.2518086</ee><url>https://dblp.org/rec/journals/tvcg/PickWHK16</url></info>
+<url>URL#2487912</url>
+</hit>
+<hit score="1" id="2487913">
+<info><authors><author pid="54/6258">Mores Prachyabrued</author><author pid="90/4955">Christoph W. Borst</author></authors><title>Design and Evaluation of Visual Interpenetration Cues in Virtual Grasping.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1718-1731</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/PrachyabruedB16</key><doi>10.1109/TVCG.2015.2456917</doi><ee>https://doi.org/10.1109/TVCG.2015.2456917</ee><url>https://dblp.org/rec/journals/tvcg/PrachyabruedB16</url></info>
+<url>URL#2487913</url>
+</hit>
+<hit score="1" id="2487914">
+<info><authors><author pid="165/0260">P. Samuel Quinan</author><author pid="77/1627">Miriah D. Meyer</author></authors><title>Visually Comparing Weather Features in Forecasts.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>389-398</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/QuinanM16</key><doi>10.1109/TVCG.2015.2467754</doi><ee>https://doi.org/10.1109/TVCG.2015.2467754</ee><url>https://dblp.org/rec/journals/tvcg/QuinanM16</url></info>
+<url>URL#2487914</url>
+</hit>
+<hit score="1" id="2487915">
+<info><authors><author pid="69/7691">Eric D. Ragan</author><author pid="19/7983">Alex Endert</author><author pid="25/6185">Jibonananda Sanyal</author><author pid="49/6002">Jian Chen</author></authors><title>Characterizing Provenance in Visualization and Data Analysis: An Organizational Framework of Provenance Types and Purposes.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>31-40</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RaganESC16</key><doi>10.1109/TVCG.2015.2467551</doi><ee>https://doi.org/10.1109/TVCG.2015.2467551</ee><url>https://dblp.org/rec/journals/tvcg/RaganESC16</url></info>
+<url>URL#2487915</url>
+</hit>
+<hit score="1" id="2487916">
+<info><authors><author pid="152/9100">Renata G. Raidou</author><author pid="60/1028">Martin Eisemann</author><author pid="66/4471">Marcel Breeuwer</author><author pid="65/2556">Elmar Eisemann</author><author pid="v/AnnaVilanova">Anna Vilanova</author></authors><title>Orientation-Enhanced Parallel Coordinate Plots.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>589-598</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RaidouEBEV16</key><doi>10.1109/TVCG.2015.2467872</doi><ee>https://doi.org/10.1109/TVCG.2015.2467872</ee><url>https://dblp.org/rec/journals/tvcg/RaidouEBEV16</url></info>
+<url>URL#2487916</url>
+</hit>
+<hit score="1" id="2487917">
+<info><authors><author pid="31/10782">François Rameau</author><author pid="62/10333">Hyowon Ha</author><author pid="138/0123">Kyungdon Joo</author><author pid="138/0075">Jinsoo Choi</author><author pid="160/2535">Kibaek Park</author><author pid="74/4917">In-So Kweon</author></authors><title>A Real-Time Augmented Reality System to See-Through Cars.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2395-2404</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RameauHJCPK16</key><doi>10.1109/TVCG.2016.2593768</doi><ee>https://doi.org/10.1109/TVCG.2016.2593768</ee><url>https://dblp.org/rec/journals/tvcg/RameauHJCPK16</url></info>
+<url>URL#2487917</url>
+</hit>
+<hit score="1" id="2487918">
+<info><authors><author pid="153/5945">Christoph Resch</author><author pid="20/1920">Peter Keitler</author><author pid="k/GudrunKlinker">Gudrun Klinker</author></authors><title>Sticky Projections-A Model-Based Approach to Interactive Shader Lamps Tracking.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1291-1301</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ReschKK16</key><doi>10.1109/TVCG.2015.2450934</doi><ee>https://doi.org/10.1109/TVCG.2015.2450934</ee><url>https://dblp.org/rec/journals/tvcg/ReschKK16</url></info>
+<url>URL#2487918</url>
+</hit>
+<hit score="1" id="2487919">
+<info><authors><author pid="27/11181">Andrew C. Robb</author><author pid="38/1559">Andrea Kleinsmith</author><author pid="44/9943">Andrew Cordar</author><author pid="64/11181">Casey White</author><author pid="36/720">Samsun Lampotang</author><author pid="45/11181">Adam Wendling</author><author pid="00/5204">Benjamin Lok</author></authors><title>Do Variations in Agency Indirectly Affect Behavior with Others? An Analysis of Gaze Behavior.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1336-1345</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RobbKCWLWL16</key><doi>10.1109/TVCG.2016.2518405</doi><ee>https://doi.org/10.1109/TVCG.2016.2518405</ee><url>https://dblp.org/rec/journals/tvcg/RobbKCWLWL16</url></info>
+<url>URL#2487919</url>
+</hit>
+<hit score="1" id="2487920">
+<info><authors><author pid="54/6461">Jonathan C. Roberts</author><author pid="132/5233">Chris Headleand</author><author pid="121/1541">Panagiotis D. Ritsos</author></authors><title>Sketching Designs Using the Five Design-Sheet Methodology.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>419-428</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RobertsHR16</key><doi>10.1109/TVCG.2015.2467271</doi><ee>https://doi.org/10.1109/TVCG.2015.2467271</ee><url>https://dblp.org/rec/journals/tvcg/RobertsHR16</url></info>
+<url>URL#2487920</url>
+</hit>
+<hit score="1" id="2487921">
+<info><authors><author pid="71/5993">Manuel Rubio-Sánchez</author><author pid="30/8320">Laura Raya</author><author pid="169/0092">Francisco Diaz</author><author pid="86/6411-1">Alberto Sánchez 0001</author></authors><title>A comparative study between RadViz and Star Coordinates.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>619-628</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Rubio-SanchezRD16</key><doi>10.1109/TVCG.2015.2467324</doi><ee>https://doi.org/10.1109/TVCG.2015.2467324</ee><url>https://dblp.org/rec/journals/tvcg/Rubio-SanchezRD16</url></info>
+<url>URL#2487921</url>
+</hit>
+<hit score="1" id="2487922">
+<info><authors><author pid="137/2143">Atul Rungta</author><author pid="118/6128">Carl Schissler</author><author pid="57/7592">Ravish Mehra</author><author pid="177/6230">Chris Malloy</author><author pid="l/MingCLin">Ming C. Lin</author><author pid="m/DineshManocha">Dinesh Manocha</author></authors><title>SynCoPation: Interactive Synthesis-Coupled Sound Propagation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1346-1355</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/RungtaSMMLM16</key><doi>10.1109/TVCG.2016.2518421</doi><ee>https://doi.org/10.1109/TVCG.2016.2518421</ee><url>https://dblp.org/rec/journals/tvcg/RungtaSMMLM16</url></info>
+<url>URL#2487922</url>
+</hit>
+<hit score="1" id="2487923">
+<info><authors><author pid="153/7512">Dominik Sacha</author><author pid="123/0489">Hansi Senaratne</author><author pid="73/1969">Bum Chul Kwon</author><author pid="06/6113">Geoffrey P. Ellis</author><author pid="k/DanielAKeim">Daniel A. Keim</author></authors><title>The Role of Uncertainty, Awareness, and Trust in Visual Analytics.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>240-249</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SachaSKEK16</key><doi>10.1109/TVCG.2015.2467591</doi><ee>https://doi.org/10.1109/TVCG.2015.2467591</ee><url>https://dblp.org/rec/journals/tvcg/SachaSKEK16</url></info>
+<url>URL#2487923</url>
+</hit>
+<hit score="1" id="2487924">
+<info><authors><author pid="117/7079">Daisuke Sakurai</author><author pid="168/8689">Osamu Saeki</author><author pid="91/4373">Hamish A. Carr</author><author pid="11/7258">Hsiang-Yun Wu</author><author pid="23/1497">Takahiro Yamamoto</author><author pid="09/1985">David J. Duke</author><author pid="53/5423">Shigeo Takahashi</author></authors><title>Interactive Visualization for Singular Fibers of Functions f : R3 → R2.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>945-954</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SakuraiSCWYDT16</key><doi>10.1109/TVCG.2015.2467433</doi><ee>https://doi.org/10.1109/TVCG.2015.2467433</ee><url>https://dblp.org/rec/journals/tvcg/SakuraiSCWYDT16</url></info>
+<url>URL#2487924</url>
+</hit>
+<hit score="1" id="2487925">
+<info><authors><author pid="30/10031">Gayani Samaraweera</author><author pid="55/11181">Rongkai Guo</author><author pid="52/1010">John Quarles</author></authors><title>Head Tracking Latency in Virtual Environments Revisited: Do Users with Multiple Sclerosis Notice Latency Less?</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1630-1636</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SamaraweeraGQ16</key><doi>10.1109/TVCG.2015.2443783</doi><ee>https://doi.org/10.1109/TVCG.2015.2443783</ee><url>https://dblp.org/rec/journals/tvcg/SamaraweeraGQ16</url></info>
+<url>URL#2487925</url>
+</hit>
+<hit score="1" id="2487926">
+<info><authors><author pid="67/6038">Pedro V. Sander</author><author pid="37/4654">John Keyser</author></authors><title>Guest Editor&apos;s Introduction to the Special Section on the ACM Symposium on Interactive 3D Graphics and Games (I3D).</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2214</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SanderK16</key><doi>10.1109/TVCG.2016.2596858</doi><ee>https://doi.org/10.1109/TVCG.2016.2596858</ee><url>https://dblp.org/rec/journals/tvcg/SanderK16</url></info>
+<url>URL#2487926</url>
+</hit>
+<hit score="1" id="2487927">
+<info><authors><author pid="39/11083">Arvind Satyanarayan</author><author pid="170/1599">Ryan Russell</author><author pid="170/1713">Jane Hoffswell</author><author pid="27/4508">Jeffrey Heer</author></authors><title>Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>659-668</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SatyanarayanRHH16</key><doi>10.1109/TVCG.2015.2467091</doi><ee>https://doi.org/10.1109/TVCG.2015.2467091</ee><url>https://dblp.org/rec/journals/tvcg/SatyanarayanRHH16</url></info>
+<url>URL#2487927</url>
+</hit>
+<hit score="1" id="2487928">
+<info><authors><author pid="177/6224">Christian Schatzschneider</author><author pid="11/1175">Gerd Bruder</author><author pid="09/6285">Frank Steinicke</author></authors><title>Who turned the clock? Effects of Manipulated Zeitgebers, Cognitive Load and Immersion on Time Estimation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1387-1395</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Schatzschneider16</key><doi>10.1109/TVCG.2016.2518137</doi><ee>https://doi.org/10.1109/TVCG.2016.2518137</ee><url>https://dblp.org/rec/journals/tvcg/Schatzschneider16</url></info>
+<url>URL#2487928</url>
+</hit>
+<hit score="1" id="2487929">
+<info><authors><author pid="21/10267">Roeland Scheepens</author><author pid="99/4557">Christophe Hurter</author><author pid="w/HuubvandeWetering">Huub van de Wetering</author><author pid="22/4877">Jarke J. van Wijk</author></authors><title>Visualization, Selection, and Analysis of Traffic Flows.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>379-388</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ScheepensHWW16</key><doi>10.1109/TVCG.2015.2467112</doi><ee>https://doi.org/10.1109/TVCG.2015.2467112</ee><url>https://dblp.org/rec/journals/tvcg/ScheepensHWW16</url></info>
+<url>URL#2487929</url>
+</hit>
+<hit score="1" id="2487930">
+<info><authors><author pid="118/6128">Carl Schissler</author><author pid="165/9993">Aaron Nicholls</author><author pid="57/7592">Ravish Mehra</author></authors><title>Efficient HRTF-based Spatial Audio for Area and Volumetric Sources.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1356-1366</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SchisslerNM16</key><doi>10.1109/TVCG.2016.2518134</doi><ee>https://doi.org/10.1109/TVCG.2016.2518134</ee><url>https://dblp.org/rec/journals/tvcg/SchisslerNM16</url></info>
+<url>URL#2487930</url>
+</hit>
+<hit score="1" id="2487931">
+<info><authors><author pid="02/9594">David Schroeder</author><author pid="42/3096">Daniel F. Keefe</author></authors><title>Visualization-by-Sketching: An Artist&apos;s Interface for Creating Multivariate Time-Varying Data Visualizations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>877-885</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SchroederK16</key><doi>10.1109/TVCG.2015.2467153</doi><ee>https://doi.org/10.1109/TVCG.2015.2467153</ee><url>https://dblp.org/rec/journals/tvcg/SchroederK16</url></info>
+<url>URL#2487931</url>
+</hit>
+<hit score="1" id="2487932">
+<info><authors><author pid="00/1405">Hans-Jörg Schulz</author><author pid="118/6511">Marco Angelini</author><author pid="s/GiuseppeSantucci">Giuseppe Santucci</author><author pid="s/HeidrunSchumann">Heidrun Schumann</author></authors><title>An Enhanced Visualization Process Model for Incremental Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1830-1842</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SchulzASS16</key><doi>10.1109/TVCG.2015.2462356</doi><ee>https://doi.org/10.1109/TVCG.2015.2462356</ee><url>https://dblp.org/rec/journals/tvcg/SchulzASS16</url></info>
+<url>URL#2487932</url>
+</hit>
+<hit score="1" id="2487933">
+<info><authors><author pid="61/2654">Vidya Setlur</author><author pid="s/MaureenCStone">Maureen C. Stone</author></authors><title>A Linguistic Approach to Categorical Color Assignment for Data Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>698-707</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SetlurS16</key><doi>10.1109/TVCG.2015.2467471</doi><ee>https://doi.org/10.1109/TVCG.2015.2467471</ee><url>https://dblp.org/rec/journals/tvcg/SetlurS16</url></info>
+<url>URL#2487933</url>
+</hit>
+<hit score="1" id="2487934">
+<info><authors><author pid="117/8475">Nithin Shivashankar</author><author pid="00/10483">Pratyush Pranav</author><author pid="83/3653">Vijay Natarajan</author><author pid="31/3913">Rien van de Weygaert</author><author pid="32/10483">E. G. Patrick Bos</author><author pid="59/8398">Steven Rieder</author></authors><title>Felix: A Topology Based Framework for Visual Exploration of Cosmic Filaments.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1745-1759</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ShivashankarPNW16</key><doi>10.1109/TVCG.2015.2452919</doi><ee>https://doi.org/10.1109/TVCG.2015.2452919</ee><url>https://dblp.org/rec/journals/tvcg/ShivashankarPNW16</url></info>
+<url>URL#2487934</url>
+</hit>
+<hit score="1" id="2487935">
+<info><authors><author pid="51/3807">Paolo Simonetto</author><author pid="185/1576">Daniel Archambault</author><author pid="17/5910">Carlos Scheidegger</author></authors><title>A Simple Approach for Boundary Improvement of Euler Diagrams.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>678-687</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SimonettoAS16</key><doi>10.1109/TVCG.2015.2467992</doi><ee>https://doi.org/10.1109/TVCG.2015.2467992</ee><url>https://dblp.org/rec/journals/tvcg/SimonettoAS16</url></info>
+<url>URL#2487935</url>
+</hit>
+<hit score="1" id="2487936">
+<info><authors><author pid="170/1572">Robin Skånberg</author><author pid="84/368">Pere-Pau Vázquez</author><author pid="41/5814">Victor Guallar</author><author pid="92/5590">Timo Ropinski</author></authors><title>Real-Time Molecular Visualization Supporting Diffuse Interreflections and Ambient Occlusion.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>718-727</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SkanbergVGR16</key><doi>10.1109/TVCG.2015.2467293</doi><ee>https://doi.org/10.1109/TVCG.2015.2467293</ee><url>https://dblp.org/rec/journals/tvcg/SkanbergVGR16</url></info>
+<url>URL#2487936</url>
+</hit>
+<hit score="1" id="2487937">
+<info><authors><author pid="60/1944">Primoz Skraba</author><author pid="85/1344">Paul Rosen 0001</author><author pid="08/6391-1">Bei Wang 0001</author><author pid="62/1670">Guoning Chen</author><author pid="09/10267">Harsh Bhatia</author><author pid="02/2574">Valerio Pascucci</author></authors><title>Critical Point Cancellation in 3D Vector Fields: Robustness and Discussion.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1683-1693</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SkrabaRWCBP16</key><doi>10.1109/TVCG.2016.2534538</doi><ee>https://doi.org/10.1109/TVCG.2016.2534538</ee><url>https://dblp.org/rec/journals/tvcg/SkrabaRWCBP16</url></info>
+<url>URL#2487937</url>
+</hit>
+<hit score="1" id="2487938">
+<info><authors><author pid="140/0877">Johannes Sorger</author><author pid="170/1556">Thomas Ortner</author><author pid="16/9396">Christian Luksch</author><author pid="36/7590">Michael Schwärzler</author><author pid="g/MEGroller">M. Eduard Gröller</author><author pid="67/5356">Harald Piringer</author></authors><title>LiteVis: Integrated Visualization for Simulation-Based Decision Support in Lighting Design.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>290-299</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SorgerOLSGP16</key><doi>10.1109/TVCG.2015.2468011</doi><ee>https://doi.org/10.1109/TVCG.2015.2468011</ee><url>https://dblp.org/rec/journals/tvcg/SorgerOLSGP16</url></info>
+<url>URL#2487938</url>
+</hit>
+<hit score="1" id="2487939">
+<info><authors><author pid="170/1736">Julian Stahnke</author><author pid="50/2795">Marian Dörk</author><author pid="28/1228">Boris Müller</author><author pid="17/1988-2">Andreas Thom 0002</author></authors><title>Probing Projections: Interaction Techniques for Interpreting Arrangements and Errors of Dimensionality Reductions.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>629-638</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/StahnkeDMT16</key><doi>10.1109/TVCG.2015.2467717</doi><ee>https://doi.org/10.1109/TVCG.2015.2467717</ee><url>https://dblp.org/rec/journals/tvcg/StahnkeDMT16</url></info>
+<url>URL#2487939</url>
+</hit>
+<hit score="1" id="2487940">
+<info><authors><author pid="55/1675">Anthony Steed</author><author pid="143/9539">Sebastian Friston</author><author pid="177/6240">María Murcia-López</author><author pid="134/5906">Jason Drummond</author><author pid="135/6838">Ye Pan</author><author pid="38/1471">David Swapp</author></authors><title>An &apos;In the Wild&apos; Experiment on Presence and Embodiment using Consumer Virtual Reality Equipment.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1406-1414</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SteedFLDPS16</key><doi>10.1109/TVCG.2016.2518135</doi><ee>https://doi.org/10.1109/TVCG.2016.2518135</ee><url>https://dblp.org/rec/journals/tvcg/SteedFLDPS16</url></info>
+<url>URL#2487940</url>
+</hit>
+<hit score="1" id="2487941">
+<info><authors><author pid="118/3783">Holger Stitz</author><author pid="137/2111">Samuel Gratzl</author><author pid="90/4470">Wolfgang Aigner</author><author pid="99/5746">Marc Streit</author></authors><title>ThermalPlot: Visualizing Multi-Attribute Time-Series Data Using a Thermal Metaphor.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2594-2607</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/StitzGAS16</key><doi>10.1109/TVCG.2015.2513389</doi><ee>https://doi.org/10.1109/TVCG.2015.2513389</ee><url>https://dblp.org/rec/journals/tvcg/StitzGAS16</url></info>
+<url>URL#2487941</url>
+</hit>
+<hit score="1" id="2487942">
+<info><authors><author pid="67/7527">Hendrik Strobelt</author><author pid="95/7852">Bilal Alsallakh</author><author pid="170/1560">Joseph Botros</author><author pid="170/1636">Brant Peterson</author><author pid="170/1592">Mark Borowsky</author><author pid="p/HanspeterPfister">Hanspeter Pfister</author><author pid="12/7258">Alexander Lex</author></authors><title>Vials: Visualizing Alternative Splicing of Genes.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>399-408</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/StrobeltABPBPL16</key><doi>10.1109/TVCG.2015.2467911</doi><ee>https://doi.org/10.1109/TVCG.2015.2467911</ee><url>https://dblp.org/rec/journals/tvcg/StrobeltABPBPL16</url></info>
+<url>URL#2487942</url>
+</hit>
+<hit score="1" id="2487943">
+<info><authors><author pid="67/7527">Hendrik Strobelt</author><author pid="76/6879">Daniela Oelke</author><author pid="73/1969">Bum Chul Kwon</author><author pid="81/2498">Tobias Schreck</author><author pid="p/HanspeterPfister">Hanspeter Pfister</author></authors><title>Guidelines for Effective Usage of Text Highlighting Techniques.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>489-498</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/StrobeltOKSP16</key><doi>10.1109/TVCG.2015.2467759</doi><ee>https://doi.org/10.1109/TVCG.2015.2467759</ee><url>https://dblp.org/rec/journals/tvcg/StrobeltOKSP16</url></info>
+<url>URL#2487943</url>
+</hit>
+<hit score="1" id="2487944">
+<info><authors><author pid="67/7527">Hendrik Strobelt</author><author pid="76/6879">Daniela Oelke</author><author pid="73/1969">Bum Chul Kwon</author><author pid="81/2498">Tobias Schreck</author><author pid="p/HanspeterPfister">Hanspeter Pfister</author></authors><title>Errata to &quot;Guidelines for Effective Usage of Text Highlighting Techniques&quot; [1].</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1637</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/StrobeltOKSP16a</key><doi>10.1109/TVCG.2016.2532240</doi><ee>https://doi.org/10.1109/TVCG.2016.2532240</ee><url>https://dblp.org/rec/journals/tvcg/StrobeltOKSP16a</url></info>
+<url>URL#2487944</url>
+</hit>
+<hit score="1" id="2487945">
+<info><authors><author pid="136/5572">Wei Sui</author><author pid="06/4250">Lingfeng Wang</author><author pid="60/105">Bin Fan</author><author pid="49/2442">Hongfei Xiao</author><author pid="83/7682">Huai-Yu Wu</author><author pid="26/3810">Chunhong Pan</author></authors><title>Layer-Wise Floorplan Extraction for Automatic Urban Building Reconstruction.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1261-1277</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SuiWFXWP16</key><doi>10.1109/TVCG.2015.2505296</doi><ee>https://doi.org/10.1109/TVCG.2015.2505296</ee><url>https://dblp.org/rec/journals/tvcg/SuiWFXWP16</url></info>
+<url>URL#2487945</url>
+</hit>
+<hit score="1" id="2487946">
+<info><authors><author pid="09/3224-6">Feng Sun 0006</author><author pid="13/5305">Yi-King Choi</author><author pid="90/6896">Yizhou Yu</author><author pid="49/4096">Wenping Wang</author></authors><title>Medial Meshes - A Compact and Accurate Representation of Medial Axis Transform.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1278-1290</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SunCYW16</key><doi>10.1109/TVCG.2015.2448080</doi><ee>https://doi.org/10.1109/TVCG.2015.2448080</ee><url>https://dblp.org/rec/journals/tvcg/SunCYW16</url></info>
+<url>URL#2487946</url>
+</hit>
+<hit score="1" id="2487947">
+<info><authors><author pid="61/10989">Maoyuan Sun</author><author pid="123/9753">Peng Mi</author><author pid="58/4516">Chris North 0001</author><author pid="r/NarenRamakrishnan">Naren Ramakrishnan</author></authors><title>BiSet: Semantic Edge Bundling with Biclusters for Sensemaking.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>310-319</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SunMNR16</key><doi>10.1109/TVCG.2015.2467813</doi><ee>https://doi.org/10.1109/TVCG.2015.2467813</ee><url>https://dblp.org/rec/journals/tvcg/SunMNR16</url></info>
+<url>URL#2487947</url>
+</hit>
+<hit score="1" id="2487948">
+<info><authors><author pid="83/8320">Danielle Albers Szafir</author><author pid="149/0951">Alper Sarikaya</author><author pid="g/MichaelGleicher">Michael Gleicher</author></authors><title>Lightness Constancy in Surface Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2107-2121</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/SzafirSG16</key><doi>10.1109/TVCG.2015.2500240</doi><ee>https://doi.org/10.1109/TVCG.2015.2500240</ee><url>https://dblp.org/rec/journals/tvcg/SzafirSG16</url></info>
+<url>URL#2487948</url>
+</hit>
+<hit score="1" id="2487949">
+<info><authors><author pid="44/515">Shoichi Takeda</author><author pid="50/1009">Daisuke Iwai</author><author pid="23/832">Kosuke Sato</author></authors><title>Inter-reflection Compensation of Immersive Projection Display by Spatio-Temporal Screen Reflectance Modulation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1424-1431</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/TakedaIS16</key><doi>10.1109/TVCG.2016.2518136</doi><ee>https://doi.org/10.1109/TVCG.2016.2518136</ee><url>https://dblp.org/rec/journals/tvcg/TakedaIS16</url></info>
+<url>URL#2487949</url>
+</hit>
+<hit score="1" id="2487950">
+<info><authors><author pid="35/5170-2">Jun Tao 0002</author><author pid="w/ChaoliWang">Chaoli Wang 0001</author><author pid="20/3462">Ching-Kuang Shene</author><author pid="177/7898">Raymond A. Shaw</author></authors><title>A Vocabulary Approach to Partial Streamline Matching and Exploratory Flow Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1503-1516</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/TaoWSS16</key><doi>10.1109/TVCG.2015.2440252</doi><ee>https://doi.org/10.1109/TVCG.2015.2440252</ee><url>https://dblp.org/rec/journals/tvcg/TaoWSS16</url></info>
+<url>URL#2487950</url>
+</hit>
+<hit score="1" id="2487951">
+<info><authors><author pid="00/7166">Dennis Thom</author><author pid="123/9755">Robert Krüger</author><author pid="e/ThomasErtl">Thomas Ertl</author></authors><title>Can Twitter Save Lives? A Broad-Scale Study on Visual Social Media Analytics for Public Safety.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1816-1829</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ThomKE16</key><doi>10.1109/TVCG.2015.2511733</doi><ee>https://doi.org/10.1109/TVCG.2015.2511733</ee><url>https://dblp.org/rec/journals/tvcg/ThomKE16</url></info>
+<url>URL#2487951</url>
+</hit>
+<hit score="1" id="2487952">
+<info><authors><author pid="52/11300">Alice Thudt</author><author pid="42/6314">Dominikus Baur</author><author pid="132/4841">Samuel Huron</author><author pid="c/MSheelaghTCarpendale">Sheelagh Carpendale</author></authors><title>Visual Mementos: Reflecting Memories with Personal Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>369-378</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ThudtBHC16</key><doi>10.1109/TVCG.2015.2467831</doi><ee>https://doi.org/10.1109/TVCG.2015.2467831</ee><url>https://dblp.org/rec/journals/tvcg/ThudtBHC16</url></info>
+<url>URL#2487952</url>
+</hit>
+<hit score="1" id="2487953">
+<info><authors><author pid="86/2176">Xin Tong</author><author pid="93/1067">John Edwards</author><author pid="25/2383">Chun-Ming Chen</author><author pid="61/6829">Han-Wei Shen</author><author pid="80/2990">Chris R. Johnson 0001</author><author pid="59/1574">Pak Chung Wong</author></authors><title>View-Dependent Streamline Deformation and Exploration.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1788-1801</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/TongECSJW16</key><doi>10.1109/TVCG.2015.2502583</doi><ee>https://doi.org/10.1109/TVCG.2015.2502583</ee><url>https://dblp.org/rec/journals/tvcg/TongECSJW16</url></info>
+<url>URL#2487953</url>
+</hit>
+<hit score="1" id="2487954">
+<info><authors><author pid="75/8250">Susan VanderPlas</author><author pid="52/2313">Heike Hofmann</author></authors><title>Spatial Reasoning and Data Displays.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>459-468</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/VanderPlasH16</key><doi>10.1109/TVCG.2015.2469125</doi><ee>https://doi.org/10.1109/TVCG.2015.2469125</ee><url>https://dblp.org/rec/journals/tvcg/VanderPlasH16</url></info>
+<url>URL#2487954</url>
+</hit>
+<hit score="1" id="2487955">
+<info><authors><author pid="06/9661">Corinna Vehlow</author><author pid="b/FabianBeck">Fabian Beck 0001</author><author pid="w/DanielWeiskopf">Daniel Weiskopf</author></authors><title>Visualizing Dynamic Hierarchies in Graph Sequences.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2343-2357</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/VehlowBW16</key><doi>10.1109/TVCG.2015.2507595</doi><ee>https://doi.org/10.1109/TVCG.2015.2507595</ee><url>https://dblp.org/rec/journals/tvcg/VehlowBW16</url></info>
+<url>URL#2487955</url>
+</hit>
+<hit score="1" id="2487956">
+<info><authors><author pid="15/11270">Marek Vinkler</author><author pid="56/5112">Vlastimil Havran</author><author pid="59/5617">Jirí Bittner</author><author pid="63/3062">Jirí Sochor</author></authors><title>Parallel On-Demand Hierarchy Construction on Contemporary GPUs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>7</number><pages>1886-1898</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/VinklerHBS16</key><doi>10.1109/TVCG.2015.2465898</doi><ee>https://doi.org/10.1109/TVCG.2015.2465898</ee><url>https://dblp.org/rec/journals/tvcg/VinklerHBS16</url></info>
+<url>URL#2487956</url>
+</hit>
+<hit score="1" id="2487957">
+<info><authors><author pid="177/6216">Matias Volonte</author><author pid="94/8434">Sabarish V. Babu</author><author pid="167/3398">Himanshu Chaturvedi</author><author pid="167/3399">Nathan D. Newsome</author><author pid="134/5930">Elham Ebrahimi</author><author pid="84/9468">Tania Roy</author><author pid="13/5471">Shaundra Bryant Daily</author><author pid="134/5918">Tracy Fasolino</author></authors><title>Effects of Virtual Human Appearance Fidelity on Emotion Contagion in Affective Inter-Personal Simulations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>4</number><pages>1326-1335</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/VolanteBCNERDF16</key><doi>10.1109/TVCG.2016.2518158</doi><ee>https://doi.org/10.1109/TVCG.2016.2518158</ee><url>https://dblp.org/rec/journals/tvcg/VolanteBCNERDF16</url></info>
+<url>URL#2487957</url>
+</hit>
+<hit score="1" id="2487958">
+<info><authors><author pid="17/3176">James S. Walker</author><author pid="06/5053">Rita Borgo</author><author pid="22/238">Mark W. Jones</author></authors><title>TimeNotes: A Study on Effective Chart Visualization and Interaction Techniques for Time-Series Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>549-558</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WalkerBJ16</key><doi>10.1109/TVCG.2015.2467751</doi><ee>https://doi.org/10.1109/TVCG.2015.2467751</ee><url>https://dblp.org/rec/journals/tvcg/WalkerBJ16</url></info>
+<url>URL#2487958</url>
+</hit>
+<hit score="1" id="2487959">
+<info><authors><author pid="142/2752">Jinglu Wang</author><author pid="06/1750">Tian Fang</author><author pid="148/8897">Qingkun Su</author><author pid="81/8842-1">Siyu Zhu 0001</author><author pid="43/7726">Jingbo Liu</author><author pid="150/6341">Shengnan Cai</author><author pid="40/1592">Chiew-Lan Tai</author><author pid="04/575">Long Quan</author></authors><title>Image-Based Building Regularization Using Structural Linear Features.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1760-1772</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangFSZLCTQ16</key><doi>10.1109/TVCG.2015.2461163</doi><ee>https://doi.org/10.1109/TVCG.2015.2461163</ee><url>https://dblp.org/rec/journals/tvcg/WangFSZLCTQ16</url></info>
+<url>URL#2487959</url>
+</hit>
+<hit score="1" id="2487960">
+<info><authors><author pid="134/4020">Xiting Wang</author><author pid="22/904">Shixia Liu</author><author pid="55/6642">Junlin Liu</author><author pid="48/6809-1">Jianfei Chen 0001</author><author pid="50/2644-1">Jun Zhu 0001</author><author pid="44/3946">Baining Guo</author></authors><title>TopicPanorama: A Full Picture of Relevant Topics.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2508-2521</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangLLCZG16</key><doi>10.1109/TVCG.2016.2515592</doi><ee>https://doi.org/10.1109/TVCG.2016.2515592</ee><url>https://dblp.org/rec/journals/tvcg/WangLLCZG16</url></info>
+<url>URL#2487960</url>
+</hit>
+<hit score="1" id="2487961">
+<info><authors><author pid="125/8189">Jun Wang</author><author pid="26/6494">Klaus Mueller 0001</author></authors><title>The Visual Causality Analyst: An Interactive Interface for Causal Reasoning.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>230-239</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangM16</key><doi>10.1109/TVCG.2015.2467931</doi><ee>https://doi.org/10.1109/TVCG.2015.2467931</ee><url>https://dblp.org/rec/journals/tvcg/WangM16</url></info>
+<url>URL#2487961</url>
+</hit>
+<hit score="1" id="2487962">
+<info><authors><author pid="08/742">Yu-Shuen Wang</author><author pid="173/9423">Wan-Yu Peng</author></authors><title>Interactive Metro Map Editing.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1115-1126</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangP16</key><doi>10.1109/TVCG.2015.2430290</doi><ee>https://doi.org/10.1109/TVCG.2015.2430290</ee><url>https://dblp.org/rec/journals/tvcg/WangP16</url></info>
+<url>URL#2487962</url>
+</hit>
+<hit score="1" id="2487963">
+<info><authors><author pid="84/2694-21">Yong Wang 0021</author><author pid="170/1662">Qiaomu Shen</author><author pid="185/1576">Daniel Archambault</author><author pid="26/9663">Zhiguang Zhou</author><author pid="76/3988">Min Zhu</author><author pid="43/9916">Sixiao Yang</author><author pid="65/1792">Huamin Qu</author></authors><title>AmbiguityVis: Visualization of Ambiguity in Graph Layouts.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>359-368</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangSAZZYQ16</key><doi>10.1109/TVCG.2015.2467691</doi><ee>https://doi.org/10.1109/TVCG.2015.2467691</ee><url>https://dblp.org/rec/journals/tvcg/WangSAZZYQ16</url></info>
+<url>URL#2487963</url>
+</hit>
+<hit score="1" id="2487964">
+<info><authors><author pid="88/845-1">Zhongjie Wang 0001</author><author pid="s/HansPeterSeidel">Hans-Peter Seidel</author><author pid="06/505">Tino Weinkauf</author></authors><title>Multi-field Pattern Matching based on Sparse Feature Sampling.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>807-816</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WangSW16</key><doi>10.1109/TVCG.2015.2467292</doi><ee>https://doi.org/10.1109/TVCG.2015.2467292</ee><url>https://dblp.org/rec/journals/tvcg/WangSW16</url></info>
+<url>URL#2487964</url>
+</hit>
+<hit score="1" id="2487965">
+<info><authors><author pid="34/1111">Kenneth Weiss 0001</author><author pid="89/4312">Peter Lindstrom 0001</author></authors><title>Adaptive Multilinear Tensor Product Wavelets.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>985-994</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WeissL16</key><doi>10.1109/TVCG.2015.2467412</doi><ee>https://doi.org/10.1109/TVCG.2015.2467412</ee><url>https://dblp.org/rec/journals/tvcg/WeissL16</url></info>
+<url>URL#2487965</url>
+</hit>
+<hit score="1" id="2487966">
+<info><authors><author pid="178/0261">Pei-Chih Wen</author><author pid="33/11308">Wei-Chih Cheng</author><author pid="08/742">Yu-Shuen Wang</author><author pid="67/2946">Hung-Kuo Chu</author><author pid="31/2554">Nick C. Tang</author><author pid="05/2757">Hong-Yuan Mark Liao</author></authors><title>Court Reconstruction for Camera Calibration in Broadcast Basketball Videos.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1517-1526</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WenCWCTL16</key><doi>10.1109/TVCG.2015.2440236</doi><ee>https://doi.org/10.1109/TVCG.2015.2440236</ee><url>https://dblp.org/rec/journals/tvcg/WenCWCTL16</url></info>
+<url>URL#2487966</url>
+</hit>
+<hit score="1" id="2487967">
+<info><authors><author pid="186/1875">Simon Willi</author><author pid="83/2599">Anselm Grundhöfer</author></authors><title>Spatio-Temporal Point Path Analysis and Optimization of a Galvanoscopic Scanning Laser Projector.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>11</number><pages>2377-2384</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WilliG16</key><doi>10.1109/TVCG.2016.2593766</doi><ee>https://doi.org/10.1109/TVCG.2016.2593766</ee><url>https://dblp.org/rec/journals/tvcg/WilliG16</url></info>
+<url>URL#2487967</url>
+</hit>
+<hit score="1" id="2487968">
+<info><authors><author pid="119/4550">Kanit Wongsuphasawat</author><author pid="147/1186">Dominik Moritz</author><author pid="86/6871">Anushka Anand</author><author pid="03/2919">Jock D. Mackinlay</author><author pid="h/BillHowe">Bill Howe</author><author pid="27/4508">Jeffrey Heer</author></authors><title>Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>649-658</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WongsuphasawatM16</key><doi>10.1109/TVCG.2015.2467191</doi><ee>https://doi.org/10.1109/TVCG.2015.2467191</ee><url>https://dblp.org/rec/journals/tvcg/WongsuphasawatM16</url></info>
+<url>URL#2487968</url>
+</hit>
+<hit score="1" id="2487969">
+<info><authors><author pid="62/6327">Jonathan Woodring</author><author pid="46/8895">Mark R. Petersen</author><author pid="173/8241">Andre Schmeißer</author><author pid="44/6866">John Patchett</author><author pid="88/2598">James P. Ahrens</author><author pid="h/HansHagen">Hans Hagen</author></authors><title>In Situ Eddy Analysis in a High-Resolution Ocean Climate Model.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>857-866</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WoodringPSPAH16</key><doi>10.1109/TVCG.2015.2467411</doi><ee>https://doi.org/10.1109/TVCG.2015.2467411</ee><url>https://dblp.org/rec/journals/tvcg/WoodringPSPAH16</url></info>
+<url>URL#2487969</url>
+</hit>
+<hit score="1" id="2487970">
+<info><authors><author pid="20/3894-5">Jun Wu 0005</author><author pid="05/3742">Christian Dick</author><author pid="w/RudigerWestermann">Rüdiger Westermann</author></authors><title>A System for High-Resolution Topology Optimization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>3</number><pages>1195-1208</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuDW16</key><doi>10.1109/TVCG.2015.2502588</doi><ee>https://doi.org/10.1109/TVCG.2015.2502588</ee><url>https://dblp.org/rec/journals/tvcg/WuDW16</url></info>
+<url>URL#2487970</url>
+</hit>
+<hit score="1" id="2487971">
+<info><authors><author pid="115/6411">Meng-Lin Wu</author><author pid="p/VoicuPopescu">Voicu Popescu</author></authors><title>Multiperspective Focus+Context Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1555-1567</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuP16</key><doi>10.1109/TVCG.2015.2443804</doi><ee>https://doi.org/10.1109/TVCG.2015.2443804</ee><url>https://dblp.org/rec/journals/tvcg/WuP16</url></info>
+<url>URL#2487971</url>
+</hit>
+<hit score="1" id="2487972">
+<info><authors><author pid="49/4363">Yanhong Wu</author><author pid="170/1733">Naveen Pitipornvivat</author><author pid="70/2932-10">Jian Zhao 0010</author><author pid="43/9916">Sixiao Yang</author><author pid="18/1730">Guowei Huang</author><author pid="65/1792">Huamin Qu</author></authors><title>egoSlider: Visual Analysis of Egocentric Network Evolution.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>260-269</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuPZYHQ16</key><doi>10.1109/TVCG.2015.2468151</doi><ee>https://doi.org/10.1109/TVCG.2015.2468151</ee><url>https://dblp.org/rec/journals/tvcg/WuPZYHQ16</url></info>
+<url>URL#2487972</url>
+</hit>
+<hit score="1" id="2487973">
+<info><authors><author pid="179/3791">Tongshuang Wu</author><author pid="49/6702">Yingcai Wu</author><author pid="53/10398">Conglei Shi</author><author pid="65/1792">Huamin Qu</author><author pid="34/2915">Weiwei Cui</author></authors><title>PieceStack: Toward Better Understanding of Stacked Graphs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1640-1651</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuWSQC16</key><doi>10.1109/TVCG.2016.2534518</doi><ee>https://doi.org/10.1109/TVCG.2016.2534518</ee><url>https://dblp.org/rec/journals/tvcg/WuWSQC16</url></info>
+<url>URL#2487973</url>
+</hit>
+<hit score="1" id="2487974">
+<info><authors><author pid="22/6047">Hongzhi Wu</author><author pid="182/2835">Zhaotian Wang</author><author pid="48/3927-1">Kun Zhou 0001</author></authors><title>Simultaneous Localization and Appearance Estimation with a Consumer RGB-D Camera.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>2012-2023</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuWZ16</key><doi>10.1109/TVCG.2015.2498617</doi><ee>https://doi.org/10.1109/TVCG.2015.2498617</ee><url>https://dblp.org/rec/journals/tvcg/WuWZ16</url></info>
+<url>URL#2487974</url>
+</hit>
+<hit score="1" id="2487975">
+<info><authors><author pid="159/1364">Wenchao Wu</author><author pid="40/6214-1">Jiayi Xu 0001</author><author pid="170/1659">Haipeng Zeng</author><author pid="92/9577">Yixian Zheng</author><author pid="65/1792">Huamin Qu</author><author pid="57/6532">Bing Ni</author><author pid="74/2356">Mingxuan Yuan</author><author pid="n/LionelMNi">Lionel M. Ni</author></authors><title>TelCoVis: Visual Exploration of Co-occurrence in Urban Human Mobility Based on Telco Data.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>935-944</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WuXZZQNYN16</key><doi>10.1109/TVCG.2015.2467194</doi><ee>https://doi.org/10.1109/TVCG.2015.2467194</ee><url>https://dblp.org/rec/journals/tvcg/WuXZZQNYN16</url></info>
+<url>URL#2487975</url>
+</hit>
+<hit score="1" id="2487976">
+<info><authors><author pid="91/2214">Chris Wyman</author><author pid="10/7552">Rama Hoetzlein</author><author pid="16/31">Aaron E. Lefohn</author></authors><title>Frustum-Traced Irregular Z-Buffers: Fast, Sub-Pixel Accurate Hard Shadows.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>10</number><pages>2249-2261</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/WymanHL16</key><doi>10.1109/TVCG.2016.2572689</doi><ee>https://doi.org/10.1109/TVCG.2016.2572689</ee><url>https://dblp.org/rec/journals/tvcg/WymanHL16</url></info>
+<url>URL#2487976</url>
+</hit>
+<hit score="1" id="2487977">
+<info><authors><author pid="44/2171-1">Ke Xie 0001</author><author pid="21/8870">Feilong Yan</author><author pid="21/5216">Andrei Sharf</author><author pid="48/2158">Oliver Deussen</author><author pid="33/5763-4">Hui Huang 0004</author><author pid="23/4197">Baoquan Chen</author></authors><title>Tree Modeling with Real Tree-Parts Examples.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2608-2618</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/XieYSDHC16</key><doi>10.1109/TVCG.2015.2513409</doi><ee>https://doi.org/10.1109/TVCG.2015.2513409</ee><url>https://dblp.org/rec/journals/tvcg/XieYSDHC16</url></info>
+<url>URL#2487977</url>
+</hit>
+<hit score="1" id="2487978">
+<info><authors><author pid="188/4700">Mehmet Adil Yalçin</author><author pid="e/NiklasElmqvist">Niklas Elmqvist</author><author pid="b/BenBederson">Benjamin B. Bederson</author></authors><title>AggreSet: Rich and Scalable Set Exploration using Visualizations of Element Aggregations.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>688-697</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YalcinEB16</key><doi>10.1109/TVCG.2015.2467051</doi><ee>https://doi.org/10.1109/TVCG.2015.2467051</ee><url>https://dblp.org/rec/journals/tvcg/YalcinEB16</url></info>
+<url>URL#2487978</url>
+</hit>
+<hit score="1" id="2487979">
+<info><authors><author pid="94/1731-1">Dong-Ming Yan 0001</author><author pid="98/5522">Peter Wonka</author></authors><title>Non-Obtuse Remeshing with Centroidal Voronoi Tessellation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2136-2144</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YanW16</key><doi>10.1109/TVCG.2015.2505279</doi><ee>https://doi.org/10.1109/TVCG.2015.2505279</ee><url>https://dblp.org/rec/journals/tvcg/YanW16</url></info>
+<url>URL#2487979</url>
+</hit>
+<hit score="1" id="2487980">
+<info><authors><author pid="98/2604-39">Ming Yang 0039</author><author pid="58/4277">Hongyang Chao</author><author pid="91/195-26">Chi Zhang 0026</author><author pid="73/273">Jun Guo</author><author pid="66/6740">Lu Yuan</author><author pid="68/4942-1">Jian Sun 0001</author></authors><title>Effective Clipart Image Vectorization through Direct Optimization of Bezigons.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1063-1075</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YangCZGY016</key><doi>10.1109/TVCG.2015.2440273</doi><ee>https://doi.org/10.1109/TVCG.2015.2440273</ee><url>https://dblp.org/rec/journals/tvcg/YangCZGY016</url></info>
+<url>URL#2487980</url>
+</hit>
+<hit score="1" id="2487981">
+<info><authors><author pid="72/8479">Shan Yang</author><author pid="l/MingCLin">Ming C. Lin</author></authors><title>MaterialCloning: Acquiring Elasticity Parameters from Images for Medical Applications.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>9</number><pages>2122-2135</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YangL16</key><doi>10.1109/TVCG.2015.2505285</doi><ee>https://doi.org/10.1109/TVCG.2015.2505285</ee><url>https://dblp.org/rec/journals/tvcg/YangL16</url></info>
+<url>URL#2487981</url>
+</hit>
+<hit score="1" id="2487982">
+<info><authors><author pid="48/450">Yang Yang</author><author pid="04/3750">Xubo Yang</author><author pid="156/1150">Shuangcai Yang</author></authors><title>A Fast Iterated Orthogonal Projection Framework for Smoke Simulation.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>5</number><pages>1492-1502</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YangYY16</key><doi>10.1109/TVCG.2015.2446474</doi><ee>https://doi.org/10.1109/TVCG.2015.2446474</ee><url>https://dblp.org/rec/journals/tvcg/YangYY16</url></info>
+<url>URL#2487982</url>
+</hit>
+<hit score="1" id="2487983">
+<info><authors><author pid="170/1594">Vahan Yoghourdjian</author><author pid="21/6679">Tim Dwyer</author><author pid="76/3059">Graeme Gange</author><author pid="133/8429">Steve Kieffer</author><author pid="19/5555">Karsten Klein 0001</author><author pid="m/KimMarriott">Kim Marriott</author></authors><title>High-Quality Ultra-Compact Grid Layout of Grouped Networks.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>339-348</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YoghourdjianDGK16</key><doi>10.1109/TVCG.2015.2467251</doi><ee>https://doi.org/10.1109/TVCG.2015.2467251</ee><url>https://dblp.org/rec/journals/tvcg/YoghourdjianDGK16</url></info>
+<url>URL#2487983</url>
+</hit>
+<hit score="1" id="2487984">
+<info><authors><author pid="47/3963">Lingyun Yu</author><author pid="53/9707">Konstantinos Efstathiou 0001</author><author pid="n/PetraNeumann">Petra Isenberg</author><author pid="i/TobiasIsenberg1">Tobias Isenberg 0001</author></authors><title>CAST: Effective and Efficient User Interaction for Context-Aware Selection in 3D Particle Clouds.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>886-895</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/Yu0I016</key><doi>10.1109/TVCG.2015.2467202</doi><ee>https://doi.org/10.1109/TVCG.2015.2467202</ee><url>https://dblp.org/rec/journals/tvcg/Yu0I016</url></info>
+<url>URL#2487984</url>
+</hit>
+<hit score="1" id="2487985">
+<info><authors><author pid="33/9924">Lap-Fai Yu</author><author pid="144/7479">Sai Kit Yeung</author><author pid="85/4738">Demetri Terzopoulos</author></authors><title>The Clutterpalette: An Interactive Tool for Detailing Indoor Scenes.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1138-1148</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/YuYT16</key><doi>10.1109/TVCG.2015.2417575</doi><ee>https://doi.org/10.1109/TVCG.2015.2417575</ee><url>https://dblp.org/rec/journals/tvcg/YuYT16</url></info>
+<url>URL#2487985</url>
+</hit>
+<hit score="1" id="2487986">
+<info><authors><author pid="68/1429">Qing Zhang</author><author pid="31/8005">Yongwei Nie</author><author pid="76/5973">Ling Zhang</author><author pid="83/1718">Chunxia Xiao</author></authors><title>Underexposed Video Enhancement via Perception-Driven Progressive Fusion.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1773-1785</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhangNZX16</key><doi>10.1109/TVCG.2015.2461157</doi><ee>https://doi.org/10.1109/TVCG.2015.2461157</ee><url>https://dblp.org/rec/journals/tvcg/ZhangNZX16</url></info>
+<url>URL#2487986</url>
+</hit>
+<hit score="1" id="2487987">
+<info><authors><author pid="170/1654">Changgong Zhang</author><author pid="72/1969-1">Thomas Schultz 0001</author><author pid="120/6338">Kai Lawonn</author><author pid="65/2556">Elmar Eisemann</author><author pid="v/AnnaVilanova">Anna Vilanova</author></authors><title>Glyph-Based Comparative Visualization for Diffusion Tensor Fields.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>1</number><pages>797-806</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhangSLEV16</key><doi>10.1109/TVCG.2015.2467435</doi><ee>https://doi.org/10.1109/TVCG.2015.2467435</ee><url>https://dblp.org/rec/journals/tvcg/ZhangSLEV16</url></info>
+<url>URL#2487987</url>
+</hit>
+<hit score="1" id="2487988">
+<info><authors><author pid="23/4835">Ran Zhang</author><author pid="76/6446">Shiwei Wang</author><author pid="17/4378">Xuejin Chen</author><author pid="77/7806">Chao Ding</author><author pid="173/9427">Luo Jiang</author><author pid="00/5012-10">Jie Zhou 0010</author><author pid="07/1830">Ligang Liu</author></authors><title>Designing Planar Deployable Objects via Scissor Structures.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>2</number><pages>1051-1062</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhangWCDJZL16</key><doi>10.1109/TVCG.2015.2430322</doi><ee>https://doi.org/10.1109/TVCG.2015.2430322</ee><url>https://dblp.org/rec/journals/tvcg/ZhangWCDJZL16</url></info>
+<url>URL#2487988</url>
+</hit>
+<hit score="1" id="2487989">
+<info><authors><author pid="21/8698">Youyi Zheng</author><author pid="35/2899-3">Han Liu 0003</author><author pid="d/JulieDorsey">Julie Dorsey</author><author pid="45/1575">Niloy J. Mitra</author></authors><title>Ergonomics-Inspired Reshaping and Exploration of Collections of Models.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>6</number><pages>1732-1744</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhengLDM16</key><doi>10.1109/TVCG.2015.2448084</doi><ee>https://doi.org/10.1109/TVCG.2015.2448084</ee><url>https://dblp.org/rec/journals/tvcg/ZhengLDM16</url></info>
+<url>URL#2487989</url>
+</hit>
+<hit score="1" id="2487990">
+<info><authors><author pid="81/4761-1">Liang Zhou 0001</author><author pid="n/CharlesDHansen">Charles D. Hansen</author></authors><title>A Survey of Colormaps in Visualization.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>2051-2069</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhouH16</key><doi>10.1109/TVCG.2015.2489649</doi><ee>https://doi.org/10.1109/TVCG.2015.2489649</ee><url>https://dblp.org/rec/journals/tvcg/ZhouH16</url></info>
+<url>URL#2487990</url>
+</hit>
+<hit score="1" id="2487991">
+<info><authors><author pid="79/6387">Zhe Zhu</author><author pid="170/1729">Hao-Zhi Huang 0001</author><author pid="98/5387">Zhipeng Tan</author><author pid="29/6948-3">Kun Xu 0003</author><author pid="h/ShiMinHu">Shi-Min Hu 0001</author></authors><title>Faithful Completion of Images of Scenic Landmarks Using Internet Images.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>8</number><pages>1945-1958</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZhuHTXH16</key><doi>10.1109/TVCG.2015.2480081</doi><ee>https://doi.org/10.1109/TVCG.2015.2480081</ee><url>https://dblp.org/rec/journals/tvcg/ZhuHTXH16</url></info>
+<url>URL#2487991</url>
+</hit>
+<hit score="1" id="2487992">
+<info><authors><author pid="97/9845">Matthew van der Zwan</author><author pid="136/5479">Valeriu Codreanu</author><author pid="t/AlexandruTelea">Alexandru C. Telea</author></authors><title>CUBu: Universal Real-Time Bundling for Large Graphs.</title><venue>IEEE Trans. Vis. Comput. Graph.</venue><volume>22</volume><number>12</number><pages>2550-2563</pages><year>2016</year><type>Journal Articles</type><access>closed</access><key>journals/tvcg/ZwanCT16</key><doi>10.1109/TVCG.2016.2515611</doi><ee>https://doi.org/10.1109/TVCG.2016.2515611</ee><url>https://dblp.org/rec/journals/tvcg/ZwanCT16</url></info>
+<url>URL#2487992</url>
+</hit>
+</hits>
+</result>
