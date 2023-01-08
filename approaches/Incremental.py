@@ -50,6 +50,7 @@ def Merging(Gi, Gi_1, Li_1, dl):
             Li[node] = np.array([0.0, 0.0])
             for neib in neibsi_1:
                 Li[node] += Li_1[neib]
+                move_flag[neib] = True
             Li[node] /= float(neibslen)
             contri_fact[node] = contri_fact_level[2]
         # only 1 positioned node connected:
@@ -57,10 +58,12 @@ def Merging(Gi, Gi_1, Li_1, dl):
             rd_angle = np.random.uniform( 0.0, 2.0 * np.pi )
             Li[node] = Li_1[list(neibsi_1)[0]] + dl * np.array(np.cos(rd_angle),np.sin(rd_angle))
             contri_fact[node] = contri_fact_level[1]
+            move_flag[list(neibsi_1)[0]] = True
         # no positioned node connected:
         else:
             Li[node] = center_bx + np.random.uniform( -0.5,0.5 ) * bounding_box_size
             contri_fact[node] = contri_fact_level[0]
+        move_flag[node] = True
 
     for edge_var in edges_var:
         u = edge_var[0]
@@ -167,7 +170,7 @@ def Refinement(Gi, Li, C, dl, weight, K=1.0):
     np.clip(distance, 0.01, None, out=distance)
     En = np.einsum(
         "ij,ij->i", ones, -C / distance +
-            A * _1d9 * (np.power(distance, 3) * (np.log(distance / dl) - 1) + dl3)
+            A * _1d9 * (distance**3 * (np.log(distance / dl) - 1) + dl3)
     )
 
     miu = np.mean(En)
