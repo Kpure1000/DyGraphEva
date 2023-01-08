@@ -50,16 +50,17 @@ class fix_layout {
             if (w > maxweight) maxweight = w
         }
 
-        let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
+        // let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
+        let get_group_color = ()=>{return "#E6E6E7"}
 
         let link = this.svg.append("g")
-            .attr("stroke", "#999")
+            .attr("stroke", "#E6E7E7")
             .attr("stroke-opacity", 0.4)
             .attr("stroke-width", 1.9)
             .selectAll("line")
 
         let node = this.svg.append("g")
-            .attr("stroke", "#fff")
+            .attr("stroke", "#9FA0A0")
             .attr("stroke-width", 1.5)
             .selectAll("circle")
 

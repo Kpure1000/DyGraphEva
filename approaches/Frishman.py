@@ -155,7 +155,7 @@ def InitLayout(G0, distance_scale, weight):
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = fr_layout(G=G0, k=0.1, pos=L0, weight=weight, scale=None)
+    L0 = fr_layout(G=G0, k=0.1, iterations = 100, pos=L0, weight=weight, scale=None)
 
     return L0
 

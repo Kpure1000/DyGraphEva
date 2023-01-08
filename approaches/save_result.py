@@ -55,4 +55,4 @@ def Get_Result_Incremental(pathIn, nameIn, pathOut, nameOut):
 # Get_Result_Incremental("../data/dataset/truth/vdBunt_data/", "FR", "../data/result/truth/vdBunt_data/", "FR_Incremental")
 # Get_Result_Incremental("../data/dataset/truth/vdBunt_data/", "VRND32T", "../data/result/truth/vdBunt_data/", "VRND32T_Incremental")
 # Get_Result_Incremental("../data/dataset/truth/mammalia-pa/", "mammalia-pa", "../data/result/truth/mammalia-pa/", "mammalia-pa_Incremental")
-Get_Result_Incremental("../data/dataset/truth/dblp/", "dblp", "../data/result/truth/dblp/", "dblp_Incremental")
+# Get_Result_Incremental("../data/dataset/truth/dblp/", "dblp", "../data/result/truth/dblp/", "dblp_Incremental")
