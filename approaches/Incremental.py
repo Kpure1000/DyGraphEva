@@ -101,53 +101,74 @@ def Merging(Gi, Gi_1, Li_1, dl):
     for node in Li_1:
         contri_fact[node] = contri_fact_level[3]
 
-    return Li, move_flag, neibs
+    return Li, move_flag
 
 
-def Multilevel(Gi, Li, move_flag, neibs, min_ite=30, max_ite=250):
-    comps = nx.connected_components(Gi)
-    super_nodes = []
-    for node_set in comps:
-        super_nodes.append(max(list(nx.degree(Gi, node_set)), key = lambda ele: ele[1])[0])
-    nodes_ite = dict()
-    contri_facts = {}
-    for n in super_nodes:
-        nodes_ite[n] = 0
-        cf = 0
-        for nei in neibs[n]:
-            if move_flag[nei] == True:
-                cf += 1
-        if cf == 0:
-            contri_facts[n] = 0
+def Collapse(Gk_1, move_flag,weight):
+    Gk = Gk_1.copy()
+    SSs = [] # solar systems
+    SUN = set()
+    while len(Gk) > 0:
+        comps = nx.connected_components(Gk)
+        S = set()
+        for node_comp in comps:
+            S.add(max(list(nx.degree(Gk, node_comp)), key = lambda ele: ele[1])[0])
+        V = set(S)
+        SUN = SUN | S
+        for s in S:
+            P = set(Gk.neighbors(s))
+            V = V | P
+            M = set()
+            for p in P:
+                M = M | set(Gk.neighbors(p)) - V
+                V = V | M
+            SSs.append(
+                (s, P, M, V)
+            )
+        Gk.remove_nodes_from(V)
+    # print(SSs)
+    Gk.add_nodes_from({n: dict(Gk_1.nodes)[n] for n in SUN})
+    for i in range(len(SSs)):
+        for j in range(i):
+            SSi, SSj, Si, Sj = SSs[i][3], SSs[j][3], SSs[i][0], SSs[j][0]
+            # find edges between SSi and SSj
+            dl_uv, count = 0.0, 0 # designed length
+            for u in SSi:
+                for v in SSj:
+                    if Gk_1.has_edge(u,v):
+                        dl_uv += Gk_1[u][v][weight]
+                        if Gk_1.has_edge(Si, u): dl_uv += Gk_1[Si][u][weight]
+                        if Gk_1.has_edge(v, Sj): dl_uv += Gk_1[v][Sj][weight]
+                        count += 1
+            if count > 0:
+                dl_uv /= float(count)
+                Gk.add_edge(Si, Sj, **{weight: dl_uv})
+    # contribution factor
+    contribution_factor = {}
+    for ss in SSs:
+        if len(ss[3]) <= 1: 
+            contribution_factor[ss[0]] = 1.0 if move_flag[ss[0]] is True else 0.0
+            continue
+        count = 0
+        for v in ss[3]:
+            if ss[0] is not v and move_flag[v] is True:
+                count += 1
+        contribution_factor[ss[0]] = count / (len(ss[3]) - 1)
+    return Gk, contribution_factor
+
+
+def Multilevel(Gi, move_flag, weight):
+    G0 = Gi.copy()
+    Level = []
+    Level.append((G0, {})) # (Gx, contribution_factor)
+    Gk = G0
+    while True:
+        Gk, cf = Collapse(Gk, move_flag, weight)
+        if len(Gk) > 1:
+            Level.append((Gk, cf))
         else:
-            contri_facts[n] = float(cf / len(neibs[n]))
-    # bfs
-    que = super_nodes.copy()
-    while len(que) > 0:
-        rear_n = que[0]
-        for nei in neibs[rear_n]:
-            if nei not in nodes_ite:
-                que.append(nei)
-                nodes_ite[nei] = nodes_ite[rear_n] + 1
-        que.pop(0)
-
-    max_level = max([nodes_ite[n] for n in nodes_ite])
-    if max_level == 0:
-        for n in super_nodes:
-            nodes_ite[n] = 250
-        return nodes_ite
-
-    d_level = float(max_ite - min_ite) / (max_level)
-
-    for n in nodes_ite:
-        nodes_ite[n] = int(
-            (max_ite - d_level * (nodes_ite[n]))
-        )
-
-    for n in super_nodes:
-        nodes_ite[n] *= contri_facts[n]
-
-    return nodes_ite
+            break
+    return Level
 
 
 def Refinement(Gi, Li, C, dl, weight, K=1.0):
@@ -184,8 +205,8 @@ def Incremental(gs,
                 C=4.0,
                 dl=0.055,
                 K=1.0,
-                max_ite=250,
                 min_ite=30,
+                max_ite=250,
                 re_ite=20,
                 weight='weight',
                 seed=0):
@@ -201,17 +222,29 @@ def Incremental(gs,
                             C=C,
                             dl=dl)
         else:
-            Li, move_flag, neibs = Merging(gs[i], gs[i-1], Li, dl)
-            nodes_ite = Multilevel(Gi, Li, move_flag, neibs, min_ite, max_ite)
-            Li = fm3_layout(G=Gi,
-                            pos=Li,
-                            iterations=max_ite,
-                            weight=weight,
-                            seed=seed,
-                            scale=None,
-                            C=C,
-                            dl=dl,
-                            nodes_ite=nodes_ite)
+            Li, move_flag = Merging(gs[i], gs[i-1], Li, dl)
+
+            Level = Multilevel(Gi, move_flag, weight)
+            ite = int(min_ite + (max_ite - min_ite) / len(Level))
+            for i, lv in enumerate(reversed(Level)):
+                Gk = lv[0]
+                Li_i = {n: Li[n] for n in Gk.nodes}
+                iterations = max_ite - i * ite
+                nodes_ite = {}
+                for n in Gk.nodes:
+                    nodes_ite[n] = iterations if n not in lv[1] else lv[1][n] * iterations
+                Li_i = fm3_layout(G=Gk,
+                                pos=Li_i,
+                                iterations=iterations,
+                                weight=weight,
+                                seed=seed,
+                                scale=None,
+                                nodes_ite=nodes_ite,
+                                C=C,
+                                dl=dl)
+                for n in Li_i:
+                    Li[n] = Li_i[n]
+
             refine = Refinement(Gi, Li, C, dl, weight, K)
             fixed = [n for n in refine if refine[n] == False]
             if len(fixed) == 0: fixed = None
@@ -231,3 +264,17 @@ def Incremental(gs,
         nx.set_node_attributes(G=gs[i], values=pos, name='pos')
 
     return gs
+
+
+# Multilevel Test
+# G = nx.watts_strogatz_graph(100, 3, 0.8, 0)
+# # G = nx.Graph([(1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (7, 6), (7, 8), (9, 8),
+# #               (10, 8), (11, 8), (12, 13), (12, 14), (12, 15), (12, 16),
+# #               (12, 17), (16, 18), (17, 11), (3, 19), (19, 12)])
+# nx.set_edge_attributes(G, 1.0, 'weight')
+# L = Multilevel(G, None, None, None)
+# G = L[1][0]
+# lb = nx.get_edge_attributes(G,'weight')
+# nx.draw_networkx(G, pos=nx.fruchterman_reingold_layout(G, seed=0))
+# # nx.draw_networkx_edge_labels(G, pos=nx.fruchterman_reingold_layout(G, seed=0),edge_labels=lb)
+# plt.show()
