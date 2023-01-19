@@ -7,7 +7,7 @@ import networkx as nx
 def Get_Result_Frishman(pathIn, nameIn, pathOut, nameOut):
     gs, distance_scale = read_Graphs(pathIn, nameIn)
 
-    gs_out = Frishman(gs=gs, weight='weight')
+    gs_out = Frishman(gs=gs, k=0.1, iterations=250, weight='weight')
 
     save_Graphs(pathOut, nameOut, gs_out, 100.0)
     print("Frishman {0} save suc".format(nameIn))
@@ -15,7 +15,7 @@ def Get_Result_Frishman(pathIn, nameIn, pathOut, nameOut):
 def Get_Result_Aging(pathIn, nameIn, pathOut, nameOut):
     gs, distance_scale = read_Graphs(pathIn, nameIn)
 
-    gs_out = Aging(gs=gs, beta=0.1, weight='weight')
+    gs_out = Aging(gs=gs, beta=0.1, k=0.1, iterations=250, weight='weight')
 
     save_Graphs(pathOut, nameOut, gs_out, 100.0)
     print("Aging {0} save suc".format(nameIn))
