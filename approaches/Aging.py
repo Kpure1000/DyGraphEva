@@ -68,7 +68,7 @@ def Aging_Gs(Gs):
     return Ages
 
 
-def Aging(gs, beta=1, weight='weight', seed=1):
+def Aging(gs, beta=1, k=0.1, iterations=100, weight='weight', seed=1):
     np.random.seed(seed)
     Ages_G = Aging_Gs(Gs=gs)
     drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
@@ -83,8 +83,8 @@ def Aging(gs, beta=1, weight='weight', seed=1):
         Li_1 = fr_layout(G=G,
                          pos=Li_1,
                          weight=weight,
-                         k=0.1,
-                         iterations = 100,
+                         k=k,
+                         iterations = iterations,
                          drag_index=drag_index_G[G],
                          scale=None
                          )

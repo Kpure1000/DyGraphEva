@@ -315,7 +315,7 @@ def _FM3(
                 pinning.append([0.0,0.0])
         ite = []
         for it in nodes_ite_arr:
-            if iteration < it:
+            if iterations - iteration < it:
                 ite.append([1.0, 1.0])
             else:
                 ite.append([0.0, 0.0])
@@ -411,7 +411,7 @@ def _sparse_FM3(
                 pinning.append([0.0,0.0])
         ite = []
         for it in nodes_ite_arr:
-            if iteration < it:
+            if iterations - iteration < it:
                 ite.append([1.0, 1.0])
             else:
                 ite.append([0.0, 0.0])

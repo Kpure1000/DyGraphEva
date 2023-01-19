@@ -150,34 +150,34 @@ def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
     return Wpin_global
 
 
-def InitLayout(G0, distance_scale, weight):
+def InitLayout(G0, k, iterations, weight):
     L0 = nx.kamada_kawai_layout(G=G0,weight=weight)
     neibs={} # neibs of all node in Gi
     for node in G0.nodes:
         neibs[node] = list(nx.neighbors(G=G0, n=node))
-    L0 = fr_layout(G=G0, k=0.1, iterations = 100, pos=L0, weight=weight, scale=None)
+    L0 = fr_layout(G=G0, k=k, iterations = iterations, pos=L0, weight=weight, scale=None)
 
     return L0
 
 
-def OnlineLayout(Gi, Gi_1, Li_1, distance_scale, weight='weight'):
+def OnlineLayout(Gi, Gi_1, Li_1, k, iterations, weight='weight'):
     Li_init, score, neibs = Merging(Gi, Gi_1, Li_1)
     Wpin_glob = Pinning(Gi, Gi_1, score, neibs, weight)
-    Li = fr_layout(G=Gi, k=0.1, pos=Li_init, iterations = 100, weight=weight, pinning=Wpin_glob, scale=None)
+    Li = fr_layout(G=Gi, k=k, pos=Li_init, iterations = iterations, weight=weight, pinning=Wpin_glob, scale=None)
 
     return Li
 
 
-def Frishman(gs, distance_scale=1.0, weight='weight', seed=1):
+def Frishman(gs, k=0.1, iterations=100, weight='weight', seed=1):
     np.random.seed(seed)
 
     Li_1 = None
     posOut=[]
     for i in range(0, len(gs)):
         if i == 0:
-            Li_1 = InitLayout(G0=gs[i], distance_scale=distance_scale, weight=weight)
+            Li_1 = InitLayout(G0=gs[i], k=k, iterations = iterations, weight=weight)
         else:
-            Li_1 = OnlineLayout(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, distance_scale=distance_scale, weight=weight)
+            Li_1 = OnlineLayout(Gi=gs[i], Gi_1=gs[i - 1], Li_1=Li_1, k=k, iterations = iterations, weight=weight)
         posOut.append(deepcopy(Li_1))
 
     for i in range(0, len(posOut)):
