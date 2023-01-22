@@ -20,28 +20,10 @@ class fix_layout {
 
         // ndoes list to dict and normalize nodes
         let nodes_dict = {}
-        let xmin = Number.MAX_VALUE, ymin = Number.MAX_VALUE, 
-            xmax = Number.NEGATIVE_INFINITY, ymax = Number.NEGATIVE_INFINITY
+        
         for (let n in nodes) {
             let node = nodes[n]
             nodes_dict[nodes[n].id] = node
-            xmin = Math.min(node.x, xmin)
-            ymin = Math.min(node.y, ymin)
-            xmax = Math.max(node.x, xmax)
-            ymax = Math.max(node.y, ymax)
-        }
-        let date_center_x = (xmin + xmax) * 0.5
-        let date_center_y = (ymin + ymax) * 0.5
-        // let data_radius = Math.sqrt(Math.pow((xmax - xmin), 2) + Math.pow((ymax - ymin), 2)) * 0.6
-        let data_radius = Math.max(xmax - xmin, ymax - ymin) * 0.6
-        let svg_radius = Math.min(width, height) * 0.5
-
-        for (let n in nodes) {
-            let node = nodes[n]
-            node.x -= date_center_x 
-            node.x = node.x * svg_radius / data_radius
-            node.y -= date_center_y
-            node.y = node.y * svg_radius / data_radius
         }
 
         let maxweight = 0

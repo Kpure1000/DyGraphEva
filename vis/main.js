@@ -50,22 +50,6 @@ let result_item = [
         "path": "../data/result/synth/intra_cluster/",
     },
     {
-        "name": "newcomb_Frishman",
-        "path": "../data/result/truth/newcomb/",
-    },
-    {
-        "name": "FR_Frishman",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "VRND32T_Frishman",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "mammalia-pa_Frishman",
-        "path": "../data/result/truth/mammalia-pa/",
-    },
-    {
         "name": "cluster_Aging",
         "path": "../data/result/synth/cluster/",
     },
@@ -74,52 +58,12 @@ let result_item = [
         "path": "../data/result/synth/intra_cluster/",
     },
     {
-        "name": "newcomb_Aging",
-        "path": "../data/result/truth/newcomb/",
-    },
-    {
-        "name": "FR_Aging",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "VRND32T_Aging",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "mammalia-pa_Aging",
-        "path": "../data/result/truth/mammalia-pa/",
-    },
-    {
-        "name": "dblp_Aging",
-        "path": "../data/result/truth/dblp/",
-    },
-    {
         "name": "cluster_Incremental",
         "path": "../data/result/synth/cluster/",
     },
     {
         "name": "intra_cluster_Incremental",
         "path": "../data/result/synth/intra_cluster/",
-    },
-    {
-        "name": "newcomb_Incremental",
-        "path": "../data/result/truth/newcomb/",
-    },
-    {
-        "name": "FR_Incremental",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "VRND32T_Incremental",
-        "path": "../data/result/truth/vdBunt_data/",
-    },
-    {
-        "name": "mammalia-pa_Incremental",
-        "path": "../data/result/truth/mammalia-pa/",
-    },
-    {
-        "name": "dblp_Incremental",
-        "path": "../data/result/truth/dblp/",
     },
 ]
 
@@ -159,6 +103,12 @@ function fix_main(path, filename) {
             slices.appendChild(cloneNode.cloneNode(true));
         }
 
+        let load_count = 0
+        let days_num = data_config.day_end - data_config.day_start + 1
+        let cache_data = Array(days_num)
+
+        let load_pros = []
+
         for (let i = 0, count = data_config.day_start; i < slice.length && count <= data_config.day_end; i++,count++) {
             let data_name = data_config.prefix + count
             const sl = slice[i];
@@ -167,17 +117,26 @@ function fix_main(path, filename) {
             sl.getElementsByTagName("div")[0]
                 .getElementsByTagName("svg")[0]
                 .id = "viser" + i;
-
-            new Promise((resolve) => {
+            load_pros.push(new Promise((resolve) => {
                 vis_methods.push(new fix_layout("viser" + i))
                 d3.json(path + data_name + ".json", d => {
                     resolve(d)
                 })
             }).then(d => {
-                vis_methods[i].vis(d)
-            })
+                cache_data[i] = d
+            }))
 
         }
+        Promise.all(load_pros).then(()=>{
+            let nodess = []
+            for (let i in cache_data) {
+                nodess.push(cache_data[i].nodes)
+            }
+            let range = layout_normalize(nodess)
+            for (let i = 0; i < days_num; i++) {
+                vis_methods[i].vis(cache_data[i])
+            }
+        })
     })
 }
 
@@ -188,6 +147,35 @@ function vis_clear() {
     }
     vis_methods = []
     slices.innerHTML = ""
+}
+
+function layout_normalize(nodess) {
+    let xmin = Number.MAX_VALUE, ymin = Number.MAX_VALUE,
+        xmax = Number.NEGATIVE_INFINITY, ymax = Number.NEGATIVE_INFINITY
+    for (let nodes in nodess) {
+        for (let n in nodess[nodes]) {
+            let node = nodess[nodes][n]
+            xmin = Math.min(node.x, xmin)
+            ymin = Math.min(node.y, ymin)
+            xmax = Math.max(node.x, xmax)
+            ymax = Math.max(node.y, ymax)
+        }
+    }
+    
+    let date_center_x = (xmin + xmax) * 0.5
+    let date_center_y = (ymin + ymax) * 0.5
+    let data_radius = Math.max(xmax - xmin, ymax - ymin) * 0.6
+    let svg_radius = Math.min(width, height) * 0.5
+    
+    for (let nodes in nodess) {
+        for (let n in nodess[nodes]) {
+            let node = nodess[nodes][n]
+            node.x -= date_center_x
+            node.x = node.x * svg_radius / data_radius
+            node.y -= date_center_y
+            node.y = node.y * svg_radius / data_radius
+        }
+    }
 }
 
 let vismethod_item = [
