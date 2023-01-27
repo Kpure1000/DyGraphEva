@@ -68,25 +68,21 @@ def Aging_Gs(Gs):
     return Ages
 
 
-def Aging(gs, beta=1, k=0.1, iterations=100, weight='weight', seed=1):
+def Aging(gs, beta=1, k=0.1, iterations=100, scale=None, weight='weight', seed=1):
     np.random.seed(seed)
     Ages_G = Aging_Gs(Gs=gs)
     drag_index_G = Age_drag_index(Ages_G=Ages_G, beta=beta)
 
     posOut=[]
     Li_1=None
-    # for i in range(0, len(gs)):
     for i, G in enumerate(gs):
-        # if i==0:
-        # Li_1 = nx.kamada_kawai_layout(G=G, weight=weight)
-        from FM3 import fm3_layout
         Li_1 = fr_layout(G=G,
                          pos=Li_1,
                          weight=weight,
                          k=k,
                          iterations = iterations,
                          drag_index=drag_index_G[G],
-                         scale=None
+                         scale=scale
                          )
 
         posOut.append(deepcopy(Li_1))
