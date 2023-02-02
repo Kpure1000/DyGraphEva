@@ -100,8 +100,8 @@ def Pinning(Gi, Gi_1, score, neibs, weight='weight'):
     # nodes with removed edges
     for rm in edge_rm:
         # print("rm node[{0}]".format(rm))
-        D0.add(rm[0])
-        D0.add(rm[1])
+        if rm[0] in Gi: D0.add(rm[0])
+        if rm[1] in Gi: D0.add(rm[1])
     # nodes with added edges
     for add in edge_add:
         # print("add node[{0}]".format(add))

@@ -108,6 +108,7 @@ def Collapse(Gk_1, move_flag,weight):
     Gk = Gk_1.copy()
     SSs = [] # solar systems
     SUN = set()
+    # TODO: connected_components is very cost, try to reduce it
     while len(Gk) > 0:
         comps = nx.connected_components(Gk)
         S = set()
@@ -146,7 +147,7 @@ def Collapse(Gk_1, move_flag,weight):
     # contribution factor
     contribution_factor = {}
     for ss in SSs:
-        if len(ss[3]) <= 1: 
+        if len(ss[3]) <= 1:
             contribution_factor[ss[0]] = 1.0 if move_flag[ss[0]] is True else 0.0
             continue
         count = 0
@@ -172,6 +173,7 @@ def Multilevel(Gi, move_flag, weight):
 
 
 def Refinement(Gi, Li, C, dl, weight, K=1.0):
+    Li = {n: Li[n] for n in Li if n in Gi.nodes}
     pos = np.array([np.asarray(Li[n]) for n in Li])
 
     A = nx.to_numpy_array(G=Gi, weight=weight)
