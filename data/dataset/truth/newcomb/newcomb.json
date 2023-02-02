@@ -2,5 +2,5 @@
     "day_start": 1,
     "day_end": 15,
     "prefix": "newcomb_",
-    "distance_scale": 4
+    "distance_scale": 400.0
 }

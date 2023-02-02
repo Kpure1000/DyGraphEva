@@ -2,5 +2,5 @@
     "day_start": 1,
     "day_end": 5,
     "prefix": "cluster_",
-    "distance_scale": 30.0
+    "distance_scale": 3.0
 }
