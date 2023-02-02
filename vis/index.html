@@ -31,9 +31,20 @@
         <input  style="margin-right: 30pt;" type="checkbox" name="rescale" id="can_rescale", onchange="OnRecaleChanged()">
         <!-- <input type="button" value="Reset Zoom" id="reset_bt"> -->
     </div>
+    <div id="nodes_out" style="margin: 0 0 10px 10px;border-style: solid; border-color: #999; max-width: fit-content;clear: both; display: none;">
+        <div style="margin-bottom: 5px;">
+            <button style="font-size: large;" id="bt_cp" data-clipboard-action="copy" data-clipboard-target="#txa_res">
+                Cut Nodes to Clipboard
+            </button>
+            <button style="font-size: large;" id="bt_sel" onclick="OnApplyNodes()">
+                Apply to Selected Nodes
+            </button>
+        </div>
+        <textarea style="font-size: larger;" id="txa_res" cols=50 rows=3 ></textarea>
+    </div>
     <ul id="slices">
         <li style="float: left;">
-            <div style="margin: 0px 10px 20px 0px; float: left;">
+            <div style="margin: 0px 10px 10px 0px; float: left;">
                 <svg id="viser"
                     style="border-style: solid; border-color: #999; max-width: 100%; height: auto; height: intrinsic;"></svg>
                 <div style="text-align: center; color: #666;"><i>1</i></div>
@@ -44,6 +55,11 @@
 <script src="basic.js"></script>
 <script src="fd.js"></script>
 <script src="fix.js"></script>
+<script src="select.js"></script>
+<script src="items.js"></script>
 <script src="main.js"></script>
-
+<script src="clipboard.min.js"></script>
+<script>
+    new ClipboardJS("#bt_cp")
+</script>
 </html>

@@ -9,65 +9,11 @@ let data_select = document.getElementById("data_select")
 let vis_select = document.getElementById("vis_select")
 let rescale_check = document.getElementById("can_rescale")
 
-let dataset_item = [
-    {
-        "name": "newcomb",
-        "path": "../data/dataset/truth/newcomb/",
-    },
-    {
-        "name": "FR",
-        "path": "../data/dataset/truth/vdBunt_data/",
-    },
-    {
-        "name": "VRND32T",
-        "path": "../data/dataset/truth/vdBunt_data/",
-    },
-    {
-        "name": "mammalia-pa",
-        "path": "../data/dataset/truth/mammalia-pa/",
-    },
-    {
-        "name": "dblp",
-        "path": "../data/dataset/truth/dblp/",
-    },
-    {
-        "name": "cluster",
-        "path": "../data/dataset/synth/cluster/",
-    },
-    {
-        "name": "intra_cluster",
-        "path": "../data/dataset/synth/intra_cluster/",
-    },
-]
-
-let result_item = [
-    {
-        "name": "cluster_Frishman",
-        "path": "../data/result/synth/cluster/",
-    },
-    {
-        "name": "intra_cluster_Frishman",
-        "path": "../data/result/synth/intra_cluster/",
-    },
-    {
-        "name": "cluster_Aging",
-        "path": "../data/result/synth/cluster/",
-    },
-    {
-        "name": "intra_cluster_Aging",
-        "path": "../data/result/synth/intra_cluster/",
-    },
-    {
-        "name": "cluster_Incremental",
-        "path": "../data/result/synth/cluster/",
-    },
-    {
-        "name": "intra_cluster_Incremental",
-        "path": "../data/result/synth/intra_cluster/",
-    },
-]
+nodes_out = document.getElementById('nodes_out')
+nodes_out.disabled = true
 
 function fd_main(path, filename) {
+    nodes_out.style.display = 'block'
     vis_clear()
     d3.json(path + filename + ".json", data_config => {
         for (let i = data_config.day_start; i < data_config.day_end + 1; i++) {
@@ -95,6 +41,38 @@ function fd_main(path, filename) {
         }
     })
 }
+
+
+function sel_main(path, filename) {
+    nodes_out.style.display = 'block'
+    vis_clear()
+    d3.json(path + filename + ".json", data_config => {
+        for (let i = data_config.day_start; i < data_config.day_end + 1; i++) {
+            slices.appendChild(cloneNode.cloneNode(true));
+        }
+
+        for (let i = 0, count = data_config.day_start; i < slice.length && count <= data_config.day_end; i++,count++) {
+            let data_name = data_config.prefix + count
+            const sl = slice[i];
+            sl.getElementsByTagName("div")[1]
+                .innerText = data_name;
+            sl.getElementsByTagName("div")[0]
+                .getElementsByTagName("svg")[0]
+                .id = "viser" + i;
+
+            new Promise((resolve) => {
+                vis_methods.push(new select_vis("viser" + i, data_config.distance_scale))
+                d3.json(path + data_name + ".json", d => {
+                    resolve(d)
+                })
+            }).then(d => {
+                vis_methods[i].vis(d)
+            })
+
+        }
+    })
+}
+
 
 function fix_main(path, filename) {
     vis_clear()
@@ -145,8 +123,10 @@ function vis_clear() {
         const method = vis_methods[index];
         method.clear()
     }
+    selected_nodes = []
     vis_methods = []
     slices.innerHTML = ""
+    document.getElementById('txa_res').value = '[]'
 }
 
 function layout_normalize(nodess) {
@@ -180,7 +160,7 @@ function layout_normalize(nodess) {
 
 let vismethod_item = [
     {
-        "name": "positioned",
+        "name": "fixed_layout",
         "func": fix_main,
         "data": result_item,
     },
@@ -188,6 +168,11 @@ let vismethod_item = [
         "name": "force_directed",
         "func": fd_main,
         "data": dataset_item,
+    },
+    {
+        "name": "selection",
+        "func": sel_main,
+        "data": selected_item,
     },
 ]
 
@@ -201,6 +186,8 @@ function OnSelecterChanged() {
 
 function OnVisMethodChanged() {
     vis_clear()
+
+    nodes_out.style.display = 'none'
 
     func_main = vismethod_item[vis_select.value].func;
     seleter_item = vismethod_item[vis_select.value].data;
@@ -219,6 +206,22 @@ function OnVisMethodChanged() {
 function OnRecaleChanged() {
     is_rescale = rescale_check.checked
     console.log(is_rescale)
+}
+
+function OnSelectedNodesChange(id) {
+    let index = selected_nodes.indexOf(id)
+    if (index >= 0) {
+        selected_nodes.splice(index, 1)
+    } else {
+        selected_nodes.push(id)
+    }
+    txa_res = document.getElementById('txa_res')
+    txa_res.value = JSON.stringify(selected_nodes)
+}
+
+function OnApplyNodes() {
+    txa_res = document.getElementById('txa_res')
+    selected_nodes = JSON.parse(txa_res.value)
 }
 
 function main() {

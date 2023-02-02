@@ -1,7 +1,5 @@
 
-// let selected_node_id = -1
-
-class fix_layout {
+class select_vis {
     constructor(svg_id) {
         this.svg = d3.select('#' + svg_id)
             .attr("width", width)
@@ -20,16 +18,28 @@ class fix_layout {
 
         // ndoes list to dict and normalize nodes
         let nodes_dict = {}
-        
+        let xmin = Number.MAX_VALUE, ymin = Number.MAX_VALUE,
+        xmax = Number.NEGATIVE_INFINITY, ymax = Number.NEGATIVE_INFINITY
         for (let n in nodes) {
             let node = nodes[n]
             nodes_dict[nodes[n].id] = node
+            xmin = Math.min(node.x, xmin)
+            ymin = Math.min(node.y, ymin)
+            xmax = Math.max(node.x, xmax)
+            ymax = Math.max(node.y, ymax)
         }
 
-        let maxweight = 0
-        for (let index = 0; index < links.length; index++) {
-            let w = links[index].weight
-            if (w > maxweight) maxweight = w
+        let date_center_x = (xmin + xmax) * 0.5
+        let date_center_y = (ymin + ymax) * 0.5
+        let data_radius = Math.max(xmax - xmin, ymax - ymin) * 0.6
+        let svg_radius = Math.min(width, height) * 0.5
+    
+        for (let n in nodes) {
+            let node = nodes[n]
+            node.x -= date_center_x
+            node.x = node.x * svg_radius / data_radius
+            node.y -= date_center_y
+            node.y = node.y * svg_radius / data_radius
         }
 
         // let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
@@ -61,7 +71,7 @@ class fix_layout {
             .call(title => title.append("title").text(d => d.id))
             .text(d=>d.id)
             .on("click", function(d){
-                selected_node_id = d.id;
+                OnSelectedNodesChange(d.id)
             })
             .attr("x",d=>d.x)
             .attr("y",d=>d.y)
@@ -80,16 +90,14 @@ class fix_layout {
             .attr("y2", d => nodes_dict[d.target].y)
 
         let selected_fill = d => {
-            if (d.id == selected_node_id)
+            if (selected_nodes.indexOf(d.id) >= 0)
                 return "#f00";
             return get_group_color(d.group);
         }
         let selected_size = d => {
-            if (d.id == selected_node_id)
-                // return 5.64;
-                return 4.2;
-            // return 4.75;
-            return 3.15;
+            if (selected_nodes.indexOf(d.id) >= 0)
+                return 5.64;
+            return 4.75;
         }
 
         node = node
@@ -98,7 +106,7 @@ class fix_layout {
             .append("circle")
             .attr("fill", d => get_group_color(d.group))
             .on("click", function(d){
-                selected_node_id = d.id;
+                OnSelectedNodesChange(d.id)
             })
             .call(node => node.append("title").text(d => d.id))
             .attr("cx", d => d.x)

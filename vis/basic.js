@@ -8,3 +8,5 @@ var is_rescale = false
 //     .attr("width", width)
 //     .attr("height", height)
 //     .attr("viewBox", [-width / 2, -height / 2, width, height])
+
+var selected_nodes = []

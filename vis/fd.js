@@ -48,18 +48,18 @@ class force_directed {
         let get_group_color = d3.scaleOrdinal(d3.schemeCategory20)
 
         let link = this.svg.append("g")
-            .attr("stroke", "#999")
-            .attr("stroke-opacity", 0.4)
-            .attr("stroke-width", 1.9)
+            .attr("stroke", "#DDD")
+            .attr("stroke-opacity", 0.6)
+            .attr("stroke-width", 1.0)
             .selectAll("line")
 
         let node = this.svg.append("g")
-            .attr("stroke", "#fff")
-            .attr("stroke-width", 1.8)
+            .attr("stroke", "#EEE")
+            .attr("stroke-width", 1.2)
             .selectAll("circle")
 
         let title = this.svg.append("g")
-            .attr("font-size","5pt")
+            .attr("font-size","4pt")
             .attr("fill", "#ccc")
             .attr("style", "user-select: none;")
             .style("font-weight", "bold")
@@ -75,9 +75,9 @@ class force_directed {
             .attr("dy", 3)
             .text(d=>d.id)
             .on("click", function(d){
-                selected_node_id = d.id;
+                OnSelectedNodesChange(d.id)
             })
-            // .call(drag(simulation))
+            .call(drag(simulation))
 
         link = link
             .data(links)
@@ -91,9 +91,9 @@ class force_directed {
             .append("circle")
             .attr("fill", d => get_group_color(d.group))
             .on("click", function(d){
-                selected_node_id = d.id;
+                OnSelectedNodesChange(d.id)
             })
-            // .call(drag(simulation))
+            .call(drag(simulation))
 
         let scale = 1.0
         let translate = { 'x': 0.0, 'y': 0.0 }
@@ -122,12 +122,12 @@ class force_directed {
             node.attr("cx", d => d.x * scale + translate.x)
                 .attr("cy", d => d.y * scale + translate.y)
                 .attr("fill", (d)=>{
-                    if (d.id == selected_node_id) return "#f00";
+                    if (selected_nodes.indexOf(d.id) >= 0) return "#f00";
                     return get_group_color(d.group);
                 })
                 .attr("r", (d)=>{
-                    if (d.id == selected_node_id) return 7.7;
-                    return 6.5;
+                    if (selected_nodes.indexOf(d.id) >= 0) return 5.2;
+                    return 4.5;
                 })
 
         }
@@ -143,7 +143,7 @@ class force_directed {
                 event.fy = d3.event.y;
             }
             function dragended(event) {
-                if (!event.active) simulation.alphaTarget(0);
+                if (!event.active) simulation.alphaTarget(0.001);
                 event.fx = null;
                 event.fy = null;
             }

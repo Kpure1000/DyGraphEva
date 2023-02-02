@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="clipboard.min.js"></script>
+<style>
+    .large_text {
+        font-size: larger;
+    }
+    ul {
+        padding-inline: 10px;
+    }
+
+    li {
+        float: left;
+        list-style-type: none;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-bottom: 10px;">
+        <a href="index.html">To Visualization >></a>
+    </div>
+    <div style="padding: 10px;">
+        <input type="file" id="fl_sel" style="font-size: 16px;">
+    </div>
+    <div>
+        <ul id="slices">
+            <li style="float: left;">
+                <div style="margin: 0px 10px 20px 0px; float: left;">
+                    <svg id="viser"
+                    style="border-style: solid; border-color: #999; max-width: 100%; height: auto; height: intrinsic;"></svg>
+                    <div style="text-align: center; color: #666;"><i>1</i></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div style="clear: both;">
+        <div style="margin-bottom: 10px;">
+            <button style="font-size: larger;" id="bt_cp" data-clipboard-action="copy" data-clipboard-target="#txa_res">
+                Cut to clipboard
+            </button>
+        </div>
+        <textarea style="font-size: larger;" id="txa_res" cols="25" rows="10" readonly>www</textarea>
+    </div>
+</body>
+<script>
+    new ClipboardJS("#bt_cp")
+</script>
+
+</html>
