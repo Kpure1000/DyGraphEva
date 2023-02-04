@@ -324,7 +324,7 @@ def _FM3(
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
         #     break
-        frac_done += 1.0 / float(iteration + 1)
+        frac_done += 1.0 / float(iterations)
 
     return pos
 
@@ -420,5 +420,5 @@ def _sparse_FM3(
         t -= dt
         # if (np.linalg.norm(delta_pos) / nnodes) < threshold:
         #     break
-        frac_done += 1.0 / float(iteration + 1)
+        frac_done += 1.0 / float(iterations)
     return pos
