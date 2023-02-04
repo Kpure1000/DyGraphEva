@@ -99,9 +99,21 @@ for y in Sec:
 #                                       weight=1.0)
 
 
-# nx.draw_networkx(Sec[list(Sec)[0]]['g'])
 # import matplotlib.pyplot as plt
-# plt.show()
+# # pos = None
+# for i, s in enumerate(Sec):
+#     fig = plt.figure()
+#     G = Sec[s]['g']
+#     # pos = nx.fruchterman_reingold_layout(G, pos)
+#     nx.draw_networkx(G,
+#                     #  pos=pos,
+#                      with_labels=False,
+#                      node_size=20,
+#                      node_color='gray',
+#                      linewidths=0.2)
+#     plt.axis("off")
+#     fig.savefig(f'primaryout/{i}_{len(G)}.jpg')
+#     plt.close(fig)
 
 for i, s in enumerate( Sec ):
     save_graph(Sec[s]['g'], i)
