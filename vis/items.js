@@ -44,6 +44,10 @@ let dataset_item = [
         "path": "../data/dataset/truth/primary/",
     },
     {
+        "name": "ambassador",
+        "path": "../data/dataset/truth/ambassador/",
+    },
+    {
         "name": "cluster",
         "path": "../data/dataset/synth/cluster/",
     },
@@ -99,6 +103,10 @@ let selected_item = [
         "path": "../data/selected/truth/primary/",
     },
     {
+        "name": "ambassador",
+        "path": "../data/selected/truth/ambassador/",
+    },
+    {
         "name": "cluster",
         "path": "../data/selected/synth/cluster/",
     },
@@ -130,6 +138,11 @@ let result_item = [
         "path": "../data/result/truth/primary/",
     },
     {
+        "name": "ambassador_Frishman",
+        "path": "../data/result/truth/ambassador/",
+    },
+
+    {
         "name": "cluster_Frishman",
         "path": "../data/result/synth/cluster/",
     },
@@ -157,6 +170,10 @@ let result_item = [
     {
         "name": "primary_Aging",
         "path": "../data/result/truth/primary/",
+    },
+    {
+        "name": "ambassador_Aging",
+        "path": "../data/result/truth/ambassador/",
     },
 
     {
@@ -188,6 +205,11 @@ let result_item = [
         "name": "primary_Incremental",
         "path": "../data/result/truth/primary/",
     },
+    {
+        "name": "ambassador_Incremental",
+        "path": "../data/result/truth/ambassador/",
+    },
+
     {
         "name": "cluster_Incremental",
         "path": "../data/result/synth/cluster/",

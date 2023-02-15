@@ -44,6 +44,7 @@ def Get_Result_Incremental(pathIn, nameIn, pathOut, nameOut):
 # Get_Result_Frishman("../data/dataset/truth/InVS15/", "InVS15", "../data/result/truth/InVS15/", "InVS15_Frishman")
 # Get_Result_Frishman("../data/dataset/truth/InVS13/", "InVS13", "../data/result/truth/InVS13/", "InVS13_Frishman")
 # Get_Result_Frishman("../data/dataset/truth/primary/", "primary", "../data/result/truth/primary/", "primary_Frishman")
+# Get_Result_Frishman("../data/dataset/truth/ambassador/", "ambassador", "../data/result/truth/ambassador/", "ambassador_Frishman")
 
 # Get_Result_Aging("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Aging")
 # Get_Result_Aging("../data/dataset/synth/intra_cluster/", "intra_cluster", "../data/result/synth/intra_cluster/", "intra_cluster_Aging")
@@ -57,6 +58,7 @@ def Get_Result_Incremental(pathIn, nameIn, pathOut, nameOut):
 # Get_Result_Aging("../data/dataset/truth/InVS15/", "InVS15", "../data/result/truth/InVS15/", "InVS15_Aging")
 # Get_Result_Aging("../data/dataset/truth/InVS13/", "InVS13", "../data/result/truth/InVS13/", "InVS13_Aging")
 # Get_Result_Aging("../data/dataset/truth/primary/", "primary", "../data/result/truth/primary/", "primary_Aging")
+# Get_Result_Aging("../data/dataset/truth/ambassador/", "ambassador", "../data/result/truth/ambassador/", "ambassador_Aging")
 
 # Get_Result_Incremental("../data/dataset/synth/cluster/", "cluster", "../data/result/synth/cluster/", "cluster_Incremental")
 # Get_Result_Incremental("../data/dataset/synth/intra_cluster/", "intra_cluster", "../data/result/synth/intra_cluster/", "intra_cluster_Incremental")
@@ -70,3 +72,4 @@ def Get_Result_Incremental(pathIn, nameIn, pathOut, nameOut):
 # Get_Result_Incremental("../data/dataset/truth/InVS15/", "InVS15", "../data/result/truth/InVS15/", "InVS15_Incremental")
 # Get_Result_Incremental("../data/dataset/truth/InVS13/", "InVS13", "../data/result/truth/InVS13/", "InVS13_Incremental")
 # Get_Result_Incremental("../data/dataset/truth/primary/", "primary", "../data/result/truth/primary/", "primary_Incremental")
+# Get_Result_Incremental("../data/dataset/truth/ambassador/", "ambassador", "../data/result/truth/ambassador/", "ambassador_Incremental")
