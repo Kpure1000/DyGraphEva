@@ -46,6 +46,11 @@ def remove_diff(Sec, start, end):
             G.remove_nodes_from(set(G.nodes) - node_set)
 
 
+def remove_nodes(Sec, nodes_list):
+    for s in Sec:
+        Sec[s]['g'].remove_nodes_from(nodes_list)
+
+
 def save_image(Sec):
     import matplotlib.pyplot as plt
     # pos = None
@@ -80,7 +85,7 @@ Nodes = {}
 # Cluster = {}
 
 internal = 60 * 60 * 24 * 4
-window = 60 * 60 * 24 * 7   
+window = 60 * 60 * 24 * 7
 slide_time = ar[0][3]
 is_window = True
 for i in range(len(ar)):
@@ -121,10 +126,10 @@ for i in range(len(ar)):
             #     Cluster[row[4]] = c_count
             #     c_count += 1
 
-            # Sec[g_count]['g'].add_nodes_from([
-            #     ( Nodes[row[0]], {'group': Cluster[row[3]]} ),
-            #     ( Nodes[row[1]], {'group': Cluster[row[4]]} ),
-            # ])
+            Sec[g_count]['g'].add_nodes_from([
+                ( Nodes[row[0]], {'group': 0} ),
+                ( Nodes[row[1]], {'group': 0} ),
+            ])
 
             if Sec[g_count]['g'].has_edge(Nodes[row[0]], Nodes[row[1]]):
                 Sec[g_count]['g'][Nodes[row[0]]][Nodes[row[1]]]['weight'] += float(row[2])
@@ -136,8 +141,9 @@ for i in range(len(ar)):
 
 print(len(Sec))
 remove_loop(Sec)
-# # remove_diff(Sec, 9, 15)
-save_image(Sec)
+remove_diff(Sec, 52, 56)
+remove_nodes(Sec, [4, 0])
+# save_image(Sec)
 
-# # for i, s in enumerate( Sec ):
-# #     save_graph(Sec[s]['g'], i)
+for i, s in enumerate( Sec ):
+    save_graph(Sec[s]['g'], i)
