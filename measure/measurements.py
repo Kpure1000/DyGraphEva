@@ -21,7 +21,7 @@ class ShortestPath(IMeasure):
         self.weight = weight
         self.nodes = list(G.nodes)
         self.G = G
-        self.ps = nx.shortest_path(G=G, weight=weight, method='bellman-ford')
+        self.ps = nx.shortest_path(G=G, weight=weight)
 
 
     def get(self, s, t):
@@ -87,10 +87,12 @@ class ACT(IMeasure):
 
     def get(self, s, t):
         val = (self.CTK[s][s] + self.CTK[t][t] - 2 * self.CTK[s][t])
-        if val != 0:
-            return 1/(self.CTK[s][s] + self.CTK[t][t] - 2 * self.CTK[s][t])
-        else:
-            return 0
+        # val = val if val >= 1e-5 else 1e-5
+        return 1.0 / (val + 1e-5)
+        # if val != 0:
+        #     return 1.0/val
+        # else:
+        #     return 0
 
 
 class RWR(IMeasure):

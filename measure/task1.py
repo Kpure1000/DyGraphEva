@@ -21,37 +21,37 @@ def all_node_delta(nodes, gs_metrics):
     all_pairs_delta = ms.delta_sum(gs_metrics)
     nodes_l = pairs2nodes(all_nodes=list(gs[0].nodes), all_pairs=all_pairs_delta)
     nodes_l.sort(key=lambda ele: ele['val'], reverse=True)
-    
+
     return nodes_l
 
 
-def t1_ShortestPath(Gs, print_lim=sys.maxsize):
+def t1_ShortestPath(Gs, weight='weight', print_lim=sys.maxsize):
     nodes = list(Gs[0].nodes)
-    gs_measure = ms.all_pairs_measure([ms.ShortestPath(g,'weight') for g in Gs])
+    gs_measure = ms.all_pairs_measure([ms.ShortestPath(g,weight) for g in Gs])
     nodes_delta_l = all_node_delta(nodes, gs_measure)
 
     print_l(nodes_delta_l, "Shortest Path", print_lim)
 
 
-def t1_ACT(Gs, print_lim=sys.maxsize):
+def t1_ACT(Gs, weight='weight', print_lim=sys.maxsize):
     nodes = list(Gs[0].nodes)
-    gs_measure = ms.all_pairs_measure([ms.ACT(g) for g in Gs])
+    gs_measure = ms.all_pairs_measure([ms.ACT(g,weight) for g in Gs])
     nodes_delta_l = all_node_delta(nodes, gs_measure)
 
     print_l(nodes_delta_l, "ACT", print_lim)
 
 
-def t1_MCT(Gs, print_lim=sys.maxsize):
+def t1_MCT(Gs, weight='weight', print_lim=sys.maxsize):
     nodes = list(Gs[0].nodes)
-    gs_measure = ms.all_pairs_measure([ms.MCT(g) for g in Gs])
+    gs_measure = ms.all_pairs_measure([ms.MCT(g,weight) for g in Gs])
     nodes_delta_l = all_node_delta(nodes, gs_measure)
 
     print_l(nodes_delta_l, "MCT", print_lim)
 
 
-def t1_Katz(Gs, print_lim=sys.maxsize):
+def t1_Katz(Gs, weight='weight', print_lim=sys.maxsize):
     nodes = list(Gs[0].nodes)
-    gs_measure = ms.all_pairs_measure([ms.KatzIndex(g) for g in Gs])
+    gs_measure = ms.all_pairs_measure([ms.KatzIndex(g, weight,0.9) for g in Gs])
     nodes_delta_l = all_node_delta(nodes, gs_measure)
 
     print_l(nodes_delta_l, "Katz", print_lim)
@@ -62,10 +62,36 @@ def t1_Katz(Gs, print_lim=sys.maxsize):
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
 # gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "FR")
 # gs = read_Graphs("../data/dataset/truth/vdBunt_data/", "VRND32T")
-gs = read_Graphs("../data/dataset/truth/mammalia-pa/", "mammalia-pa")
+# gs = read_Graphs("../data/dataset/truth/mammalia-pa/", "mammalia-pa")
 
+# gs = read_Graphs("../data/dataset/truth/canVote/", "canVote")
+# gs = read_Graphs("../data/dataset/truth/reality_mining/", "reality_mining")
+gs = read_Graphs("../data/dataset/truth/ambassador/", "ambassador")
 
-t1_ShortestPath(gs,10)
-# t1_ACT(gs,10)
-# t1_MCT(gs,10)
-# t1_Katz(gs,10)
+def weight2length(gs):
+    # wmax = float('-inf')
+    # ws=[]
+    # for g in gs:
+    #     w = nx.get_edge_attributes(g, 'weight')
+    #     w_max = float(w[max(w, key=lambda ele: w[ele])])
+    #     wmax = w_max if wmax < w_max else wmax
+    #     ws.append(w)
+    # div_wmax = 1.0 / wmax
+    # for i,g in enumerate(gs):
+    #     for edg in ws[i]:
+    #         ws[i][edg] = 1.0 - float(ws[i][edg]) * div_wmax
+    #     nx.set_edge_attributes(g, ws[i], 'length')
+
+    for g in gs:
+        w = nx.get_edge_attributes(g, 'weight')
+        inv_w = {pair: 1.0 / (w[pair] + 1e-5) for pair in w}
+        nx.set_edge_attributes(g, inv_w, 'length')
+    
+    return gs
+
+gs = weight2length(gs)
+
+t1_ShortestPath(gs,'length',5)
+# t1_ACT(gs,'weight',5)
+t1_MCT(gs,'weight',5)
+t1_Katz(gs,'lenght',5)
