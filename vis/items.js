@@ -48,6 +48,10 @@ let dataset_item = [
         "path": "../data/dataset/truth/ambassador/",
     },
     {
+        "name": "reality_mining",
+        "path": "../data/dataset/truth/reality_mining/",
+    },
+    {
         "name": "cluster",
         "path": "../data/dataset/synth/cluster/",
     },
@@ -134,6 +138,10 @@ let result_item = [
         "path": "../data/result/truth/InVS13/",
     },
     {
+        "name": "reality_mining_Frishman",
+        "path": "../data/result/truth/reality_mining/",
+    },
+    {
         "name": "primary_Frishman",
         "path": "../data/result/truth/primary/",
     },
@@ -168,6 +176,10 @@ let result_item = [
         "path": "../data/result/truth/InVS13/",
     },
     {
+        "name": "reality_mining_Aging",
+        "path": "../data/result/truth/reality_mining/",
+    },
+    {
         "name": "primary_Aging",
         "path": "../data/result/truth/primary/",
     },
@@ -200,6 +212,10 @@ let result_item = [
     {
         "name": "InVS13_Incremental",
         "path": "../data/result/truth/InVS13/",
+    },
+    {
+        "name": "reality_mining_Incremental",
+        "path": "../data/result/truth/reality_mining/",
     },
     {
         "name": "primary_Incremental",
