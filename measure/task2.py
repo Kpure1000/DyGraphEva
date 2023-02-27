@@ -2,8 +2,7 @@ import sys
 import networkx as nx
 import numpy as np
 
-from task_total import read_Graphs
-from task_total import print_l
+from task_total import read_Graphs, weight2length, print_l
 
 import measurements as ms
 
@@ -60,28 +59,6 @@ def t2_Katz(Gs, weight='weight', print_lim=sys.maxsize):
 
     print_l(pairs_delta_list, "Katz", print_lim)
 
-
-def weight2length(gs):
-    # wmax = float('-inf')
-    # ws=[]
-    # for g in gs:
-    #     w = nx.get_edge_attributes(g, 'weight')
-    #     w_max = float(w[max(w, key=lambda ele: w[ele])])
-    #     wmax = w_max if wmax < w_max else wmax
-    #     ws.append(w)
-    # div_wmax = 1.0 / wmax
-    # for i,g in enumerate(gs):
-    #     for edg in ws[i]:
-    #         ws[i][edg] = 1.0 - float(ws[i][edg]) * div_wmax
-    #     nx.set_edge_attributes(g, ws[i], 'length')
-
-    for g in gs:
-        w = nx.get_edge_attributes(g, 'weight')
-        inv_w = {pair: 1.0 / (w[pair] + 1e-5) for pair in w}
-        nx.set_edge_attributes(g, inv_w, 'length')
-
-    return gs
-    
 
 # gs = read_Graphs("../data/dataset/synth/cluster/", "cluster")
 # gs = read_Graphs("../data/dataset/truth/newcomb/", "newcomb")
