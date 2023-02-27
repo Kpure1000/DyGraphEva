@@ -110,12 +110,12 @@ for i in range(len(ar)):
                 n_count += 1
 
             if row[3] not in Cluster:
-                Cluster[row[3]] = c_count
-                c_count += 1
+                Cluster[row[3]] = c_count if row[3] != 'Teachers' else None
+                c_count += 1 if row[3] != 'Teachers' else 0
 
             if row[4] not in Cluster:
-                Cluster[row[4]] = c_count
-                c_count += 1
+                Cluster[row[4]] = c_count if row[4] != 'Teachers' else None
+                c_count += 1 if row[4] != 'Teachers' else 0
 
             Sec[g_count]['g'].add_nodes_from([
                 ( Nodes[row[1]], {'group': Cluster[row[3]]} ),
