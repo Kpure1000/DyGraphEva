@@ -25,8 +25,10 @@ class ShortestPath(IMeasure):
 
 
     def get(self, s, t):
-        sp = 0
-        nodes = self.ps[self.nodes[s]][self.nodes[t]]
+        sp = 0.0
+        nodes = []
+        if self.nodes[t] in self.ps[self.nodes[s]]:
+            nodes = self.ps[self.nodes[s]][self.nodes[t]]
         for i, n in enumerate(nodes):
             if i < len(nodes) - 1:
                 sp += self.G[nodes[i]][nodes[i + 1]][self.weight]

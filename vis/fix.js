@@ -58,8 +58,8 @@ class fix_layout {
             .data(nodes)
             .enter()
             .append("text")
-            .call(title => title.append("title").text(d => d.id))
             .text(d=>d.id)
+            .call(title => title.append("title").text(d => d.id + ', group: ' + d.group))
             .on("click", function(d){
                 selected_node_id = d.id;
             })
@@ -100,7 +100,7 @@ class fix_layout {
             .on("click", function(d){
                 selected_node_id = d.id;
             })
-            .call(node => node.append("title").text(d => d.id))
+            .call(node => node.append("title").text(d => d.id + ', group: ' + d.group))
             .attr("cx", d => d.x)
             .attr("cy", d => d.y)
             .attr("fill", selected_fill)

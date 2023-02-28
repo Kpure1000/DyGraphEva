@@ -47,3 +47,11 @@ def print_l(pairs_delta_list, method_name, print_lim):
         if i < print_lim:
             print("Pair '{0}':\t{1:.4f}".format(pair_res['id'],pair_res['val']))
 
+
+def weight2length(gs):
+    for g in gs:
+        w = nx.get_edge_attributes(g, 'weight')
+        inv_w = {pair: 1.0 / (w[pair] + 1e-5) for pair in w}
+        nx.set_edge_attributes(g, inv_w, 'length')
+
+    return gs
