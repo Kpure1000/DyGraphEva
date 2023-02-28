@@ -34,12 +34,29 @@ ar = data.to_numpy()
 
 Years = {}
 
+node_map = {}
+node_count = 0
+
 for row in ar:
     if row[0] not in Years:
         Years[row[0]] = {'g': nx.Graph(), 's': set()}
-    Years[row[0]]['g'].add_edge(row[1], row[2], weight=row[3])
-    Years[row[0]]['s'].add(row[1])
-    Years[row[0]]['s'].add(row[2])
+    g = Years[row[0]]['g']
+    if row[1] not in node_map:
+        node_map[row[1]] = node_count
+        node_count += 1
+    if row[2] not in node_map:
+        node_map[row[2]] = node_count
+        node_count += 1
+    n1 = node_map[row[1]]
+    n2 = node_map[row[2]]
+    g.add_node(n1)
+    g.add_node(n2)
+    if g.has_edge(n1, n2):
+        g[n1][n2]['weight'] += float(row[3])
+    else:
+        g.add_edge(n1, n2, weight=float(row[3]))
+    Years[row[0]]['s'].add(n1)
+    Years[row[0]]['s'].add(n2)
 
 node_set = Years[list(Years)[0]]['s']
 for y in Years:
@@ -49,9 +66,9 @@ for y in Years:
     G = Years[y]['g']
     G.remove_edges_from(list(nx.selfloop_edges(G)))
     G.remove_nodes_from(set(G.nodes) - node_set)
-    G.remove_nodes_from(["maxime-bernier","david-tilson","nathan-cullen"])
+    G.remove_nodes_from([node_map[name] for name in ["maxime-bernier","david-tilson","nathan-cullen"]])
     G.remove_nodes_from(
-        set(G.nodes) - {
+        set(G.nodes) - {node_map[name] for name in {
             # "rob-nicholson", "carolyn-bennett", "mark-eyking", "john-mckay",
             # "tony-clement", "cheryl-gallant", "dean-allison", "tom-lukiwski",
             # "david-sweet"
@@ -80,7 +97,7 @@ for y in Years:
             "dave-mackenzie",
             "blaine-calkins",
             "ed-fast"
-        })
+        } })
 
 
 
