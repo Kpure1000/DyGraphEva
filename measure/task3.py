@@ -61,6 +61,10 @@ cl_ms = task3(gs, {g: ShortestPath(g, 'length') for g in gs})
 print(f'ShortestPath res: {cl_ms}')
 print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')
 
-cl_ms = task3(gs, {g: ACT(g, 'weight') for g in gs})
-print(f'ACT res: {cl_ms}')
+# cl_ms = task3(gs, {g: ACT(g, 'weight') for g in gs})
+# print(f'ACT res: {cl_ms}')
+# print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')
+
+cl_ms = task3(gs, {g: MCT(g, 'weight') for g in gs})
+print(f'MCT res: {cl_ms}')
 print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')

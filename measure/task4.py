@@ -27,20 +27,21 @@ def task4(gs, measures):
         cl_list = list(gs_clusters[g])
         for c1 in range(len(cl_list)):
             for c2 in range(len(cl_list)):
-                cl_1 = cl_list[c1]
-                cl_2 = cl_list[c2]
-                ms_cls[(cl_1, cl_2)] = 0.0
-                ms_cls[(cl_2, cl_1)] = 0.0
-                c1_nodes = gs_clusters[g][cl_1]
-                c2_nodes = gs_clusters[g][cl_2]
-                for u in range(len(c1_nodes)):
-                    for v in range(len(c2_nodes)):
-                        node_index_u = list(g.nodes).index(c1_nodes[u])
-                        node_index_v = list(g.nodes).index(c2_nodes[v])
-                        ms_cls[(cl_1, cl_2)] += measures[g].get(node_index_u, node_index_v)
-                        ms_cls[(cl_2, cl_1)] = ms_cls[(cl_1, cl_2)]
-                ms_cls[(cl_1, cl_2)] /= float(len(c1_nodes) * len(c2_nodes))
-                ms_cls[(cl_2, cl_1)] = ms_cls[(cl_1, cl_2)]
+                if c1 != c2:
+                    cl_1 = cl_list[c1]
+                    cl_2 = cl_list[c2]
+                    ms_cls[(cl_1, cl_2)] = 0.0
+                    ms_cls[(cl_2, cl_1)] = 0.0
+                    c1_nodes = gs_clusters[g][cl_1]
+                    c2_nodes = gs_clusters[g][cl_2]
+                    for u in range(len(c1_nodes)):
+                        for v in range(len(c2_nodes)):
+                            node_index_u = list(g.nodes).index(c1_nodes[u])
+                            node_index_v = list(g.nodes).index(c2_nodes[v])
+                            ms_cls[(cl_1, cl_2)] += measures[g].get(node_index_u, node_index_v)
+                            ms_cls[(cl_2, cl_1)] = ms_cls[(cl_1, cl_2)]
+                    ms_cls[(cl_1, cl_2)] /= float(len(c1_nodes) * len(c2_nodes))
+                    ms_cls[(cl_2, cl_1)] = ms_cls[(cl_1, cl_2)]
         # print(ms_cls)
 
     cls = [cl for cl in gs_ms_cls[list(gs_ms_cls)[0]]] 
@@ -56,9 +57,9 @@ def task4(gs, measures):
     return cl_ms
 
 
-# gs = read_Graphs('../data/dataset/synth/cluster/', 'cluster')
+gs = read_Graphs('../data/dataset/synth/cluster/', 'cluster')
 # gs = read_Graphs('../data/dataset/synth/intra_cluster/', 'intra_cluster')
-gs = read_Graphs('../data/dataset/truth/primary/', 'primary')
+# gs = read_Graphs('../data/dataset/truth/primary/', 'primary')
 
 gs = weight2length(gs)
 
@@ -66,6 +67,6 @@ cl_ms = task4(gs, {g: ShortestPath(g, 'length') for g in gs})
 print(f'ShortestPath res: {cl_ms}')
 print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')
 
-# cl_ms = task3(gs, {g: ACT(g, 'weight') for g in gs})
-# print(f'ACT res: {cl_ms}')
-# print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')
+cl_ms = task4(gs, {g: MCT(g, 'weight') for g in gs})
+print(f'MCT res: {cl_ms}')
+print(f'max: {max(cl_ms, key=lambda el : cl_ms[el])}')
