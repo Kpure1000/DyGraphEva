@@ -38,6 +38,7 @@ def intra_cluster():
 
     np.random.seed(0)
 
+    # adding nodes
     old_size = sum(sizes)
     adding_node = 20
     for i in range(adding_node):
@@ -59,35 +60,41 @@ def intra_cluster():
     c4_nodes = {n: G.nodes[n] for n in G.nodes if G.nodes[n]['block'] == 3}
     c5_nodes = {n: G.nodes[n] for n in G.nodes if G.nodes[n]['block'] == 4}
 
+    # c1: 收缩
+    # c2: 扩张
+    # c3: 收缩->扩张
+    # c4: 扩张->收缩
+    # c5: none
+
     G0 = G.copy()
 
     G1 = G0.copy()
-    intra_multi(G1, c1_nodes, 1.0, 2.0)
-    intra_multi(G1, c2_nodes, 1.0, 4.0)
-    intra_multi(G1, c3_nodes, 0.5, 1.0)
-    # intra_add(G1, c4_nodes, 0.0, 40.0)
+    intra_multi(G1, c1_nodes, 1.0, 4.0)
+    intra_multi(G1, c2_nodes, 0.25, 1.0)
+    intra_multi(G1, c3_nodes, 1.0, 8.0)
+    intra_multi(G1, c4_nodes, 0.125, 1.0)
     # intra_add(G1, c5_nodes, 20.0,40.0)
 
     G2 = G1.copy()
 
-    intra_multi(G2, c1_nodes, 1.0, 2.0)
-    intra_multi(G2, c2_nodes, 1.0, 4.0)
-    intra_multi(G2, c3_nodes, 0.5, 1.0)
-    # intra_add(G2, c4_nodes, 0.0, 40.0)
+    intra_multi(G2, c1_nodes, 1.0, 4.0)
+    intra_multi(G2, c2_nodes, 0.25, 1.0)
+    intra_multi(G2, c3_nodes, 1.0, 8.0)
+    intra_multi(G2, c4_nodes, 0.125, 1.0)
     # intra_add(G2, c5_nodes, -0.0,0.0)
 
     G3 = G2.copy()
-    intra_multi(G3, c1_nodes, 1.0, 2.0)
-    intra_multi(G3, c2_nodes, 0.2, 1.0)
-    intra_multi(G3, c3_nodes, 0.5, 1.0)
-    # intra_add(G3, c4_nodes, 0.0, 0.0)
+    intra_multi(G3, c1_nodes, 1.0, 4.0)
+    intra_multi(G3, c2_nodes, 0.25, 1.0)
+    intra_multi(G3, c3_nodes, 0.125, 1.0)
+    intra_multi(G3, c4_nodes, 1.0, 8.0)
     # intra_add(G3, c5_nodes, 20.0,40.0)
 
     G4 = G3.copy()
-    intra_multi(G4, c1_nodes, 1.0, 2.0)
-    intra_multi(G4, c2_nodes, 0.2, 1.0)
-    intra_multi(G4, c3_nodes, 0.5, 1.0)
-    # intra_add(G4, c4_nodes, 0.0, 20.0)
+    intra_multi(G4, c1_nodes, 1.0, 4.0)
+    intra_multi(G4, c2_nodes, 0.25, 1.0)
+    intra_multi(G4, c3_nodes, 0.125, 1.0)
+    intra_multi(G4, c4_nodes, 1.0, 8.0)
     # intra_add(G4, c5_nodes, -20.0,0.0)
 
     gs = [G0, G1, G2, G3, G4]

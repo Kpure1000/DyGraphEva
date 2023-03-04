@@ -234,4 +234,48 @@ let result_item = [
         "name": "intra_cluster_Incremental",
         "path": "../data/result/synth/intra_cluster/",
     },
+    
+    {
+        "name": "canVote_Laplacian",
+        "path": "../data/result/truth/canVote/",
+    },
+    {
+        "name": "wildbird_Laplacian",
+        "path": "../data/result/truth/wildbird/",
+    },
+    {
+        "name": "InVS15_Laplacian",
+        "path": "../data/result/truth/InVS15/",
+    },
+    {
+        "name": "InVS13_Laplacian",
+        "path": "../data/result/truth/InVS13/",
+    },
+    {
+        "name": "reality_mining_Laplacian",
+        "path": "../data/result/truth/reality_mining/",
+    },
+    {
+        "name": "primary_Laplacian",
+        "path": "../data/result/truth/primary/",
+    },
+    {
+        "name": "ambassador_Laplacian",
+        "path": "../data/result/truth/ambassador/",
+    },
+
+    {
+        "name": "cluster_Laplacian",
+        "path": "../data/result/synth/cluster/",
+    },
+    {
+        "name": "intra_cluster_Laplacian",
+        "path": "../data/result/synth/intra_cluster/",
+    },
+    {
+        "name": "lap_Laplacian",
+        "path": "../data/result/synth/lap/",
+    },
+
+
 ]
