@@ -49,7 +49,7 @@ class ShortestPath(IMeasure):
 
 class KatzIndex(IMeasure):
 
-    def __init__(self, G, weight='weight', b=0.099999) -> None:
+    def __init__(self, G, weight='weight', b=0.099999, beta=0.1) -> None:
         '''
         b : float, control the beta, 
             which is a free parameter used to control path weights
@@ -59,8 +59,8 @@ class KatzIndex(IMeasure):
         I = np.identity(len(G))
         # eigen_max = np.amax(np.double(nx.adjacency_spectrum(G))) # ! nx spectrum is comlex number !
         eigen_max = np.amax(np.double(np.linalg.eigvals(A)))
-        Beta = b * (1.0 / eigen_max)  # Beta is a free parameter
-        self.S = np.linalg.inv(I - Beta * A) - I
+        self.Beta = b * (1.0 / eigen_max) if beta==None else beta  # Beta is a free parameter
+        self.S = np.linalg.inv(I - self.Beta * A) - I
 
 
     def get(self, s, t):

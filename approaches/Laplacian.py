@@ -126,10 +126,10 @@ def EnergyFn(pos_vec, d_star_mat_inv, d_i_1_mat_inv, alpha):
     return E, grad.ravel()
 
 
-def Laplacian(Gs, weight='weight', seed=0, iterations=100, alpha=10.0):
+def Laplacian(gs, weight='weight', seed=0, iterations=100, alpha=10.0):
     from copy import deepcopy
     posOut = []
-    for i, Gi in enumerate(Gs):
+    for i, Gi in enumerate(gs):
         if i == 0:
             Li = fr_layout(G=Gi,
                            weight=weight,
@@ -138,7 +138,7 @@ def Laplacian(Gs, weight='weight', seed=0, iterations=100, alpha=10.0):
                            scale=None)
         else:
             Li_1 = Li
-            Li_merge = Merging(Gi,Gs[i-1],Li_1)
+            Li_merge = Merging(Gi,gs[i-1],Li_1)
             L_star = fr_layout(G=Gi,
                            pos=Li_merge,
                            weight=weight,
@@ -146,7 +146,7 @@ def Laplacian(Gs, weight='weight', seed=0, iterations=100, alpha=10.0):
                            iterations=iterations,
                            scale=None)
             Li = Refinement(Gi=Gi,
-                            Gi_1=Gs[i - 1],
+                            Gi_1=gs[i - 1],
                             Li_1=Li_1,
                             L_star=L_star,
                             alpha=alpha)
@@ -154,9 +154,9 @@ def Laplacian(Gs, weight='weight', seed=0, iterations=100, alpha=10.0):
         posOut.append(deepcopy(Li))
 
     for i, pos in enumerate(posOut):
-        nx.set_node_attributes(G=Gs[i], values=pos, name='pos')
+        nx.set_node_attributes(G=gs[i], values=pos, name='pos')
 
-    return Gs
+    return gs
 
 
 # Testing follow Fig.1 & Fig.2 in paper

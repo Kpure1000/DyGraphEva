@@ -34,7 +34,7 @@ def Get_Result_Incremental(pathIn, nameIn, pathOut, nameOut):
 def Get_Result_Laplacian(pathIn, nameIn, pathOut, nameOut):
     gs, d = read_Graphs(pathIn, nameIn)
 
-    gs_out = Laplacian(Gs=gs,
+    gs_out = Laplacian(gs=gs,
                        weight='weight',
                        seed=0,
                        alpha=1.0,
